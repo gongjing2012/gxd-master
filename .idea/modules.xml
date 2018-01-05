@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gxd-commons/gxd-commons.iml" filepath="$PROJECT_DIR$/gxd-commons/gxd-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxd-components-redis/gxd-components-redis.iml" filepath="$PROJECT_DIR$/gxd-components-redis/gxd-components-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxd-consumer-freemarker/gxd-consumer-freemarker.iml" filepath="$PROJECT_DIR$/gxd-consumer-freemarker/gxd-consumer-freemarker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxd-consumer-permission/gxd-consumer-permission.iml" filepath="$PROJECT_DIR$/gxd-consumer-permission/gxd-consumer-permission.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxd-consumer-thymeleaf/gxd-consumer-thymeleaf.iml" filepath="$PROJECT_DIR$/gxd-consumer-thymeleaf/gxd-consumer-thymeleaf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxd-eureka-server/gxd-eureka-server.iml" filepath="$PROJECT_DIR$/gxd-eureka-server/gxd-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxd-feign/gxd-feign.iml" filepath="$PROJECT_DIR$/gxd-feign/gxd-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxd-hystrix/gxd-hystrix.iml" filepath="$PROJECT_DIR$/gxd-hystrix/gxd-hystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxd-master.iml" filepath="$PROJECT_DIR$/gxd-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxd-provider/gxd-provider.iml" filepath="$PROJECT_DIR$/gxd-provider/gxd-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxd-sso/gxd-sso.iml" filepath="$PROJECT_DIR$/gxd-sso/gxd-sso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxd-turbine/gxd-turbine.iml" filepath="$PROJECT_DIR$/gxd-turbine/gxd-turbine.iml" />
+    </modules>
+  </component>
+</project>

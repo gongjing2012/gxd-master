@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka-sever" />
+        <module name="gxd-commons" />
+        <module name="gxd-components-redis" />
+        <module name="gxd-consumer-freemarker" />
+        <module name="gxd-consumer-permission" />
+        <module name="gxd-consumer-thymeleaf" />
+        <module name="gxd-eureka-server" />
+        <module name="gxd-feign" />
+        <module name="gxd-hystrix" />
+        <module name="gxd-provider" />
+        <module name="gxd-sso" />
+        <module name="gxd-turbine" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="eureka-sever" target="1.8" />
+      <module name="gxd-commons" target="1.8" />
+      <module name="gxd-components-redis" target="1.8" />
+      <module name="gxd-consumer-freemarker" target="1.8" />
+      <module name="gxd-consumer-permission" target="1.8" />
+      <module name="gxd-consumer-thymeleaf" target="1.8" />
+      <module name="gxd-eureka-server" target="1.8" />
+      <module name="gxd-eureka-sever" target="1.8" />
+      <module name="gxd-feign" target="1.8" />
+      <module name="gxd-hystrix" target="1.8" />
+      <module name="gxd-master" target="1.8" />
+      <module name="gxd-provider" target="1.8" />
+      <module name="gxd-sso" target="1.8" />
+      <module name="gxd-turbine" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

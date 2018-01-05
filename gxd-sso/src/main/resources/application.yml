@@ -1,0 +1,11 @@
+server:
+  port: 2032
+spring:
+  application:
+    name: gxd-sso
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+logging:
+  config: classpath:conf/log4j2.xml
