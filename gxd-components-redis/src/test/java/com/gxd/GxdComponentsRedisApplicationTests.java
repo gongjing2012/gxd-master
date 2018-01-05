@@ -24,6 +24,8 @@ public class GxdComponentsRedisApplicationTests {
 
 	@Autowired
 	private RedisTemplate<String, String> redisTemplate;
+	//@Autowired
+	//private RedisUtils redisUtils;
 
 	@Test
 	public void contextLoads() {
@@ -51,6 +53,7 @@ public class GxdComponentsRedisApplicationTests {
 
 	@Test
 	public void testSet(){
+		//redisUtils.set("test","gongjing");
 	}
 
 	@Test

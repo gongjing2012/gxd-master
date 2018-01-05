@@ -6,7 +6,7 @@ import com.gxd.enums.LoginResponseCode;
 import com.gxd.enums.ResponseCode;
 import com.gxd.model.RedisLoginDTO;
 import com.gxd.model.ResponseVO;
-import com.gxd.redis.utils.RedisUtils;
+import com.gxd.redis.config.RedisService;
 import com.gxd.utils.JwtUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.method.HandlerMethod;
@@ -31,7 +31,7 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Resource
     private JwtUtils jwtUtils;
     @Resource
-    private RedisUtils redisUtils;
+    private RedisService redisService;
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
@@ -78,7 +78,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         }
 
         //验证登录时间
-        RedisLoginDTO redisLogin = null;//(RedisLoginDTO) JedisUtils.getObject(uid);
+        RedisLoginDTO redisLogin = (RedisLoginDTO) redisService.getObject(uid);
         if (null == redisLogin) {
             writer = response.getWriter();
             ResponseVO responseVO = LoginResponseCode.buildEnumResponseVO(LoginResponseCode.RESPONSE_CODE_UNLOGIN_ERROR, false);
@@ -102,7 +102,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
         //重新刷新有效期
         redisLogin = new RedisLoginDTO(uid, token, System.currentTimeMillis() + 60L * 1000L * 30L);
-        redisUtils.setObject(uid, redisLogin, 360000000);
+        redisService.setObject(uid, redisLogin, 360000000);
         return true;
     }
 

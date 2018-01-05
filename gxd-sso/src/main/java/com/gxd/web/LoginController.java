@@ -1,4 +1,5 @@
 package com.gxd.web;
+import com.gxd.annotation.IsLogin;
 import com.gxd.utils.CookieUtils;
 import com.gxd.utils.JwtUtils;
 import org.springframework.stereotype.Controller;
@@ -35,6 +36,7 @@ public class LoginController {
         return "login";
     }
 
+    @IsLogin
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public String login(HttpServletResponse httpServletResponse, String username, String password, String redirect, Model model){
         if (username == null || !credentials.containsKey(username) || !credentials.get(username).equals(password)){
@@ -43,7 +45,7 @@ public class LoginController {
         }
 
         String token = jwtUtils.generateToken(signingKey, username);
-        CookieUtils.create(httpServletResponse, jwtTokenCookieName, token, false, -1, "localhost");
+        CookieUtils.create(httpServletResponse, jwtTokenCookieName, token, false, 604800, "127.0.0.1");
 
         return "redirect:" + redirect;
     }

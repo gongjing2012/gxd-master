@@ -2,11 +2,16 @@ server:
   port: 1111
 
 eureka:
+ # begin  配置关闭自我保护，并配置Eureka Server清理无效节点的时间间隔
+  server:
+    enable-self-preservation: false         # 设为false，关闭自我保护
+    eviction-interval-timer-in-ms: 30000   # 清理间隔（单位毫秒，默认是60*1000）
+  # end
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    registerWithEureka: false # 当前服务不需要到Eureka Server上注册
+    fetchRegistry: false # 不需要从eureka服务器获取注册信息
     serviceUrl:
-      defaultZone: http://localhost:${server.port}/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   instance:
     perferIpAddress: true
 
