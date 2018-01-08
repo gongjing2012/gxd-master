@@ -25,7 +25,7 @@
             data:$('#fm').serialize(),// 序列化表单值
             beforeSend: function(request) {
                 request.setRequestHeader("token", "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZWxsb2tvZGluZyIsImlhdCI6MTUxNTE3MDkwN30._IrNM9gi_GRqXaU8J6bpneDbaARfeUFZo4lNOrAmG7M");
-                request.setRequestHeader("uid", "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZWxsb2tvZGluZyIsImlhdCI6MTUxNTE3MDkwN30._IrNM9gi_GRqXaU8J6bpneDbaARfeUFZo4lNOrAmG7M");
+                request.setRequestHeader("uid", "hellokoding");
 
             },
             async: false,
@@ -33,7 +33,7 @@
                 alert("Connection error");
             },
             success: function(data) {  //成功
-                alert(data);  //就将返回的数据显示出来
+                alert(JSON.stringify(data));
                 window.location.href="http://127.0.0.1:3000"
             }
         });

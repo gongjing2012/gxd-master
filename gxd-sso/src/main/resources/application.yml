@@ -3,6 +3,42 @@ server:
 spring:
   application:
     name: gxd-sso
+#  redis:
+#          #服务器地址
+#    host: 127.0.0.1
+#          #服务器连接端口
+#    port: 6379
+#         # 登录redis服务器的密码。
+#    password: 123456
+#    pool:
+#      max-active: 200
+#        # 池在给定时间可以分配的最大连接数。使用负值无限制。
+#      max-idle: 50
+#        # 连接分配在池被耗尽时抛出异常之前应该阻塞的最长时间量（以毫秒为单位）。使用负值可以无限期地阻止。
+#      max-wait: 200
+#        # 目标为保持在池中的最小空闲连接数。这个设置只有在正面的情况下才有效果。
+#      min-idle: 10
+#      master: 0
+#          #链接超时时间（毫秒）
+#    timeout: 3000
+#        # 启用SSL支持。
+#    ssl: false
+  redis:
+    cluster:
+      nodes:
+        - 192.168.50.36:7000
+        - 192.168.50.36:7001
+        - 192.168.50.36:7002
+        - 192.168.50.36:7007
+        - 192.168.50.36:7009
+        - 192.168.50.37:7003
+        - 192.168.50.37:7004
+        - 192.168.50.37:7005
+        - 192.168.50.37:7006
+        - 192.168.50.37:7008
+      timeout:  3000
+      maxAttempts:  5
+      clusterFlag:  true
   freemarker:
       request-context-attribute: request
       allow-request-override: false
@@ -28,25 +64,3 @@ eureka:
       defaultZone: http://localhost:1111/eureka/
 logging:
   config: classpath:conf/log4j2.xml
-redis:
-    #数据库索引
-  database: 0
-      #服务器地址
-  host: 127.0.0.1
-      #服务器连接端口
-  port: 6379
-      #链接密码
-  password: 123456
-      #最大连接数（负值表示没有限制）
-  pool:
-    max-active: 200
-      #最大空闲链接
-    max-idle: 50
-      #最大阻塞等待时间（负值表示没有限制）
-    max-wait: 200
-      #最小空闲链接
-    min-idle: 10
-
-    master: 0
-      #链接超时时间（毫秒）
-  timeout: 3000

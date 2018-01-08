@@ -8,6 +8,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.SerializationUtils;
 
 import java.util.List;
 import java.util.Map;
@@ -36,7 +37,7 @@ public class RedisService {
     }
 
     public Object getObject(final String key){
-        return (Object) redisTemplate.opsForValue().get(key);
+        return redisTemplate.opsForValue().get(key.getBytes());
     }
 
     /**
@@ -63,8 +64,8 @@ public class RedisService {
 
     public boolean setObject(String key, Object value, long time){
         try {
-            if(time>0){
-                redisTemplate.opsForValue().set(key, value, time, TimeUnit.SECONDS);
+            if(time > 0){
+                redisTemplate.opsForValue().set(key.getBytes(), SerializationUtils.serialize(value), time, TimeUnit.SECONDS);
             }else{
                 return false;
             }
@@ -141,7 +142,7 @@ public class RedisService {
      */
 
     public long incr(String key, long delta){
-        if(delta<0){
+        if(delta < 0){
             throw new RuntimeException("递增因子必须大于0");
         }
         return redisTemplate.opsForValue().increment(key, delta);

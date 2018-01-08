@@ -1,6 +1,7 @@
 package com.gxd.utils;
 
-import com.gxd.redis.config.RedisService;
+import com.gxd.model.RedisLoginDTO;
+import com.gxd.redis.utils.RedisUtils;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -18,7 +19,7 @@ public class JwtUtils {
     private static final String REDIS_SET_ACTIVE_SUBJECTS = "active-subjects";
 
     @Resource
-    private RedisService redisService;
+    private RedisUtils redisUtils;
 
     public String generateToken(String signingKey, String subject) {
         long nowMillis = System.currentTimeMillis();
@@ -31,7 +32,9 @@ public class JwtUtils {
 
         String token = builder.compact();
 
-        redisService.sadd(REDIS_SET_ACTIVE_SUBJECTS,subject);
+        redisUtils.sadd(REDIS_SET_ACTIVE_SUBJECTS,subject);
+        RedisLoginDTO redisLogin = new RedisLoginDTO(subject, token, System.currentTimeMillis() + 60L * 1000L * 30L);
+        redisUtils.setObject(subject, redisLogin, 360000000);
         return token;
     }
 
@@ -42,7 +45,7 @@ public class JwtUtils {
         }
 
         String subject = Jwts.parser().setSigningKey(signingKey).parseClaimsJws(token).getBody().getSubject();
-        if(!redisService.sHasKey(REDIS_SET_ACTIVE_SUBJECTS,subject)){
+        if(!redisUtils.sHasKey(REDIS_SET_ACTIVE_SUBJECTS,subject)){
             return null;
         }
 
@@ -50,7 +53,7 @@ public class JwtUtils {
     }
 
     public void invalidateRelatedTokens(HttpServletRequest httpServletRequest) {
-        redisService.srem(REDIS_SET_ACTIVE_SUBJECTS, (String) httpServletRequest.getAttribute("username"));
+        redisUtils.srem(REDIS_SET_ACTIVE_SUBJECTS, (String) httpServletRequest.getAttribute("username"));
     }
 }
 
