@@ -1,9 +1,6 @@
 package com.gxd.redis.utils;
 
-import com.gxd.redis.config.RedisClusterProperties;
-import com.gxd.redis.config.RedisObjectSerializer;
 import com.gxd.utils.FastJsonUtils;
-import com.mysql.jdbc.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +8,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
-import redis.clients.jedis.JedisCluster;
 
 import java.util.List;
 import java.util.Map;
@@ -29,29 +25,25 @@ public class RedisUtils {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     private RedisTemplate redisTemplate;
-    @Autowired
-    private JedisCluster jedisCluster;
 
-    @Autowired
-    private RedisClusterProperties redisProperties;
-
+    /**
+     * 普通缓存放入
+     * @param key
+     * @param value
+     * @return
+     */
     public boolean set(final String key, final String value) {
-        if(redisProperties.getClusterFlag()){
-            jedisCluster.set(key,value);
-        }else {
-            redisTemplate.opsForValue().set(key, value);
-        }
+        redisTemplate.opsForValue().set(key, value);
         return true;
     }
 
-
-
+    /**
+     * 普通缓存get
+     * @param key
+     * @return
+     */
     public String get(final String key){
-        if(redisProperties.getClusterFlag()){
-            return jedisCluster.get(key);
-        }else {
-            return (String) redisTemplate.opsForValue().get(key);
-        }
+        return (String) redisTemplate.opsForValue().get(key);
     }
 
     /**
@@ -63,46 +55,35 @@ public class RedisUtils {
      */
 
     public String set(String key, String value, int time){
-        if(redisProperties.getClusterFlag()){
-            return jedisCluster.setex(key,time,value);
-        }else {
-            try {
-                if (time > 0) {
-                    redisTemplate.opsForValue().set(key, value, time, TimeUnit.SECONDS);
-                } else {
-                    set(key, value);
-                }
-                return "ok";
-            } catch (Exception e) {
-                return "false";
+        try {
+            if (time > 0) {
+                redisTemplate.opsForValue().set(key, value, time, TimeUnit.SECONDS);
+            } else {
+                set(key, value);
             }
+            return "ok";
+        } catch (Exception e) {
+            logger.error("异常");
+            return "false";
         }
     }
 
 
     public String setObject(String key, Object value, int time){
-        if(redisProperties.getClusterFlag()){
-            return  jedisCluster.set(getBytesKey(key), toBytes(value));
-        }else {
-            try {
-                if (time > 0) {
-                    redisTemplate.opsForValue().set(key, value, time, TimeUnit.SECONDS);
-                } else {
-                    return "false";
-                }
-                return "ok";
-            } catch (Exception e) {
+        try {
+            if (time > 0) {
+                redisTemplate.opsForValue().set(key, value, time, TimeUnit.SECONDS);
+            } else {
                 return "false";
             }
+            return "ok";
+        } catch (Exception e) {
+            return "false";
         }
     }
 
     public Object getObject(final String key){
-        if(redisProperties.getClusterFlag()){
-            return jedisCluster.get(key.getBytes());
-        }else {
-            return redisTemplate.opsForValue().get(key.getBytes());
-        }
+        return redisTemplate.opsForValue().get(key);
     }
     /**
      * 指定缓存失效时间
@@ -112,12 +93,7 @@ public class RedisUtils {
      */
 
     public void expire(final String key, int expire) {
-        if(redisProperties.getClusterFlag()){
-            jedisCluster.expire(key, expire);
-        }else{
-            redisTemplate.expire(key, expire, TimeUnit.SECONDS);
-
-        }
+        redisTemplate.expire(key, expire, TimeUnit.SECONDS);
     }
 
     /**
@@ -150,23 +126,12 @@ public class RedisUtils {
      */
 
     public void del(String ... key){
-        if(key!=null&&key.length>0){
-            if(key.length==1){
+        if (key != null && key.length > 0) {
+            if (key.length == 1) {
                 redisTemplate.delete(key[0]);
-            }else{
+            } else {
                 redisTemplate.delete(CollectionUtils.arrayToList(key));
             }
-        }
-    }
-    /**
-     * 批量删除<br>
-     * （该操作会执行模糊查询，请尽量不要使用，以免影响性能或误删）
-     * @param pattern
-     */
-
-    public void batchDel(String... pattern){
-        for (String kp : pattern) {
-            redisTemplate.delete(redisTemplate.keys(kp + "*"));
         }
     }
     /**
@@ -177,7 +142,7 @@ public class RedisUtils {
      */
 
     public long incr(String key, long delta){
-        if(delta<0){
+        if(delta < 0){
             throw new RuntimeException("递增因子必须大于0");
         }
         return redisTemplate.opsForValue().increment(key, delta);
@@ -358,14 +323,10 @@ public class RedisUtils {
      */
 
     public boolean sHasKey(String key, Object value){
-        if(redisProperties.getClusterFlag()) {
-            return jedisCluster.sismember(getBytesKey(key), toBytes(value));
-        }else {
-            try {
-                return redisTemplate.opsForSet().isMember(key, value);
-            } catch (Exception e) {
-                return false;
-            }
+        try {
+            return redisTemplate.opsForSet().isMember(key, value);
+        } catch (Exception e) {
+            return false;
         }
     }
 
@@ -450,11 +411,7 @@ public class RedisUtils {
      */
 
     public void sadd(String key, String... value) {
-        if(redisProperties.getClusterFlag()) {
-            jedisCluster.sadd(key,value);
-        }else {
             redisTemplate.boundSetOps(key).add(value);
-        }
     }
 
     /**
@@ -464,11 +421,7 @@ public class RedisUtils {
      */
 
     public  void srem(String key, String... value) {
-        if(redisProperties.getClusterFlag()) {
-            jedisCluster.srem(key,value);
-        }else {
-            redisTemplate.boundSetOps(key).remove(value);
-        }
+        redisTemplate.boundSetOps(key).remove(value);
     }
 
 //===============================list=================================
@@ -649,36 +602,6 @@ public class RedisUtils {
             return list;
         }
         return null;
-    }
-
-    /**
-     * 获取byte[]类型Key
-     * @param object
-     * @return
-     */
-    public static  byte[] getBytesKey(Object object){
-        if(object instanceof String){
-            return StringUtils.getBytes((String)object);
-        }else{
-            return new RedisObjectSerializer().serialize(object);
-        }
-    }
-    /**
-     * Object转换byte[]类型
-     * @param object
-     * @return
-     */
-    public byte[] toBytes(Object object){
-        return new RedisObjectSerializer().serialize(object);
-    }
-
-    /**
-     * byte[]型转换Object
-     * @param bytes
-     * @return
-     */
-    public  Object toObject(byte[] bytes){
-        return new RedisObjectSerializer().deserialize(bytes);
     }
 
 }
