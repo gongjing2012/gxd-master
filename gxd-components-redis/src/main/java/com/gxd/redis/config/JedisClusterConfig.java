@@ -46,7 +46,7 @@ public class JedisClusterConfig {
         return new JedisCluster(nodes, redisProperties.getTimeout(),redisProperties.getMaxAttempts());
     }
 
-    	@Bean
+    @Bean
 	public KeyGenerator wiselyKeyGenerator(){
 		return new KeyGenerator() {
 			@Override
