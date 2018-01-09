@@ -1,17 +1,21 @@
 package com.gxd;
 
+import com.gxd.redis.utils.RedisUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import redis.clients.jedis.Jedis;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class GxdSsoApplicationTests {
-	private  Jedis jedis;
+	@Autowired
+	private RedisUtils redisUtils;
 	@Test
-	public void contextLoads() {
-		//byte[] bytes = jedis.get()
+	public void get() {
+		String hellokoding = redisUtils.get("hellokoding");
+		System.out.println("get:"+hellokoding);
 	}
+
 
 }

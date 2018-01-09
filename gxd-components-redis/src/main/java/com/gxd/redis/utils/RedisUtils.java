@@ -88,12 +88,13 @@ public class RedisUtils {
     /**
      * 指定缓存失效时间
      * @param key 键
+     * @param value 值
      * @param expire 时间(秒)
      * @return
      */
 
-    public void expire(final String key, int expire) {
-        redisTemplate.expire(key, expire, TimeUnit.SECONDS);
+    public void expire(final String key,final Object value, long expire) {
+         redisTemplate.opsForValue().set(key, value,expire,TimeUnit.SECONDS);
     }
 
     /**
@@ -102,8 +103,8 @@ public class RedisUtils {
      * @return 时间(秒) 返回0代表为永久有效
      */
 
-    public long getExpire(String key){
-        return redisTemplate.getExpire(key,TimeUnit.SECONDS);
+    public int getExpire(String key){
+        return redisTemplate.getExpire(key,TimeUnit.SECONDS).intValue();
     }
 
     /**
@@ -209,8 +210,8 @@ public class RedisUtils {
     public boolean hmset(String key, Map<String,Object> map, int time){
         try {
             redisTemplate.opsForHash().putAll(key, map);
-            if(time>0){
-                expire(key, time);
+            if(time > 0){
+                expire(key, map,time);
             }
             return true;
         } catch (Exception e) {
@@ -229,27 +230,6 @@ public class RedisUtils {
     public boolean hset(String key, String item, Object value) {
         try {
             redisTemplate.opsForHash().put(key, item, value);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    /**
-     * 向一张hash表中放入数据,如果不存在将创建
-     * @param key 键
-     * @param item 项
-     * @param value 值
-     * @param time 时间(秒)  注意:如果已存在的hash表有时间,这里将会替换原有的时间
-     * @return true 成功 false失败
-     */
-
-    public boolean hset(String key, String item, Object value, int time) {
-        try {
-            redisTemplate.opsForHash().put(key, item, value);
-            if(time>0){
-                expire(key, time);
-            }
             return true;
         } catch (Exception e) {
             return false;
@@ -289,6 +269,10 @@ public class RedisUtils {
         return redisTemplate.opsForHash().increment(key, item, by);
     }
 
+    public long hincr(String key, String item, long by){
+        return redisTemplate.opsForHash().increment(key, item, by);
+    }
+
     /**
      * hash递减
      * @param key 键
@@ -298,6 +282,10 @@ public class RedisUtils {
      */
 
     public double hdecr(String key, String item, double by){
+        return redisTemplate.opsForHash().increment(key, item,-by);
+    }
+
+    public long hdecr(String key, String item, long by){
         return redisTemplate.opsForHash().increment(key, item,-by);
     }
 
@@ -353,11 +341,11 @@ public class RedisUtils {
      * @return 成功个数
      */
 
-    public long sSetAndTime(String key, int time, Object...values) {
+    public long sSetAndTime(String key, long time, Object...values) {
         try {
             Long count = redisTemplate.opsForSet().add(key, values);
-            if(time>0) {
-                expire(key, time);
+            if(time > 0) {
+                expire(key,values, time);
             }
             return count;
         } catch (Exception e) {
@@ -481,11 +469,11 @@ public class RedisUtils {
      * @return
      */
 
-    public boolean lSet(String key, Object value, int time) {
+    public boolean lSet(String key, Object value, long time) {
         try {
             redisTemplate.opsForList().rightPush(key, value);
             if (time > 0) {
-                expire(key, time);
+                expire(key,value, time);
             }
             return true;
         } catch (Exception e) {
@@ -517,11 +505,11 @@ public class RedisUtils {
      * @return
      */
 
-    public boolean lSet(String key, List<Object> value, int time) {
+    public boolean lSet(String key, List<Object> value, long time) {
         try {
             redisTemplate.opsForList().rightPushAll(key, value);
             if (time > 0) {
-                expire(key, time);
+                expire(key, value,time);
             }
             return true;
         } catch (Exception e) {
@@ -578,15 +566,26 @@ public class RedisUtils {
     }
 
     /**
+     * 有序集合添加
+     * @param key
+     * @param value
+     * @param scoure
+     */
+    public void zAdd(String key,Object value,double scoure){
+        ZSetOperations<String, Object> zset = redisTemplate.opsForZSet();
+        zset.add(key,value,scoure);
+    }
+
+    /**
      * 有序集合获取
      * @param key
-     * @param scoure
-     * @param scoure1
+     * @param from
+     * @param to
      * @return
      */
-    public Set<Object> rangeByScore(String key,double scoure,double scoure1){
+    public Set<Object> rangeByScore(String key,double from,double to){
         ZSetOperations<String, Object> zset = redisTemplate.opsForZSet();
-        return zset.rangeByScore(key, scoure, scoure1);
+        return zset.rangeByScore(key, from, to);
     }
 
     public <T> boolean setList(String key, List<T> list) {

@@ -37,8 +37,8 @@ spring:
         - 192.168.50.37:7006
         - 192.168.50.37:7008
       timeout:  3000
-      maxAttempts:  5
-      clusterFlag:  true
+      max-redirects:  5
+      ssl: false
   freemarker:
       request-context-attribute: request
       allow-request-override: false
