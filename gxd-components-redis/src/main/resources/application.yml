@@ -2,6 +2,7 @@ spring:
   application:
     name: gxd-components-redis
   redis:
+  #单点模式
           #服务器地址
     host: 127.0.0.1
           #服务器连接端口
@@ -21,6 +22,7 @@ spring:
     timeout: 3000
         # 启用SSL支持。
     ssl: false
+##集群模式
 #  redis:
 #    cluster:
 #      nodes:
@@ -37,9 +39,27 @@ spring:
 #      timeout:  3000
 #      max-redirects:  5
 #      ssl: false
+##分布式锁
+##单点模式
+#  redisson:
+#    address:  redis://127.0.0.1:6379
+#    password: 123456
+##集群模式
+  redisson:
+    nodeAddresses: redis://192.168.50.36:7000,redis://192.168.50.36:7001,redis://192.168.50.36:7002,redis://192.168.50.36:7007,redis://192.168.50.36:7009,redis://192.168.50.37:7003,redis://192.168.50.37:7004,redis://192.168.50.37:7005,redis://192.168.50.37:7006,redis://192.168.50.37:7008
+#      - redis://192.168.50.36:7000
+#      - redis://192.168.50.36:7001
+#      - redis://192.168.50.36:7002
+#      - redis://192.168.50.36:7007
+#      - redis://192.168.50.36:7009
+#      - redis://192.168.50.37:7003
+#      - redis://192.168.50.37:7004
+#      - redis://192.168.50.37:7005
+#      - redis://192.168.50.37:7006
+#      - redis://192.168.50.37:7008
+    masterConnectionPoolSize: 10000
+    slaveConnectionPoolSize:  10000
+    scanInterval: 2000
 logging:
   config: classpath:conf/log4j2.xml
-redisson:
-  address:  redis://127.0.0.1:6379
-  password: 123456
-#  spring.redisson.config.clusterServersConfig.nodeAddresses=redis://10.250.20.179:7001,redis://10.250.20.179:7002,redis://10.250.20.179:7003,redis://10.250.20.179:7004,redis://10.250.20.179:7005,redis://10.250.20.179:7006
+

@@ -4,6 +4,7 @@ import com.gxd.redis.utils.RedissLockUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
+import org.redisson.config.ClusterServersConfig;
 import org.redisson.config.Config;
 import org.redisson.config.SentinelServersConfig;
 import org.redisson.config.SingleServerConfig;
@@ -13,6 +14,8 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.List;
 
 /**
  * @Author:gxd
@@ -25,24 +28,24 @@ import org.springframework.context.annotation.Configuration;
 @EnableConfigurationProperties(RedissonProperties.class)
 public class RedissonAutoConfiguration {
     @Autowired
-    private RedissonProperties redssionProperties;
+    private RedissonProperties redissionProperties;
 
     /**
      * 哨兵模式自动装配
      * @return
      */
     @Bean
-    @ConditionalOnProperty(name="redisson.master-name")
-    RedissonClient redissonSentinel() {
+    @ConditionalOnProperty(name="spring.redisson.master-name")
+    public RedissonClient redissonSentinel() {
         Config config = new Config();
-        SentinelServersConfig serverConfig = config.useSentinelServers().addSentinelAddress(redssionProperties.getSentinelAddresses())
-                .setMasterName(redssionProperties.getMasterName())
-                .setTimeout(redssionProperties.getTimeout())
-                .setMasterConnectionPoolSize(redssionProperties.getMasterConnectionPoolSize())
-                .setSlaveConnectionPoolSize(redssionProperties.getSlaveConnectionPoolSize());
+        SentinelServersConfig serverConfig = config.useSentinelServers().addSentinelAddress(redissionProperties.getSentinelAddresses())
+                .setMasterName(redissionProperties.getMasterName())
+                .setTimeout(redissionProperties.getTimeout())
+                .setMasterConnectionPoolSize(redissionProperties.getMasterConnectionPoolSize())
+                .setSlaveConnectionPoolSize(redissionProperties.getSlaveConnectionPoolSize());
 
-        if(StringUtils.isNotBlank(redssionProperties.getPassword())) {
-            serverConfig.setPassword(redssionProperties.getPassword());
+        if(StringUtils.isNotBlank(redissionProperties.getPassword())) {
+            serverConfig.setPassword(redissionProperties.getPassword());
         }
         return Redisson.create(config);
     }
@@ -52,17 +55,39 @@ public class RedissonAutoConfiguration {
      * @return
      */
     @Bean
-    @ConditionalOnProperty(name="redisson.address")
-    RedissonClient redissonSingle() {
+    @ConditionalOnProperty(name="spring.redisson.address")
+    public RedissonClient redissonSingle() {
         Config config = new Config();
         SingleServerConfig serverConfig = config.useSingleServer()
-                .setAddress(redssionProperties.getAddress())
-                .setTimeout(redssionProperties.getTimeout())
-                .setConnectionPoolSize(redssionProperties.getConnectionPoolSize())
-                .setConnectionMinimumIdleSize(redssionProperties.getConnectionMinimumIdleSize());
+                .setAddress(redissionProperties.getAddress())
+                .setTimeout(redissionProperties.getTimeout())
+                .setConnectionPoolSize(redissionProperties.getConnectionPoolSize())
+                .setConnectionMinimumIdleSize(redissionProperties.getConnectionMinimumIdleSize());
 
-        if(StringUtils.isNotBlank(redssionProperties.getPassword())) {
-            serverConfig.setPassword(redssionProperties.getPassword());
+        if(StringUtils.isNotBlank(redissionProperties.getPassword())) {
+            serverConfig.setPassword(redissionProperties.getPassword());
+        }
+        return Redisson.create(config);
+    }
+
+    /**
+     * 集群模式自动装配
+     * @return
+     */
+    @Bean
+    @ConditionalOnProperty(name="spring.redisson.nodeAddresses")
+    public RedissonClient redissonCluster() {
+        Config config = new Config();
+        List<String> nodeAddresses = redissionProperties.getNodeAddresses();
+        ClusterServersConfig serverConfig = config.useClusterServers()
+                .addNodeAddress(nodeAddresses.toArray(new String[] {}))
+                .setTimeout(redissionProperties.getTimeout())
+                .setScanInterval(redissionProperties.getScanInterval()) //设置集群状态扫描时间
+                .setMasterConnectionPoolSize(redissionProperties.getMasterConnectionPoolSize()) //设置连接数
+                .setSlaveConnectionPoolSize(redissionProperties.getSlaveConnectionPoolSize());
+
+        if(StringUtils.isNotBlank(redissionProperties.getPassword())) {
+            serverConfig.setPassword(redissionProperties.getPassword());
         }
 
         return Redisson.create(config);

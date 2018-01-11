@@ -1,7 +1,7 @@
 package com.gxd.service.auth.impl;
 
 import com.gxd.common.exception.BusinessException;
-import com.gxd.common.util.UUIDUtil;
+import com.gxd.utils.UUIDUtil;
 import com.gxd.model.auth.Permission;
 import com.gxd.model.auth.Role;
 import com.gxd.model.auth.RolePermission;

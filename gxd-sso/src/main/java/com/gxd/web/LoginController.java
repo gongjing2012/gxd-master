@@ -40,6 +40,7 @@ public class LoginController {
             model.addAttribute("error", "Invalid username or password!");
             return "login";
         }
+        //账号密码判断业务
 
         String token = jwtUtils.generateToken(signingKey, username);
         CookieUtils.create(httpServletResponse, jwtTokenCookieName, token, false, 604800, "127.0.0.1");

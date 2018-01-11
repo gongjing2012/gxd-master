@@ -4,7 +4,7 @@ import com.gxd.common.constants.Constants;
 import com.gxd.common.exception.BusinessException;
 import com.gxd.common.salt.Digests;
 import com.gxd.common.salt.Encodes;
-import com.gxd.common.util.UUIDUtil;
+import com.gxd.utils.UUIDUtil;
 import com.gxd.model.auth.Role;
 import com.gxd.model.auth.User;
 import com.gxd.model.auth.UserRole;

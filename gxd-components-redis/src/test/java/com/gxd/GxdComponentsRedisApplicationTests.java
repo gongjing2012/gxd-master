@@ -12,6 +12,8 @@ import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
@@ -311,10 +313,28 @@ public class GxdComponentsRedisApplicationTests {
 
 	@Test
 	public void testLock(){
-		RedissLockUtils.lock("test");
-
-		System.out.println("test");
-		RedissLockUtils.unlock("test");
+		try {
+			RedissLockUtils.lock("testgongjing");
+			//do need Business
+		}catch (Exception e){
+			System.out.println("error.....................");
+		}finally {
+			RedissLockUtils.unlock("testgongjing");
+		}
 	}
 
+
+	@Test
+	public void testGeneratorId() throws Exception {
+		ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
+		for (int i = 0; i < 100; i++) {
+			cachedThreadPool.execute(new Runnable() {
+				public void run() {
+					while (true)
+						System.out.println(redisUtils.generatorId("log"));
+				}
+			});
+		}
+		System.in.read();
+	}
 }

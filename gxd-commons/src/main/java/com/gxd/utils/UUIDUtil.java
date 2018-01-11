@@ -1,4 +1,4 @@
-package com.gxd.common.util;
+package com.gxd.utils;
 
 
 /**

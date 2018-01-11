@@ -43,12 +43,12 @@ public class RedissonManager {
 
     public static void init(){
         try {
-            config.useClusterServers() //这是用的集群server
-                    .setScanInterval(2000) //设置集群状态扫描时间
-                    .setMasterConnectionPoolSize(10000) //设置连接数
-                    .setSlaveConnectionPoolSize(10000)
-                    .addNodeAddress("127.0.0.1:6379");
-            //config.useSingleServer().setAddress("redis://127.0.0.1:6379").setPassword("123456");
+            //config.useClusterServers() //这是用的集群server
+            //        .setScanInterval(2000) //设置集群状态扫描时间
+            //        .setMasterConnectionPoolSize(10000) //设置连接数
+            //        .setSlaveConnectionPoolSize(10000)
+            //        .addNodeAddress("127.0.0.1:6379");
+            config.useSingleServer().setAddress("redis://127.0.0.1:6379").setPassword("123456");
             redisson = (Redisson) Redisson.create(config);
         }catch (Exception e){
             e.printStackTrace();

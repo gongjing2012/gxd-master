@@ -1,5 +1,6 @@
 package com.gxd.redis.utils;
 
+import com.google.common.base.Strings;
 import com.gxd.utils.FastJsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,9 +10,7 @@ import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -603,4 +602,48 @@ public class RedisUtils {
         return null;
     }
 
+    public Long generatorId(String biz) {
+        // 转成数字类型，可排序
+        return incrOrderId(biz, getOrderPrefix(new Date()));
+    }
+    /**
+     * @Description 支持一个小时100w个订单号的生成
+     *
+     * @author butterfly
+     * @param prefix
+     * @return
+     */
+    private Long incrOrderId(String biz, String prefix) {
+        String orderId = null;
+        String key = "geese:#{biz}:id:".replace("#{biz}", biz).concat(prefix); // 00001
+        try {
+            Long index = redisTemplate.opsForValue().increment(key,1L);
+            orderId = prefix.concat(String.format("%1$05d", index)); // 补位操作 保证满足5位
+        } catch(Exception ex) {
+            System.out.println("分布式订单号生成失败异常。。。。。");
+        }
+        if (Strings.isNullOrEmpty(orderId)) {
+            return null;
+        }
+        return Long.parseLong(orderId);
+    }
+    /**
+     * @Description
+     *
+     * @author butterfly
+     * @param date
+     * @return
+     */
+    private String getOrderPrefix(Date date) {
+        Calendar c = Calendar.getInstance();
+        c.setTime(date);
+        int year = c.get(Calendar.YEAR);
+        int day = c.get(Calendar.DAY_OF_YEAR); // 今天是第多少天
+        int hour =  c.get(Calendar.HOUR_OF_DAY);
+        String dayFmt = String.format("%1$03d", day); // 0补位操作 必须满足三位
+        String hourFmt = String.format("%1$02d", hour);  // 0补位操作 必须满足2位
+        StringBuffer prefix = new StringBuffer();
+        prefix.append((year - 2000)).append(dayFmt).append(hourFmt);
+        return prefix.toString();
+    }
 }

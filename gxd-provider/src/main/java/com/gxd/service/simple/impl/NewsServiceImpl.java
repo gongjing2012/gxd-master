@@ -3,7 +3,7 @@ package com.gxd.service.simple.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.gxd.common.constants.Constants;
-import com.gxd.common.util.UUIDUtil;
+import com.gxd.utils.UUIDUtil;
 import com.gxd.model.simple.News;
 import com.gxd.common.datasource.DataSourceEnum;
 import com.gxd.common.datasource.TargetDataSource;

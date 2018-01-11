@@ -2,7 +2,10 @@ package com.gxd.redis.lock;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "redisson")
+import java.util.ArrayList;
+import java.util.List;
+
+@ConfigurationProperties(prefix = "spring.task.pool")
 public class RedissonProperties {
 
     private int timeout = 3000;
@@ -22,6 +25,10 @@ public class RedissonProperties {
     private String[] sentinelAddresses;
 
     private String masterName;
+
+    private int scanInterval;
+
+    private List<String> nodeAddresses = new ArrayList<>();
 
     public int getTimeout() {
         return timeout;
@@ -93,5 +100,25 @@ public class RedissonProperties {
 
     public void setConnectionMinimumIdleSize(int connectionMinimumIdleSize) {
         this.connectionMinimumIdleSize = connectionMinimumIdleSize;
+    }
+
+    public void setSentinelAddresses(String[] sentinelAddresses) {
+        this.sentinelAddresses = sentinelAddresses;
+    }
+
+    public int getScanInterval() {
+        return scanInterval;
+    }
+
+    public void setScanInterval(int scanInterval) {
+        this.scanInterval = scanInterval;
+    }
+
+    public List<String> getNodeAddresses() {
+        return nodeAddresses;
+    }
+
+    public void setNodeAddresses(List<String> nodeAddresses) {
+        this.nodeAddresses = nodeAddresses;
     }
 }
