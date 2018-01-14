@@ -86,7 +86,8 @@ public class ProducerController {
      * @throws Exception
      */
     @RequestMapping(value = "/sendOrderlyMsg", method = RequestMethod.GET)
-    public void sendOrderlyMsg() throws Exception {
+    public String sendOrderlyMsg() throws Exception {
+        long t1 = System.currentTimeMillis();
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 Message msg = new Message("order", "TagA", "OrderID11113", (i + ":" + j).getBytes());
@@ -100,9 +101,9 @@ public class ProducerController {
                     return mqs.get(value);
                 }, i);
             }
-
         }
-
+        long t2 = System.currentTimeMillis();
+        return "所花时间：" + (t2 - t1) ;
     }
 
 

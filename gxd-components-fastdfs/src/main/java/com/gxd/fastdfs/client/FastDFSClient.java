@@ -1,27 +1,30 @@
 package com.gxd.fastdfs.client;
 
 
+import com.github.tobato.fastdfs.conn.FdfsWebServer;
 import com.github.tobato.fastdfs.domain.StorePath;
 import com.github.tobato.fastdfs.exception.FdfsServerException;
+import com.github.tobato.fastdfs.proto.storage.DownloadByteArray;
+import com.github.tobato.fastdfs.service.AppendFileStorageClient;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
 import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.List;
 
+
+@Component
 public class FastDFSClient {
 
-    protected final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     protected static final Logger FDFS_UPLOAD = LoggerFactory.getLogger("FDFS_UPLOAD");
 
@@ -33,11 +36,13 @@ public class FastDFSClient {
     @Autowired
     private FastFileStorageClient storageClient;
 
-    /** fastDfs Web地址 */
-    private boolean hasFastDfsNginx;
+    @Autowired
+    protected AppendFileStorageClient storageClient1;
 
-    /** fastdfs nginx config */
-    private String fastDfsNginx;
+    @Autowired
+    private FdfsWebServer fdfsWebServer;
+
+
 
     /**
      * 上传文件
@@ -49,7 +54,7 @@ public class FastDFSClient {
      */
     public String upload(InputStream is, long fileSize, String fileExtName) throws IOException {
         StorePath storePath = storageClient.uploadFile(is, fileSize, fileExtName, null);
-        logger.debug("uploadFile fullPath:{}", storePath.getFullPath());
+        FDFS_UPLOAD.debug("uploadFile fullPath:{}", storePath.getFullPath());
         //记录上传文件地址
         FDFS_UPLOAD.info("{}", storePath.getFullPath());
         return getResAccessUrl(storePath);
@@ -65,7 +70,7 @@ public class FastDFSClient {
     public String uploadFile(MultipartFile file) throws IOException {
         StorePath storePath = storageClient.uploadFile(file.getInputStream(), file.getSize(),
                 FilenameUtils.getExtension(file.getOriginalFilename()), null);
-        logger.debug("uploadFile fullPath:{}", storePath.getFullPath());
+        FDFS_UPLOAD.debug("uploadFile fullPath:{}", storePath.getFullPath());
         //记录上传文件地址
         FDFS_UPLOAD.info("{}", storePath.getFullPath());
         return getResAccessUrl(storePath);
@@ -105,6 +110,44 @@ public class FastDFSClient {
     }
 
     /**
+     * 传图片并同时生成一个缩略图
+     * "JPG", "JPEG", "PNG", "GIF", "BMP", "WBMP"
+     * @param file 文件对象
+     * @return 文件访问地址
+     * @throws IOException
+     */
+    public StorePath uploadImageAndCrtThumbImage(MultipartFile file) throws IOException{
+        StorePath storePath = storageClient.uploadImageAndCrtThumbImage(file.getInputStream(),file.getSize(),
+                FilenameUtils.getExtension(file.getOriginalFilename()),null);
+        return storePath;
+    }
+
+    /**
+     * 传图片并同时生成一个缩略图
+     * "JPG", "JPEG", "PNG", "GIF", "BMP", "WBMP"
+     * @param content 文件路径
+     * @return 文件访问地址
+     * @throws FileNotFoundException
+     */
+    @SuppressWarnings("resource")
+    public StorePath uploadImageAndCrtThumbImage(String content) throws FileNotFoundException {
+        if(!StringUtils.hasText(content)){
+            throw new NullPointerException();
+        }
+        File file = new File(content);
+        FileInputStream inputStream=new FileInputStream(file);
+        String fileName=file.getName();
+        //获取文件后缀名
+        String strs= FilenameUtils.getExtension(fileName);
+        if(!StringUtils.hasText(strs)){
+            throw new NullPointerException();
+        }
+        StorePath storePath = storageClient.uploadImageAndCrtThumbImage(inputStream,file.length(),strs,null);
+        return storePath;
+    }
+
+
+    /**
      * 将一段字符串生成一个文件上传
      *
      * @param content       文件内容
@@ -127,12 +170,7 @@ public class FastDFSClient {
      * @return
      */
     private String getResAccessUrl(StorePath storePath) {
-        String fileRoot = "";
-        if (isHasFastDfsNginx()) {
-            fileRoot = getFastDfsNginx();
-        }
-        String filePath = String.format("%s/%s", fileRoot, storePath.getFullPath());
-        return filePath;
+        return fdfsWebServer.getWebServerUrl()+ storePath.getFullPath();
     }
 
     /**
@@ -142,21 +180,41 @@ public class FastDFSClient {
      * @return
      */
     public void deleteFile(String fileUrl) {
-        logger.debug("FastDFSClient.deleteFile fileUrl:{}", fileUrl);
+        FDFS_UPLOAD.debug("FastDFSClient.deleteFile fileUrl:{}", fileUrl);
         if (StringUtils.isEmpty(fileUrl)) {
             return;
         }
         try {
             StorePath storePath = StorePath.praseFromUrl(fileUrl);
-            logger.info("FastDFSClient.deleteFile storePath group:{}, path:{}",
+            FDFS_UPLOAD.info("FastDFSClient.deleteFile storePath group:{}, path:{}",
                     storePath.getGroup(), storePath.getPath());
             storageClient.deleteFile(storePath.getGroup(), storePath.getPath());
         } catch (FdfsServerException e) {
-            logger.warn("FdfsServerException--->{}", e.getMessage());
+            FDFS_UPLOAD.warn("FdfsServerException--->{}", e.getMessage());
             //ExceptionUtils.business(GlobalErrorCode.UNSUPPORT_STORE_PATH);
         }
     }
 
+    /**
+     *
+     * @Title: downloadFile
+     * @Description: 文件下载
+     * @param groupName
+     * @param path
+     * @return
+     * @return: InputStream
+     */
+    public InputStream downloadFile(String groupName,String path) {
+        try {
+            DownloadByteArray callback = new DownloadByteArray();
+            byte[] bytes = storageClient.downloadFile(groupName, path, callback);
+            InputStream inputStream = new ByteArrayInputStream(bytes);
+            return inputStream;
+        } catch (Exception ex) {
+            FDFS_UPLOAD.error(ex.getMessage());
+            return null;
+        }
+    }
     /**
      * 是否是支持的图片文件
      *
@@ -167,19 +225,4 @@ public class FastDFSClient {
         return SUPPORT_IMAGE_LIST.contains(fileExtName.toUpperCase());
     }
 
-    public boolean isHasFastDfsNginx() {
-        return hasFastDfsNginx;
-    }
-
-    public void setHasFastDfsNginx(boolean hasFastDfsNginx) {
-        this.hasFastDfsNginx = hasFastDfsNginx;
-    }
-
-    public String getFastDfsNginx() {
-        return fastDfsNginx;
-    }
-
-    public void setFastDfsNginx(String fastDfsNginx) {
-        this.fastDfsNginx = fastDfsNginx;
-    }
 }

@@ -1,5 +1,6 @@
 package com.gxd.common;
 
+import com.xiaoleilu.hutool.date.DateUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -18,7 +19,7 @@ public class ApplicationContext implements ServletContextAware {
 
     @Override
     public void setServletContext(ServletContext context) {
-        String datetime = DateUtil.dateToString(Calendar.getInstance().getTime(), DateUtil.fm_yyyyMMddHHmmssSSS);
+        String datetime = DateUtil.format(Calendar.getInstance().getTime(), "yyyy-mm-dd");
         String contextPath = context.getContextPath();
         log.info("# version={} , contextPath={}", datetime, contextPath);
         context.setAttribute("version_css", datetime);
