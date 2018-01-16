@@ -2,6 +2,7 @@ package com.gxd.fastdfs.web;
 
 import com.github.tobato.fastdfs.domain.FileInfo;
 import com.gxd.fastdfs.client.FastDFSClient;
+import com.xiaoleilu.hutool.date.DateUtil;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -15,6 +16,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -100,6 +102,21 @@ public class UploadController {
         return "success";
     }
 
+    @RequestMapping(value = "/modifyFile")
+    @ResponseBody
+    public String modifyFile(){
+        try {
+            String path = "M00/00/00/wKgyJVpbRu-EH67OAAAAAKmTJqU771.txt";
+            File f = new File("E:"  + File.separator + "2.png");
+            InputStream fis = new FileInputStream(f);
+            fastDFSClient.modifyFile("group1", path,fis,f.length(),0);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "false";
+        }
+        return "success";
+    }
+
     @RequestMapping(value = "/queryFileInfo")
     @ResponseBody
     public String queryFileInfo(){
@@ -107,8 +124,8 @@ public class UploadController {
 
         FileInfo fileInfo = fastDFSClient.queryFileInfo("group1",path);
 
-        String res = "创建时间："+fileInfo.getCreateTime()+"/n"
-                +"IP地址："+fileInfo.getSourceIpAddr()+"/n"
+        String res = "创建时间："+ DateUtil.date(fileInfo.getCreateTime())+","
+                +"IP地址："+fileInfo.getSourceIpAddr()+","
                 +"文件大小："+fileInfo.getFileSize();
         return res;
     }

@@ -6,6 +6,7 @@ import com.github.tobato.fastdfs.domain.FileInfo;
 import com.github.tobato.fastdfs.domain.StorePath;
 import com.github.tobato.fastdfs.exception.FdfsServerException;
 import com.github.tobato.fastdfs.proto.storage.DownloadByteArray;
+import com.github.tobato.fastdfs.service.AppendFileStorageClient;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.Validate;
@@ -43,6 +44,9 @@ public class FastDFSClient {
     private FastFileStorageClient storageClient;
 
     @Autowired
+    protected AppendFileStorageClient appendFileStorageClient;
+
+    @Autowired
     private FdfsWebServer fdfsWebServer;
 
 
@@ -57,6 +61,23 @@ public class FastDFSClient {
      */
     public String upload(InputStream is, long fileSize, String fileExtName) throws IOException {
         StorePath storePath = storageClient.uploadFile(is, fileSize, fileExtName, null);
+        FDFS_UPLOAD.debug("uploadFile fullPath:{}", storePath.getFullPath());
+        //记录上传文件地址
+        FDFS_UPLOAD.info("{}", storePath.getFullPath());
+        return getResAccessUrl(storePath);
+    }
+
+    /**
+     * 上传文件
+     * @param multipartFile
+     * @return
+     * @throws IOException
+     */
+    public String upload(MultipartFile multipartFile) throws IOException {
+        String fileName = multipartFile.getOriginalFilename();
+        long fileSize = multipartFile.getSize();
+        InputStream is = multipartFile.getInputStream();
+        StorePath storePath = storageClient.uploadFile(is, fileSize, fileName, null);
         FDFS_UPLOAD.debug("uploadFile fullPath:{}", storePath.getFullPath());
         //记录上传文件地址
         FDFS_UPLOAD.info("{}", storePath.getFullPath());
@@ -229,6 +250,55 @@ public class FastDFSClient {
         return storageClient.queryFileInfo(groupName, path);
 
     }
+
+    /**
+     * 上传支持断点续传的文件
+     *
+     * @param groupName
+     * @param inputStream
+     * @param fileSize
+     * @param fileExtName
+     * @return
+     */
+    public StorePath uploadAppenderFile(String groupName, InputStream inputStream, long fileSize, String fileExtName){
+        return appendFileStorageClient.uploadAppenderFile(groupName,inputStream,fileSize,fileExtName);
+    }
+
+    /**
+     * 断点续传文件
+     *
+     * @param groupName
+     * @param path
+     * @param inputStream
+     * @param fileSize
+     */
+    public void appendFile(String groupName, String path, InputStream inputStream, long fileSize){
+        appendFileStorageClient.appendFile(groupName,path,inputStream,fileSize);
+    }
+
+    /**
+     * 修改续传文件的内容
+     *
+     * @param groupName
+     * @param path
+     * @param inputStream
+     * @param fileSize
+     * @param fileOffset
+     */
+    public void modifyFile(String groupName, String path, InputStream inputStream, long fileSize, long fileOffset){
+        appendFileStorageClient.modifyFile(groupName,path,inputStream,fileSize,fileOffset);
+    }
+
+    /**
+     * 清除续传类型文件的内容
+     *
+     * @param groupName
+     * @param path
+     */
+    public void truncateFile(String groupName, String path){
+        appendFileStorageClient.truncateFile(groupName,path,0);
+    }
+
 
     /**
      * 是否是支持的图片文件
