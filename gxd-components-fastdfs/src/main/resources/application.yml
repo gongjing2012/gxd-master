@@ -1,0 +1,44 @@
+##start fastdfs
+#----------------------------------------------
+spring:
+  application:
+    name: gxd-components-fastdfs
+  freemarker:
+    request-context-attribute: request
+    allow-request-override: false
+    allow-session-override: false
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: true
+    prefer-file-system-access: true
+    suffix: .ftl
+    template-loader-path: classpath:/templates/
+    settings.template_update_delay: 0
+    settings.default_encoding: UTF-8
+    settings.classic_compatible: true
+    order: 1
+#  jmx:
+#    enabled:  false
+fdfs:
+  so-timeout:  3500
+  connect-timeout: 6000
+  thumbImage:
+      width: 150
+      height: 150
+  trackerList:
+    - 192.168.50.36:22122
+    - 192.168.50.37:22122
+  webServerUrl: http://192.168.50.253/
+  pool:
+      #从池中借出的对象的最大数目
+      maxTotal: 153
+     #获取连接时的最大等待毫秒数100
+      maxWaitMillis: 102
+      jmx-enabled:  false
+logging:
+  config: classpath:conf/log4j2.xml
