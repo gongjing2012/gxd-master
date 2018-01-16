@@ -2,10 +2,10 @@ package com.gxd.fastdfs.client;
 
 
 import com.github.tobato.fastdfs.conn.FdfsWebServer;
+import com.github.tobato.fastdfs.domain.FileInfo;
 import com.github.tobato.fastdfs.domain.StorePath;
 import com.github.tobato.fastdfs.exception.FdfsServerException;
 import com.github.tobato.fastdfs.proto.storage.DownloadByteArray;
-import com.github.tobato.fastdfs.service.AppendFileStorageClient;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.Validate;
@@ -22,6 +22,12 @@ import java.util.Arrays;
 import java.util.List;
 
 
+/**
+ * @Author:gxd
+ * @Description:上传下载组件
+ * @Date: 19:16 2018/1/13
+ * @Modified By:
+ */
 @Component
 public class FastDFSClient {
 
@@ -35,9 +41,6 @@ public class FastDFSClient {
 
     @Autowired
     private FastFileStorageClient storageClient;
-
-    @Autowired
-    protected AppendFileStorageClient storageClient1;
 
     @Autowired
     private FdfsWebServer fdfsWebServer;
@@ -215,6 +218,18 @@ public class FastDFSClient {
             return null;
         }
     }
+
+    /**
+     * 查询文件信息
+     * @param groupName
+     * @param path
+     * @return
+     */
+    public FileInfo queryFileInfo(String groupName,String path){
+        return storageClient.queryFileInfo(groupName, path);
+
+    }
+
     /**
      * 是否是支持的图片文件
      *

@@ -1,5 +1,6 @@
 package com.gxd.fastdfs.web;
 
+import com.github.tobato.fastdfs.domain.FileInfo;
 import com.gxd.fastdfs.client.FastDFSClient;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -87,15 +88,28 @@ public class UploadController {
     @ResponseBody
     public String download(){
         try {
-            String path = "M00/00/00/wKgyJVpbR0KAIUcRAADJbd1CckA011.jpg";
+            String path = "M00/00/00/wKgyJVpbRu-EH67OAAAAAKmTJqU771.txt";
             InputStream inputStream = fastDFSClient.downloadFile("group1", path);
             System.out.println(inputStream);
-            File destFile = new File("E:/tmp/1.jpg");
+            File destFile = new File("E:/tmp/37.txt");
             FileUtils.copyInputStreamToFile(inputStream, destFile);
         } catch (Exception e) {
             e.printStackTrace();
             return "false";
         }
         return "success";
+    }
+
+    @RequestMapping(value = "/queryFileInfo")
+    @ResponseBody
+    public String queryFileInfo(){
+        String path = "M00/00/00/wKgyJVpbRu-EH67OAAAAAKmTJqU771.txt";
+
+        FileInfo fileInfo = fastDFSClient.queryFileInfo("group1",path);
+
+        String res = "创建时间："+fileInfo.getCreateTime()+"/n"
+                +"IP地址："+fileInfo.getSourceIpAddr()+"/n"
+                +"文件大小："+fileInfo.getFileSize();
+        return res;
     }
 }
