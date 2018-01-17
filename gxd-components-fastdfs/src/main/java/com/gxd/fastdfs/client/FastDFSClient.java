@@ -3,11 +3,13 @@ package com.gxd.fastdfs.client;
 
 import com.github.tobato.fastdfs.conn.FdfsWebServer;
 import com.github.tobato.fastdfs.domain.FileInfo;
+import com.github.tobato.fastdfs.domain.MateData;
 import com.github.tobato.fastdfs.domain.StorePath;
 import com.github.tobato.fastdfs.exception.FdfsServerException;
 import com.github.tobato.fastdfs.proto.storage.DownloadByteArray;
 import com.github.tobato.fastdfs.service.AppendFileStorageClient;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
+import com.xiaoleilu.hutool.date.DateUtil;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.Validate;
 import org.slf4j.Logger;
@@ -19,8 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
 import java.nio.charset.Charset;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 
 /**
@@ -60,13 +61,22 @@ public class FastDFSClient {
      * @throws IOException
      */
     public String upload(InputStream is, long fileSize, String fileExtName) throws IOException {
-        StorePath storePath = storageClient.uploadFile(is, fileSize, fileExtName, null);
+        Set<MateData> metaDataSet = createMateData();
+        //获取文件的扩展名
+        String strs = FilenameUtils.getExtension(fileExtName);
+        StorePath storePath = storageClient.uploadFile(is, fileSize, strs, metaDataSet);
         FDFS_UPLOAD.debug("uploadFile fullPath:{}", storePath.getFullPath());
         //记录上传文件地址
         FDFS_UPLOAD.info("{}", storePath.getFullPath());
         return getResAccessUrl(storePath);
     }
 
+    private Set<MateData> createMateData() {
+        Set<MateData> metaDataSet = new HashSet<MateData>();
+        metaDataSet.add(new MateData("Author", "xdth"));
+        metaDataSet.add(new MateData("CreateDate", DateUtil.format(new Date(),"yyyy-mm-dd")));
+        return metaDataSet;
+    }
     /**
      * 上传文件
      * @param multipartFile

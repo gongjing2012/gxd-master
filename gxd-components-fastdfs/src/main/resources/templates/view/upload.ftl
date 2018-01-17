@@ -1,4 +1,4 @@
-njh mkj8u7y65tr4e3wsqa<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
