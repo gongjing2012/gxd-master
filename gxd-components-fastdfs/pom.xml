@@ -22,9 +22,17 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<commons-httpclient.version>3.1</commons-httpclient.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.gxd</groupId>
+			<artifactId>gxd-commons</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>D:/.m2/repository/com/gxd/gxd-commons/1.0-SNAPSHOT/gxd-commons-1.0-SNAPSHOT.jar</systemPath>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -72,6 +80,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>${commons-httpclient.version}</version>
 		</dependency>
 	</dependencies>
 

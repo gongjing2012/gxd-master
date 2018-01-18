@@ -188,7 +188,7 @@ public class ProducerController {
         try {
             sendResult = transactionMQProducer.send(msg);
         } catch (Exception e) {
-            throw new MQClientException("send message Exception", e);
+            throw new MQClientException("send message exception", e);
         }
         LocalTransactionState localTransactionState = LocalTransactionState.UNKNOW;
         switch (sendResult.getSendStatus()) {

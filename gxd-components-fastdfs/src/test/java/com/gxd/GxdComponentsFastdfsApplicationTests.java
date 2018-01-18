@@ -65,7 +65,7 @@
 //		//	String uploadPath = getResAccessUrl(storePath);
 //		//	System.out.println("上传文件路径："+uploadPath);
 //        //
-//		//} catch (Exception e) {
+//		//} catch (exception e) {
 //		//	e.printStackTrace();
 //		//}
 //	}

@@ -9,6 +9,7 @@ import com.github.tobato.fastdfs.exception.FdfsServerException;
 import com.github.tobato.fastdfs.proto.storage.DownloadByteArray;
 import com.github.tobato.fastdfs.service.AppendFileStorageClient;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
+import com.gxd.fastdfs.exception.BusinessException;
 import com.xiaoleilu.hutool.date.DateUtil;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.Validate;
@@ -63,8 +64,8 @@ public class FastDFSClient {
     public String upload(InputStream is, long fileSize, String fileExtName) throws IOException {
         Set<MateData> metaDataSet = createMateData();
         //获取文件的扩展名
-        String strs = FilenameUtils.getExtension(fileExtName);
-        StorePath storePath = storageClient.uploadFile(is, fileSize, strs, metaDataSet);
+        String extension = FilenameUtils.getExtension(fileExtName);
+        StorePath storePath = storageClient.uploadFile(is, fileSize, extension, metaDataSet);
         FDFS_UPLOAD.debug("uploadFile fullPath:{}", storePath.getFullPath());
         //记录上传文件地址
         FDFS_UPLOAD.info("{}", storePath.getFullPath());
@@ -74,7 +75,7 @@ public class FastDFSClient {
     private Set<MateData> createMateData() {
         Set<MateData> metaDataSet = new HashSet<MateData>();
         metaDataSet.add(new MateData("Author", "xdth"));
-        metaDataSet.add(new MateData("CreateDate", DateUtil.format(new Date(),"yyyy-mm-dd")));
+        metaDataSet.add(new MateData("CreateDate", DateUtil.format(new Date(),"yyyy-MM-dd")));
         return metaDataSet;
     }
     /**
@@ -138,7 +139,7 @@ public class FastDFSClient {
         Validate.notBlank(fileExtName, "文件扩展名不能为空");
         // 检查是否能处理此类图片
         if (!isSupportImage(fileExtName)) {
-            //throw new Exception();
+            throw new BusinessException("-1","上传图片格式不对");
         }
         return uploadImage(inputStream, fileSize, fileExtName);
     }
@@ -213,20 +214,15 @@ public class FastDFSClient {
      * @param fileUrl 文件访问地址
      * @return
      */
-    public void deleteFile(String fileUrl) {
+    public void deleteFile(String fileUrl) throws FdfsServerException{
         FDFS_UPLOAD.debug("FastDFSClient.deleteFile fileUrl:{}", fileUrl);
         if (StringUtils.isEmpty(fileUrl)) {
             return;
         }
-        try {
-            StorePath storePath = StorePath.praseFromUrl(fileUrl);
-            FDFS_UPLOAD.info("FastDFSClient.deleteFile storePath group:{}, path:{}",
-                    storePath.getGroup(), storePath.getPath());
-            storageClient.deleteFile(storePath.getGroup(), storePath.getPath());
-        } catch (FdfsServerException e) {
-            FDFS_UPLOAD.warn("FdfsServerException--->{}", e.getMessage());
-            //ExceptionUtils.business(GlobalErrorCode.UNSUPPORT_STORE_PATH);
-        }
+        StorePath storePath = StorePath.praseFromUrl(fileUrl);
+        FDFS_UPLOAD.info("FastDFSClient.deleteFile storePath group:{}, path:{}",
+                storePath.getGroup(), storePath.getPath());
+        storageClient.deleteFile(storePath.getGroup(), storePath.getPath());
     }
 
     /**
@@ -238,16 +234,11 @@ public class FastDFSClient {
      * @return
      * @return: InputStream
      */
-    public InputStream downloadFile(String groupName,String path) {
-        try {
-            DownloadByteArray callback = new DownloadByteArray();
-            byte[] bytes = storageClient.downloadFile(groupName, path, callback);
-            InputStream inputStream = new ByteArrayInputStream(bytes);
-            return inputStream;
-        } catch (Exception ex) {
-            FDFS_UPLOAD.error(ex.getMessage());
-            return null;
-        }
+    public InputStream downloadFile(String groupName,String path) throws Exception{
+        DownloadByteArray callback = new DownloadByteArray();
+        byte[] bytes = storageClient.downloadFile(groupName, path, callback);
+        InputStream inputStream = new ByteArrayInputStream(bytes);
+        return inputStream;
     }
 
     /**
