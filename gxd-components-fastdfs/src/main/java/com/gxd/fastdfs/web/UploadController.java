@@ -22,6 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -96,6 +97,8 @@ public class UploadController {
             } catch (IOException e) {
                 logger.error("上传失败："+e.getMessage());
                 return "上传失败," + e.getMessage();
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
             }
             long end = System.currentTimeMillis();
             logger.debug("end:"+end);
@@ -187,7 +190,9 @@ public class UploadController {
         }catch (IOException e){
             result.put("result","false");
             logger.error("file:"+fileName,e.fillInStackTrace());
-        }finally {
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } finally {
             if (is !=null){
                 try {
                     is.close();
@@ -237,6 +242,8 @@ public class UploadController {
             result.setSuccess(false);
             result.setMessage("上传出现异常：" + e.getMessage());
             return result;
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
         }
         result.setData("filePath", filePath);
         result.setState(0);

@@ -8,11 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-sever" />
         <module name="gxd-api-gateway" />
+        <module name="gxd-apollo-config" />
         <module name="gxd-commons" />
         <module name="gxd-components-fastdfs" />
         <module name="gxd-components-redis" />
         <module name="gxd-components-rocketmq" />
-        <module name="gxd-config-server" />
         <module name="gxd-consumer-freemarker" />
         <module name="gxd-consumer-permission" />
         <module name="gxd-consumer-thymeleaf" />
@@ -27,6 +27,7 @@
     <bytecodeTargetLevel>
       <module name="eureka-sever" target="1.8" />
       <module name="gxd-api-gateway" target="1.8" />
+      <module name="gxd-apollo-config" target="1.8" />
       <module name="gxd-commons" target="1.8" />
       <module name="gxd-components-fastdfs" target="1.8" />
       <module name="gxd-components-redis" target="1.8" />

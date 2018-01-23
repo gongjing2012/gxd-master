@@ -36,6 +36,16 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-feign</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>spring-cloud-commons</artifactId>
+					<groupId>org.springframework.cloud</groupId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-context</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>

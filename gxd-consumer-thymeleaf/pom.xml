@@ -41,19 +41,63 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>spring-cloud-netflix-core</artifactId>
+					<groupId>org.springframework.cloud</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>spring-cloud-commons</artifactId>
+					<groupId>org.springframework.cloud</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>guice</artifactId>
+					<groupId>com.google.inject</groupId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-context</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-ribbon</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>spring-cloud-netflix-core</artifactId>
+					<groupId>org.springframework.cloud</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-feign</artifactId>
-		</dependency>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-cloud-commons</artifactId>
+                    <groupId>org.springframework.cloud</groupId>
+                </exclusion>
+				<exclusion>
+					<artifactId>spring-cloud-netflix-core</artifactId>
+					<groupId>org.springframework.cloud</groupId>
+				</exclusion>
+			</exclusions>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-hystrix</artifactId>
-		</dependency>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-cloud-netflix-core</artifactId>
+                    <groupId>org.springframework.cloud</groupId>
+                </exclusion>
+				<exclusion>
+					<artifactId>commons-lang3</artifactId>
+					<groupId>org.apache.commons</groupId>
+				</exclusion>
+			</exclusions>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
@@ -94,6 +138,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>asm</artifactId>
+					<groupId>org.ow2.asm</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -115,6 +165,12 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-netflix-hystrix-dashboard</artifactId>
 			<version>RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>spring-cloud-netflix-core</artifactId>
+					<groupId>org.springframework.cloud</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 

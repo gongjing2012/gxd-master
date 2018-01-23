@@ -15,6 +15,7 @@
 		<!-- 定义控制台输出 -->
 		<Console name="Console" target="SYSTEM_OUT" follow="true">
 			<PatternLayout pattern="${PATTERN_FORMAT}" />
+			<charset>UTF-8</charset>
 		</Console>
 
 		<!-- 应用日志 -->
@@ -23,6 +24,7 @@
 			<Policies>
 				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
 			</Policies>
+			<charset>UTF-8</charset>
 		</RollingRandomAccessFile>
 	</appenders>
 

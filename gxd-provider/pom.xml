@@ -45,10 +45,38 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>guice</artifactId>
+					<groupId>com.google.inject</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>spring-cloud-commons</artifactId>
+					<groupId>org.springframework.cloud</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>spring-cloud-context</artifactId>
+					<groupId>org.springframework.cloud</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>spring-cloud-netflix-core</artifactId>
+					<groupId>org.springframework.cloud</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-commons</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-context</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<!--mybatis -->
 		<dependency>
@@ -59,6 +87,14 @@
 				<exclusion>
 					<groupId>ch.qos.logback</groupId>
 					<artifactId>logback-classic</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-commons</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-context</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
@@ -99,7 +135,17 @@
 			<optional>true</optional>
 			<scope>true</scope>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-commons</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-commons</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+    </dependencies>
 
 	<dependencyManagement>
 		<dependencies>

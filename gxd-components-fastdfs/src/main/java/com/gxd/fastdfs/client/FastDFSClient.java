@@ -9,6 +9,7 @@ import com.github.tobato.fastdfs.exception.FdfsServerException;
 import com.github.tobato.fastdfs.proto.storage.DownloadByteArray;
 import com.github.tobato.fastdfs.service.AppendFileStorageClient;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
+import com.gxd.fastdfs.config.FastDfsAntiLeechConfig;
 import com.gxd.fastdfs.exception.BusinessException;
 import com.xiaoleilu.hutool.date.DateUtil;
 import org.apache.commons.io.FilenameUtils;
@@ -22,6 +23,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
 import java.nio.charset.Charset;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 
@@ -42,6 +45,8 @@ public class FastDFSClient {
 
     private static final List<String> SUPPORT_IMAGE_LIST = Arrays.asList(SUPPORT_IMAGE_TYPE);
 
+    public static String G_CHARSET = "UTF-8";
+
     @Autowired
     private FastFileStorageClient storageClient;
 
@@ -51,7 +56,8 @@ public class FastDFSClient {
     @Autowired
     private FdfsWebServer fdfsWebServer;
 
-
+    @Autowired
+    private FastDfsAntiLeechConfig fastDfsAntiLeechConfig;
 
     /**
      * 上传文件
@@ -61,7 +67,7 @@ public class FastDFSClient {
      * @return 文件访问地址
      * @throws IOException
      */
-    public String upload(InputStream is, long fileSize, String fileExtName) throws IOException {
+    public String upload(InputStream is, long fileSize, String fileExtName) throws IOException, NoSuchAlgorithmException {
         Set<MateData> metaDataSet = createMateData();
         //获取文件的扩展名
         String extension = FilenameUtils.getExtension(fileExtName);
@@ -69,6 +75,11 @@ public class FastDFSClient {
         FDFS_UPLOAD.debug("uploadFile fullPath:{}", storePath.getFullPath());
         //记录上传文件地址
         FDFS_UPLOAD.info("{}", storePath.getFullPath());
+        int ts = (int) (System.currentTimeMillis()/1000);
+        if(fastDfsAntiLeechConfig.isCheckToken()){
+            String token = getToken(storePath.getPath(), ts, fastDfsAntiLeechConfig.getSecretKey());
+            return getResAccessUrl(storePath)+"?ts="+ts+"&token="+token;
+        }
         return getResAccessUrl(storePath);
     }
 
@@ -310,5 +321,49 @@ public class FastDFSClient {
     private boolean isSupportImage(String fileExtName) {
         return SUPPORT_IMAGE_LIST.contains(fileExtName.toUpperCase());
     }
+
+    /**
+     * md5 加密
+     * @param source
+     * @return
+     * @throws NoSuchAlgorithmException
+     */
+    public static String md5(byte[] source) throws NoSuchAlgorithmException {
+        char[] hexDigits = new char[]{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+        MessageDigest md = MessageDigest.getInstance("MD5");
+        md.update(source);
+        byte[] tmp = md.digest();
+        char[] str = new char[32];
+        int k = 0;
+
+        for(int i = 0; i < 16; ++i) {
+            str[k++] = hexDigits[tmp[i] >>> 4 & 15];
+            str[k++] = hexDigits[tmp[i] & 15];
+        }
+
+        return new String(str);
+    }
+
+    /**
+     * 获取token
+     * @param remoteFilename
+     * @param ts
+     * @param secretKey
+     * @return
+     * @throws UnsupportedEncodingException
+     * @throws NoSuchAlgorithmException
+     * @throws BusinessException
+     */
+    public static String getToken(String remoteFilename, int ts, String secretKey) throws UnsupportedEncodingException, NoSuchAlgorithmException,BusinessException {
+        byte[] bsFilename = remoteFilename.getBytes(G_CHARSET);
+        byte[] bsKey = secretKey.getBytes(G_CHARSET);
+        byte[] bsTimestamp = (new Integer(ts)).toString().getBytes(G_CHARSET);
+        byte[] buff = new byte[bsFilename.length + bsKey.length + bsTimestamp.length];
+        System.arraycopy(bsFilename, 0, buff, 0, bsFilename.length);
+        System.arraycopy(bsKey, 0, buff, bsFilename.length, bsKey.length);
+        System.arraycopy(bsTimestamp, 0, buff, bsFilename.length + bsKey.length, bsTimestamp.length);
+        return md5(buff);
+    }
+
 
 }

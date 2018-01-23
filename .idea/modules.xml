@@ -3,11 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/gxd-api-gateway/gxd-api-gateway.iml" filepath="$PROJECT_DIR$/gxd-api-gateway/gxd-api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxd-apollo-config/gxd-apollo-config.iml" filepath="$PROJECT_DIR$/gxd-apollo-config/gxd-apollo-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxd-commons/gxd-commons.iml" filepath="$PROJECT_DIR$/gxd-commons/gxd-commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxd-components-fastdfs/gxd-components-fastdfs.iml" filepath="$PROJECT_DIR$/gxd-components-fastdfs/gxd-components-fastdfs.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxd-components-redis/gxd-components-redis.iml" filepath="$PROJECT_DIR$/gxd-components-redis/gxd-components-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxd-components-rocketmq/gxd-components-rocketmq.iml" filepath="$PROJECT_DIR$/gxd-components-rocketmq/gxd-components-rocketmq.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gxd-config-server/gxd-config-server.iml" filepath="$PROJECT_DIR$/gxd-config-server/gxd-config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxd-consumer-freemarker/gxd-consumer-freemarker.iml" filepath="$PROJECT_DIR$/gxd-consumer-freemarker/gxd-consumer-freemarker.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxd-consumer-permission/gxd-consumer-permission.iml" filepath="$PROJECT_DIR$/gxd-consumer-permission/gxd-consumer-permission.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxd-consumer-thymeleaf/gxd-consumer-thymeleaf.iml" filepath="$PROJECT_DIR$/gxd-consumer-thymeleaf/gxd-consumer-thymeleaf.iml" />

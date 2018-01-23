@@ -42,22 +42,84 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>
+            <exclusions>
+                <exclusion>
+                    <artifactId>guice</artifactId>
+                    <groupId>com.google.inject</groupId>
+                </exclusion>
+					<exclusion>
+						<artifactId>spring-cloud-commons</artifactId>
+						<groupId>org.springframework.cloud</groupId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.springframework.cloud</groupId>
+						<artifactId>spring-cloud-context</artifactId>
+					</exclusion>
+            </exclusions>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-ribbon</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>spring-cloud-commons</artifactId>
+					<groupId>org.springframework.cloud</groupId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-context</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-feign</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>spring-cloud-commons</artifactId>
+					<groupId>org.springframework.cloud</groupId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-context</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-hystrix</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-lang3</artifactId>
+					<groupId>org.apache.commons</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>spring-cloud-commons</artifactId>
+					<groupId>org.springframework.cloud</groupId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-context</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-lang3</artifactId>
+					<groupId>org.apache.commons</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>spring-cloud-commons</artifactId>
+					<groupId>org.springframework.cloud</groupId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-context</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<!-- SpringBoot -->

@@ -3,14 +3,21 @@ package com.gxd.redis.config;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.interceptor.KeyGenerator;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.data.redis.cache.RedisCacheManager;
+import org.springframework.data.redis.connection.RedisClusterConfiguration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
@@ -26,7 +33,13 @@ import java.lang.reflect.Method;
 @Configuration
 @EnableCaching//启用缓存的意思
 public class CacheConfig extends CachingConfigurerSupport {
-/**
+    private static final Logger logger = LoggerFactory.getLogger(CacheConfig.class);
+
+    @SuppressWarnings("SpringJavaAutowiringInspection") //加这个注解让IDE 不报: Could not autowire
+    @Autowired
+    private ClusterConfigurationProperties clusterProperties;
+
+    /**
  * 自定义key. 这个可以不用
  * 此方法将会根据类名+方法名+所有参数的值生成唯一的一个key,即使@Cacheable中的value属性一样，key也会不一样。
  */
@@ -60,28 +73,24 @@ public class CacheConfig extends CachingConfigurerSupport {
         rcm.setExpires(map);*/
         return rcm;
     }
+
+
+    @Bean(name="redisConnection")
+    public RedisConnectionFactory connectionFactory() {
+        RedisClusterConfiguration redisClusterConfiguration = new RedisClusterConfiguration(clusterProperties.getNodes());
+        redisClusterConfiguration.setMaxRedirects(clusterProperties.getMaxRedirects());
+        logger.info("load redis cluster success {} ", clusterProperties.getNodes().toString());
+        return new JedisConnectionFactory(redisClusterConfiguration);
+    }
+
     /**
      * RedisTemplate配置
      * @param factory
      * @return
      */
     @Bean
+    @Lazy(true)
     public RedisTemplate<String, String> redisTemplate(RedisConnectionFactory factory) {
-        //StringRedisTemplate template = new StringRedisTemplate(factory);
-        ////定义key序列化方式
-        ////RedisSerializer<String> redisSerializer = new StringRedisSerializer();//Long类型会出现异常信息;需要我们上面的自定义key生成策略，一般没必要
-        ////定义value的序列化方式
-        //Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);
-        //ObjectMapper om = new ObjectMapper();
-        //om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
-        //om.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
-        //jackson2JsonRedisSerializer.setObjectMapper(om);
-        //
-        //// template.setKeySerializer(redisSerializer);
-        //template.setValueSerializer(jackson2JsonRedisSerializer);
-        //template.setHashValueSerializer(jackson2JsonRedisSerializer);
-        //template.afterPropertiesSet();
-        //return template;
         RedisTemplate redisTemplate = new RedisTemplate();
         redisTemplate.setConnectionFactory(factory);
         /**Jackson序列化  json占用的内存最小 */
@@ -101,6 +110,7 @@ public class CacheConfig extends CachingConfigurerSupport {
         redisTemplate.setHashKeySerializer(stringRedisSerializer);
         redisTemplate.setHashValueSerializer(jackson2JsonRedisSerializer);
         redisTemplate.afterPropertiesSet();
+        logger.debug("RedisTemplate 初始化成功......");
         return redisTemplate;
     }
 }

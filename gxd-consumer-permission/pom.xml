@@ -48,7 +48,17 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-netflix-hystrix-dashboard</artifactId>
 			<version>RELEASE</version>
-		</dependency>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-cloud-commons</artifactId>
+                    <groupId>org.springframework.cloud</groupId>
+                </exclusion>
+				<exclusion>
+					<artifactId>spring-cloud-netflix-core</artifactId>
+					<groupId>org.springframework.cloud</groupId>
+				</exclusion>
+			</exclusions>
+        </dependency>
 	</dependencies>
 
 	<build>

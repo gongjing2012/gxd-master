@@ -1,5 +1,6 @@
 package com.gxd;
 
+import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,6 +14,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableDiscoveryClient //向Eureka注册
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+@EnableApolloConfig
 @ComponentScan
 public class GxdSsoApplication {
 

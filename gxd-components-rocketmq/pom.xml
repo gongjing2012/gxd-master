@@ -35,7 +35,13 @@
 			<groupId>com.alibaba.rocketmq</groupId>
 			<artifactId>rocketmq-common</artifactId>
 			<version>${rocketmq.version}</version>
-		</dependency>
+            <exclusions>
+                <exclusion>
+                    <artifactId>fastjson</artifactId>
+                    <groupId>com.alibaba</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
