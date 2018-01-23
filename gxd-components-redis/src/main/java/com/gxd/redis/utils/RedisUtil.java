@@ -4,6 +4,7 @@ import com.ctrip.framework.apollo.model.ConfigChangeEvent;
 import com.ctrip.framework.apollo.spring.annotation.ApolloConfigChangeListener;
 import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import com.google.common.base.Strings;
+import com.gxd.redis.config.ClusterConfigurationProperties;
 import com.gxd.utils.FastJsonUtils;
 import com.hazelcast.config.CacheConfig;
 import org.slf4j.Logger;
@@ -58,7 +59,7 @@ public class RedisUtil {
         //context.getEnvironment().setActiveProfiles("refresh");
         //ContextRefresher refresher = new ContextRefresher(context, refreshScope);
         //refresher.refresh();
-        logger.info("before refresh: " + clusterProperties.getNodes() + " , " + clusterProperties.getMaxRedirects());
+        logger.info("before refresh: " + clusterConfigurationProperties.getNodes() + " , " + clusterConfigurationProperties.getMaxRedirects());
         refreshScope.refresh("clusterConfigurationProperties");
         ConfigurableApplicationContext context = SpringApplication.run(CacheConfig.class,
                 "--spring.main.webEnvironment=false", "--debug=false",
@@ -66,7 +67,7 @@ public class RedisUtil {
         context.getEnvironment().setActiveProfiles("refresh");
         ContextRefresher refresher = new ContextRefresher(context, refreshScope);
         refresher.refresh();
-        logger.info("after refresh: " + clusterProperties.getNodes() + " , " + clusterProperties.getMaxRedirects());
+        logger.info("after refresh: " + clusterConfigurationProperties.getNodes() + " , " + clusterConfigurationProperties.getMaxRedirects());
     }
 
 

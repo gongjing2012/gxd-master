@@ -37,8 +37,8 @@ public class RedisClusterProperties {
     @PostConstruct
     private void initialize() {
         logger.info(
-                "RedisClusterProperties initialized - timeout: {}, nodes: {}, maxAttempts: {}",
-                timeout, nodes, maxAttempts);
+                "RedisClusterProperties initialized - timeout: {}, nodes: {}, maxAttempts: {}, maxRedirects: {}",
+                timeout, nodes, maxAttempts,maxRedirects);
     }
     public List<String> getNodes() {
         return nodes;
