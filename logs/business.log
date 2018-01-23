@@ -794,3 +794,23 @@ java.net.SocketTimeoutException: Read timed out
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
 2018/01/23 14:10:44,877 DEBUG  commons-pool-evictor-thread com.github.tobato.fastdfs.conn.DefaultConnection.close(DefaultConnection.java:59) - disconnect from Socket[addr=/192.168.50.36,port=22122,localport=65090]
 2018/01/23 14:10:44,888 DEBUG  commons-pool-evictor-thread com.github.tobato.fastdfs.conn.DefaultConnection.isValid(DefaultConnection.java:91) - check connection status of com.github.tobato.fastdfs.conn.DefaultConnection@2c21bc3d 
+2018/01/23 14:10:48,389 ERROR  commons-pool-evictor-thread com.github.tobato.fastdfs.conn.DefaultConnection.isValid(DefaultConnection.java:107) - valid connection error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.8.0_152]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[?:1.8.0_152]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[?:1.8.0_152]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_152]
+	at java.net.SocketInputStream.read(SocketInputStream.java:127) ~[?:1.8.0_152]
+	at com.github.tobato.fastdfs.conn.DefaultConnection.isValid(DefaultConnection.java:101) [fastdfs-client-1.25.4-RELEASE.jar:1.25.4-RELEASE]
+	at com.github.tobato.fastdfs.conn.PooledConnectionFactory.validateObject(PooledConnectionFactory.java:86) [fastdfs-client-1.25.4-RELEASE.jar:1.25.4-RELEASE]
+	at com.github.tobato.fastdfs.conn.PooledConnectionFactory.validateObject(PooledConnectionFactory.java:24) [fastdfs-client-1.25.4-RELEASE.jar:1.25.4-RELEASE]
+	at org.apache.commons.pool2.impl.GenericKeyedObjectPool.evict(GenericKeyedObjectPool.java:966) [commons-pool2-2.5.0.jar:2.5.0]
+	at org.apache.commons.pool2.impl.BaseGenericObjectPool$Evictor.run(BaseGenericObjectPool.java:1077) [commons-pool2-2.5.0.jar:2.5.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_152]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) [?:1.8.0_152]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) [?:1.8.0_152]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) [?:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_152]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
+2018/01/23 14:10:48,389 DEBUG  commons-pool-evictor-thread com.github.tobato.fastdfs.conn.DefaultConnection.close(DefaultConnection.java:59) - disconnect from Socket[addr=/192.168.50.37,port=23000,localport=65091]
