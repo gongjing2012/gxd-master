@@ -71,6 +71,9 @@ public class FastDFSClient {
         Set<MateData> metaDataSet = createMateData();
         //获取文件的扩展名
         String extension = FilenameUtils.getExtension(fileExtName);
+        if(StringUtils.isEmpty(extension)){
+            extension ="jpg";
+        }
         StorePath storePath = storageClient.uploadFile(is, fileSize, extension, metaDataSet);
         FDFS_UPLOAD.debug("uploadFile fullPath:{}", storePath.getFullPath());
         //记录上传文件地址

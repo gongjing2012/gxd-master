@@ -5,8 +5,16 @@ server:
   port: 8040
 eureka:
   instance:
-    hostname: localhost   # 指定该Eureka实例的主机名
+    hostname: localhost
     prefer-ip-address: true
   client:
     serviceUrl:
       defaultZone:  http://localhost:1111/eureka/
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId:  gxd-permission-consumer
+    api-b:
+      path: /api-b/**
+      serviceId:  gxd-feign

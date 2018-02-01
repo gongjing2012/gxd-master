@@ -160,6 +160,16 @@
 			<optional>true</optional>
 			<scope>true</scope>
 		</dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-commons</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-commons</artifactId>
+			<version>RELEASE</version>
+		</dependency>
 	</dependencies>
 
 

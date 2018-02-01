@@ -2,7 +2,7 @@ package com.gxd.fastdfs.web;
 
 import com.github.tobato.fastdfs.domain.FileInfo;
 import com.gxd.fastdfs.client.FastDFSClient;
-import com.gxd.fastdfs.utils.Result;
+import com.gxd.model.Result;
 import com.xiaoleilu.hutool.date.DateUtil;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -229,12 +229,23 @@ public class UploadController {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             ////设置请求方式为"GET"
             //conn.setRequestMethod("GET");
-            ////超时响应时间为5秒
+            ////超时响应时间为30秒
             conn.setConnectTimeout(30 * 1000);
+            conn.setRequestProperty("Accept-Encoding", "identity");
             //通过输入流获取图片数据
             inputStream = conn.getInputStream();
-            size = inputStream.available();
-            filePath = fastDFSClient.upload(inputStream, size, path);
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            byte[] buffer = new byte[1024];
+            int len;
+            while ((len = inputStream.read(buffer)) > -1 ) {
+                baos.write(buffer, 0, len);
+                size+=len;
+            }
+            baos.flush();
+            InputStream inputStream2 = new ByteArrayInputStream(baos.toByteArray());
+            filePath = fastDFSClient.upload(inputStream2, size, path);
+            inputStream2.close();
+            baos.close();
             inputStream.close();
         } catch (IOException e) {
             logger.error(e.toString());
@@ -243,14 +254,15 @@ public class UploadController {
             result.setMessage("上传出现异常：" + e.getMessage());
             return result;
         } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
-        result.setData("filePath", filePath);
+        result.addAttribute("filePath", filePath);
         result.setState(0);
         result.setSuccess(true);
         result.setMessage("上传成功");
         return result;
     }
+
 
     /**
      *
@@ -421,7 +433,7 @@ public class UploadController {
                 +"IP地址："+fileInfo.getSourceIpAddr()+","
                 +"文件大小："+fileInfo.getFileSize();
         logger.debug(res);
-        result.setData("fileInfo",fileInfo);
+        result.addAttribute("fileInfo",fileInfo);
         result.setState(0);
         result.setSuccess(true);
         result.setMessage("获取文件信息成功");

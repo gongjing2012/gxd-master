@@ -17,11 +17,11 @@
         <option value="$PROJECT_DIR$/gxd-consumer-thymeleaf/pom.xml" />
         <option value="$PROJECT_DIR$/gxd-eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/gxd-sso/pom.xml" />
-        <option value="$PROJECT_DIR$/gxd-consumer-permission/pom.xml" />
         <option value="$PROJECT_DIR$/gxd-api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/gxd-components-rocketmq/pom.xml" />
         <option value="$PROJECT_DIR$/gxd-components-fastdfs/pom.xml" />
         <option value="$PROJECT_DIR$/gxd-apollo-config/pom.xml" />
+        <option value="$PROJECT_DIR$/gxd-components-es/pom.xml" />
       </list>
     </option>
   </component>

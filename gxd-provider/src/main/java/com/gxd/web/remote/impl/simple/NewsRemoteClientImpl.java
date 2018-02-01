@@ -31,8 +31,9 @@ public class NewsRemoteClientImpl implements NewsRemoteClient {
     public Boolean addNews(@RequestBody News news) {
         log.debug("# parameter ={}", JSON.toJSONString(news));
         boolean result = false;
-        if (news != null && StringUtils.isNotBlank(news.getAddress()))
+        if (news != null && StringUtils.isNotBlank(news.getAddress())) {
             result = newsService.addNews(news);
+        }
         log.debug("{}", result);
         return result;
     }

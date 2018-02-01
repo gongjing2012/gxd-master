@@ -60,7 +60,7 @@
 		<!--log4j2的RollingRandomAccessFile 默认日志文件写入策略为异步刷盘，引出一个缓冲区（buffer）的概念，
 		RollingRandomAccessFile 会将日志信息先写入到缓冲区，然后缓冲区满后刷到磁盘，
 		并清空缓冲区，默认缓冲区的大小在8-256kb，具体大小需要自己设置。-->
-		<RollingRandomAccessFile name="fastdfsLog" fileName="${BACKUP_HOME}/fastdfs.log" filePattern="${BACKUP_HOME}/$${date:yyyy-MM}/fastdfs-%d{yyyy-MM-dd}-%i.log">
+		<RollingRandomAccessFile name="ESLog" fileName="${BACKUP_HOME}/es.log" filePattern="${BACKUP_HOME}/$${date:yyyy-MM}/es-%d{yyyy-MM-dd}-%i.log">
 			<PatternLayout charset="UTF-8" pattern="${PATTERN_FORMAT}" />
 			<Policies>
 				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
@@ -79,7 +79,8 @@
 		<logger name="com.gxd" level="debug" />
 		<!--过滤掉spring和mybatis的一些无用的DEBUG信息-->
 		<logger name="org.springframework" level="info" />
-		<logger name="org.mybatis" level="info"></logger>
+		<logger name="org.mybatis" level="info"/>
+		<logger name="com.github.tobato" level="info" />
 		<logger name="freemarker" level="info" />
 		<logger name="org.hibernate" level="info" />
 		<logger name="org.fasterxml" level="info" />
@@ -90,7 +91,7 @@
 		<!-- Root Logger -->
 		<root level="debug">
 			<appender-ref ref="Console" />
-			<appender-ref ref="fastdfsLog" />
+			<appender-ref ref="ESLog" />
 		</root>
 
 	</loggers>

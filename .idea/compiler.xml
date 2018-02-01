@@ -10,11 +10,11 @@
         <module name="gxd-api-gateway" />
         <module name="gxd-apollo-config" />
         <module name="gxd-commons" />
+        <module name="gxd-components-es" />
         <module name="gxd-components-fastdfs" />
         <module name="gxd-components-redis" />
         <module name="gxd-components-rocketmq" />
         <module name="gxd-consumer-freemarker" />
-        <module name="gxd-consumer-permission" />
         <module name="gxd-consumer-thymeleaf" />
         <module name="gxd-eureka-server" />
         <module name="gxd-feign" />
@@ -29,6 +29,7 @@
       <module name="gxd-api-gateway" target="1.8" />
       <module name="gxd-apollo-config" target="1.8" />
       <module name="gxd-commons" target="1.8" />
+      <module name="gxd-components-es" target="1.8" />
       <module name="gxd-components-fastdfs" target="1.8" />
       <module name="gxd-components-redis" target="1.8" />
       <module name="gxd-components-rocketmq" target="1.8" />

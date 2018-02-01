@@ -32,7 +32,7 @@ spring:
       charset:  UTF-8
       enabled:  true
     antiSteal:
-      check_token:  true
+      check_token:  false
       token_ttl:  900 #token TTL，即生成token的有效时长
       secret_key: FastDFS1234567890 # 生成token的密钥，尽量设置得长一些，千万不要泄露出去
 #      token_check_fail:  #token检查失败，返回的文件内容，需指定本地文件名
@@ -48,14 +48,14 @@ fdfs:
   thumbImage:
       width: 150
       height: 150
-  trackerList:
-    - 192.168.50.36:22122
-    - 192.168.50.37:22122
-  webServerUrl: http://192.168.50.252/dfs/
 #  trackerList:
-#    - 192.168.13.5:22122
-#    - 192.168.13.6:22122
-#  webServerUrl: http://111.40.214.181/
+#    - 192.168.50.36:22122
+#    - 192.168.50.37:22122
+#  webServerUrl: http://192.168.50.252/dfs/
+  trackerList:
+    - 192.168.13.5:22122
+    - 192.168.13.6:22122
+  webServerUrl: http://111.40.214.181/
   pool:
       #从池中借出的对象的最大数目
       maxTotal: 153

@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="gxd-components:war">
-    <output-path>$PROJECT_DIR$/gxd-components/target</output-path>
-    <root id="archive" name="gxd-components.war">
-      <element id="artifact" artifact-name="gxd-components:war exploded" />
-    </root>
-  </artifact>
-</component>

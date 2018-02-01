@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-api-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-apollo-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-commons" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gxd-components-es" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-components-fastdfs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-components-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-components-redis/src/main/resources/application.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-components-rocketmq" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gxd-config-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-consumer-freemarker" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gxd-consumer-permission" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-consumer-thymeleaf" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-eureka-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-feign" charset="UTF-8" />
@@ -19,5 +18,6 @@
     <file url="file://$PROJECT_DIR$/gxd-provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-sso" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-turbine" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
