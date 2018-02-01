@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>后台管理系统</title>
+    <title>统一权限管理系统</title>
     <meta name="keyword" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
     <meta name="Author" content="zifan">
-    <meta name="copyright" content="胡桃夹子。All Rights Reserved">
+    <meta name="copyright" content="XDTH.All Rights Reserved">
     <link href="${ctx}/static/css/bootstrap.css" rel="stylesheet">
     <link href="${ctx}/static/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="${ctx}/static/css/plugins/toastr/toastr.min.css" rel="stylesheet">
@@ -168,7 +168,7 @@
                 10GB of <strong>250GB</strong> Free.
             </div>
             <div>
-                <strong>Copyright</strong> Wuling Company &copy; 2014-2015
+                <strong>Copyright</strong> XDTH &copy; 2017-208
             </div>
         </div>
         <!----版权信息结束----->
@@ -212,7 +212,7 @@
 <script src="${ctx}/static/js/jquery-2.1.1.js"></script>
 <script src="${ctx}/static/js/bootstrap.min.js"></script>
 <script src="${ctx}/static/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="${ctx}/static/js/wuling.js"></script>
+<script src="${ctx}/static/js/common.js"></script>
 <script src="${ctx}/static/js/plugins/pace/pace.min.js"></script>
 
 <!-- Custom and plugin javascript -->

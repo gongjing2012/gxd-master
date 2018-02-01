@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>后台管理系统登录</title>
+    <title>统一权限管理系统登录</title>
     <meta name="keyword" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
     <meta name="Author" content="zifan">
-    <meta name="copyright" content="胡桃夹子。All Rights Reserved">
+    <meta name="copyright" content="XDTH.All Rights Reserved">
     <link href="${ctx}/static/css/bootstrap.min.css" rel="stylesheet">
 <style type="text/css">
 body {
@@ -57,7 +57,7 @@ body {
 
 	<div class="container">
 		<form action="${ctx }/login" class="form-signin" id="userForm" method="POST">
-			<h3 class="form-signin-heading">请登录</h3>
+			<h3 class="form-signin-heading">统一权限管理服务平台</h3>
 			<input type="text" class="form-control input-block-level" id="username" name="username" placeholder="用户" value="test">
 			<input type="password" class="form-control input-block-level" id="password" name="password" placeholder="密码" value="123456">
 			<button class="btn btn-large btn-primary" type="submit">登录</button>

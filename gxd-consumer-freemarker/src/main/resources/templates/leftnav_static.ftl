@@ -1,6 +1,6 @@
 <div class="sidebar-scroll">
 	<div class="logo">
-		<a href="index.html"><img src="${ctx }/static/images/logo_icon.png" alt="">示例系统</a>
+		<a href="index.html"><img src="${ctx }/static/images/logo_icon.png" alt="">统一权限管理系统</a>
 	</div>
 	<div class="sidebar-collapse">
 		<div class="nav-header" id="side-head">
@@ -13,7 +13,7 @@
 					<li><a href="contacts.html">Contacts</a></li>
 					<li><a href="mailbox.html">Mailbox</a></li>
 					<li class="divider"></li>
-					<li><a href="http://demo.dev.wuling.me/view/login/login.html">Logout</a></li>
+					<li><a href="">Logout</a></li>
 				</ul>
 			</div>
 		</div>

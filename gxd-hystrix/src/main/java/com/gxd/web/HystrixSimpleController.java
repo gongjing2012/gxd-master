@@ -5,6 +5,7 @@ import com.gxd.web.remote.simple.NewsRemoteClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,7 @@ public class HystrixSimpleController {
 
     private static final Logger log = LoggerFactory.getLogger(HystrixSimpleController.class);
 
+    @Qualifier("gxd-provider")
     @Autowired
     private NewsRemoteClient newsRemoteClient;
 
