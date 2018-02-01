@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
-@FeignClient(path = "auth", value = "gxd-provider", fallback = AuthRemoteClientHystrix.class)
+@FeignClient(path = "auth", value = "GXD-PROVIDER", fallback = AuthRemoteClientHystrix.class)
 public interface AuthRemoteClient {
 
     @RequestMapping(value = "/findUserByName/{username}", method = RequestMethod.GET)

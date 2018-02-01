@@ -12,9 +12,9 @@ eureka:
       defaultZone:  http://localhost:1111/eureka/
 zuul:
   routes:
-    api-a:
-      path: /api-a/**
-      serviceId:  gxd-permission-consumer
-    api-b:
-      path: /api-b/**
-      serviceId:  gxd-feign
+    wx:
+      path: /wx/**
+      serviceId:  gxd-consumer-freemarker
+    news:
+      path: /news/**
+      serviceId:  gxd-consumer-freemarker

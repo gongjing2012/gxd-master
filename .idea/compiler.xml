@@ -22,6 +22,7 @@
         <module name="gxd-provider" />
         <module name="gxd-sso" />
         <module name="gxd-turbine" />
+        <module name="gxd-zipkin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -46,6 +47,7 @@
       <module name="gxd-provider" target="1.8" />
       <module name="gxd-sso" target="1.8" />
       <module name="gxd-turbine" target="1.8" />
+      <module name="gxd-zipkin" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

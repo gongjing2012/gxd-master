@@ -22,6 +22,7 @@
         <option value="$PROJECT_DIR$/gxd-components-fastdfs/pom.xml" />
         <option value="$PROJECT_DIR$/gxd-apollo-config/pom.xml" />
         <option value="$PROJECT_DIR$/gxd-components-es/pom.xml" />
+        <option value="$PROJECT_DIR$/gxd-zipkin/pom.xml" />
       </list>
     </option>
   </component>

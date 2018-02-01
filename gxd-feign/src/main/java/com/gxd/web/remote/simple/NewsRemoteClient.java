@@ -7,7 +7,7 @@ import com.gxd.web.hystrix.simple.NewsRemoteClientHystrix;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient(path = "simple", value = "gxd-provider", fallback = NewsRemoteClientHystrix.class)
+@FeignClient(path = "simple", value = "GXD-PROVIDER", fallback = NewsRemoteClientHystrix.class)
 public interface NewsRemoteClient {
 
     @RequestMapping(value = "/addNews", method = RequestMethod.POST)

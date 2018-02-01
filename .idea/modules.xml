@@ -18,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/gxd-provider/gxd-provider.iml" filepath="$PROJECT_DIR$/gxd-provider/gxd-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxd-sso/gxd-sso.iml" filepath="$PROJECT_DIR$/gxd-sso/gxd-sso.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxd-turbine/gxd-turbine.iml" filepath="$PROJECT_DIR$/gxd-turbine/gxd-turbine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxd-zipkin/gxd-zipkin.iml" filepath="$PROJECT_DIR$/gxd-zipkin/gxd-zipkin.iml" />
     </modules>
   </component>
 </project>
