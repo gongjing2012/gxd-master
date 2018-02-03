@@ -22,7 +22,7 @@ import java.util.List;
 
 /**
  * @Author:gxd
- * @Description: 新闻接口实现类（测试）
+ * @Description: 新闻接口实现类（测试1）
  * @Date: 13:54 2017/12/27
  */
 @Service("newsService")
