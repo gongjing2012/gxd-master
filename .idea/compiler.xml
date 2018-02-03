@@ -20,6 +20,7 @@
         <module name="gxd-feign" />
         <module name="gxd-hystrix" />
         <module name="gxd-provider" />
+        <module name="gxd-sleuth-zipkin" />
         <module name="gxd-sso" />
         <module name="gxd-turbine" />
         <module name="gxd-zipkin" />
@@ -32,6 +33,7 @@
       <module name="gxd-commons" target="1.8" />
       <module name="gxd-components-es" target="1.8" />
       <module name="gxd-components-fastdfs" target="1.8" />
+      <module name="gxd-components-fastdfs (1)" target="1.8" />
       <module name="gxd-components-redis" target="1.8" />
       <module name="gxd-components-rocketmq" target="1.8" />
       <module name="gxd-config-server" target="1.8" />
@@ -45,6 +47,7 @@
       <module name="gxd-master" target="1.8" />
       <module name="gxd-master-admin" target="1.8" />
       <module name="gxd-provider" target="1.8" />
+      <module name="gxd-sleuth-zipkin" target="1.8" />
       <module name="gxd-sso" target="1.8" />
       <module name="gxd-turbine" target="1.8" />
       <module name="gxd-zipkin" target="1.8" />

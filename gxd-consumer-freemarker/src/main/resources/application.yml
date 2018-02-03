@@ -5,6 +5,8 @@ info:
 spring:
   application:
     name: gxd-consumer-freemarker
+  zipkin:
+    base-url: http://gxd-zipkin-server:9411
   freemarker:
     request-context-attribute: request
     allow-request-override: false

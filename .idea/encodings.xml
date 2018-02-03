@@ -16,6 +16,7 @@
     <file url="file://$PROJECT_DIR$/gxd-feign" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-hystrix" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gxd-sleuth-zipkin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-sso" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-turbine" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-zipkin" charset="UTF-8" />
