@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/gxd-hystrix/gxd-hystrix.iml" filepath="$PROJECT_DIR$/gxd-hystrix/gxd-hystrix.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxd-master.iml" filepath="$PROJECT_DIR$/gxd-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxd-provider/gxd-provider.iml" filepath="$PROJECT_DIR$/gxd-provider/gxd-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxd-provider1/gxd-provider1.iml" filepath="$PROJECT_DIR$/gxd-provider1/gxd-provider1.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxd-sleuth-zipkin/gxd-sleuth-zipkin.iml" filepath="$PROJECT_DIR$/gxd-sleuth-zipkin/gxd-sleuth-zipkin.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxd-sso/gxd-sso.iml" filepath="$PROJECT_DIR$/gxd-sso/gxd-sso.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxd-turbine/gxd-turbine.iml" filepath="$PROJECT_DIR$/gxd-turbine/gxd-turbine.iml" />

@@ -19,10 +19,12 @@
     <module>gxd-consumer-thymeleaf</module>
     <module>gxd-hystrix</module>
     <module>gxd-provider</module>
+    <module>gxd-provider1</module>
     <module>gxd-feign</module>
     <module>gxd-turbine</module>
     <module>gxd-components-redis</module>
     <module>gxd-components-fastdfs</module>
+    <module>gxd-components-es</module>
     <module>gxd-sso</module>
     <module>gxd-api-gateway</module>
     <module>gxd-apollo-config</module>
