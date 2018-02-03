@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- status=debug 可以查看log4j的装配过程 -->
+<configuration status="off" monitorInterval="1800">
+
+	<!-- Log4j 2 包含了基于LMAX 分离库的下一代的异步日志系统，在多线程环境下，异步日志系统比 Log4j 1.x 和Logback 提高了10倍性能提升（吞吐量和延迟率 ） -->
+
+	<!--
+    status : 这个用于设置log4j2自身内部的信息输出,可以不设置,当设置成trace时,会看到log4j2内部各种详细输出
+    monitorInterval : Log4j能够自动检测修改配置文件和重新配置本身, 设置间隔秒数。
+
+    注：本配置文件的目标是将不同级别的日志输出到不同文件，最大2MB一个文件，
+    文件数据达到最大值时，旧数据会被压缩并放进指定文件夹
+-->
+	<!-- 优先级从高到低分别是 OFF、FATAL、ERROR、WARN、INFO、DEBUG、ALL -->
+	<!-- 单词解释： Match：匹配 DENY：拒绝 Mismatch：不匹配 ACCEPT：接受 -->
+	<!-- DENY，日志将立即被抛弃不再经过其他过滤器； NEUTRAL，有序列表里的下个过滤器过接着处理日志； ACCEPT，日志会被立即处理，不再经过剩余过滤器。 -->
+	<!--输出日志的格式
+     %d{yyyy-MM-dd HH:mm:ss, SSS} : 日志生产时间
+     %p : 日志输出格式
+     %c : logger的名称
+     %m : 日志内容，即 logger.info("message")
+     %n : 换行符
+     %C : Java类名
+     %L : 日志输出所在行数
+     %M : 日志输出所在方法名
+     hostName : 本地机器名
+     hostAddress : 本地ip地址 -->
+
+	<properties>
+		<!-- 日志备份目录 -->
+		<!--<property name="BACKUP_HOME">./sc/sc-eureka-consumer-freemarker/logs</property>-->
+		<property name="BACKUP_HOME">./logs</property>
+		<property name="PATTERN_FORMAT">%d{yyyy/MM/dd HH:mm:ss,SSS} %-6p %-21t %c.%M(%F:%L) - %m%n</property>
+	</properties>
+	<!--<Properties>
+            &lt;!&ndash; 配置日志文件输出目录，此配置将日志输出到tomcat根目录下的指定文件夹 &ndash;&gt;
+            <Property name="LOG_HOME">${sys:catalina.home}/WebAppLogs/SSHExample</Property>
+        </Properties>-->
+	<appenders>
+		<!-- 定义控制台输出 -->
+		<!--这个输出控制台的配置，这里输出除了warn和error级别的信息到System.out-->
+		<Console name="Console" target="SYSTEM_OUT" follow="true">
+			<PatternLayout charset="UTF-8" pattern="${PATTERN_FORMAT}" />
+			<charset>UTF-8</charset>
+		</Console>
+
+		<!-- 应用日志 -->
+		<!-- 同一来源的Appender可以定义多个RollingFile，定义按天存储日志 -->
+		<!-- 这个会打印出所有的info及以下级别的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档-->
+		<!--配置一个按时间和文件大小滚动的RollingRandomAccessFile Appender，名字真是够长，但不光只是名字长，相比RollingFileAppender有很大的性能提升，官网宣称是20-200%。-->
+		<!--RollingRandomAccessFile的属性：-->
+		<!--fileName  指定当前日志文件的位置和文件名称-->
+		<!--filePattern  指定当发生Rolling时，文件的转移和重命名规则-->
+		<!--SizeBasedTriggeringPolicy  指定当文件体积大于size指定的值时，触发Rolling-->
+		<!--DefaultRolloverStrategy  指定最多保存的文件个数-->
+		<!--TimeBasedTriggeringPolicy  这个配置需要和filePattern结合使用，
+		注意filePattern中配置的文件重命名规则是${FILE_NAME}-%d{yyyy-MM-dd HH-mm}-%i，
+		最小的时间粒度是mm，即分钟，TimeBasedTriggeringPolicy指定的size是1，
+		结合起来就是每1分钟生成一个新文件。如果改成%d{yyyy-MM-dd HH}，最小粒度为小时，则每一个小时生成一个文件。-->
+		<!--log4j2的RollingRandomAccessFile 默认日志文件写入策略为异步刷盘，引出一个缓冲区（buffer）的概念，
+		RollingRandomAccessFile 会将日志信息先写入到缓冲区，然后缓冲区满后刷到磁盘，
+		并清空缓冲区，默认缓冲区的大小在8-256kb，具体大小需要自己设置。-->
+		<RollingRandomAccessFile name="ESLog" fileName="${BACKUP_HOME}/es.log" filePattern="${BACKUP_HOME}/$${date:yyyy-MM}/es-%d{yyyy-MM-dd}-%i.log">
+			<PatternLayout charset="UTF-8" pattern="${PATTERN_FORMAT}" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+				<!--每个日志文件最大2MB-->
+				<SizeBasedTriggeringPolicy size="100MB" />
+			</Policies>
+			<charset>UTF-8</charset>
+			<!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了20 -->
+			<!-- 表示日志文件.gz的压缩包最大保留数 -->
+			<DefaultRolloverStrategy max="20"/>
+		</RollingRandomAccessFile>
+	</appenders>
+
+	<loggers>
+		<!-- 3rdparty Loggers -->
+		<logger name="com.gxd" level="debug" />
+		<!--过滤掉spring和mybatis的一些无用的DEBUG信息-->
+		<logger name="org.springframework" level="info" />
+		<logger name="org.mybatis" level="info"/>
+		<logger name="com.github.tobato" level="info" />
+		<logger name="freemarker" level="info" />
+		<logger name="org.hibernate" level="info" />
+		<logger name="org.fasterxml" level="info" />
+		<logger name="com.netflix" level="info" />
+		<logger name="javax.el" level="info" />
+		<logger name="org.apache" level="info" />
+
+		<!-- Root Logger -->
+		<root level="debug">
+			<appender-ref ref="Console" />
+			<appender-ref ref="ESLog" />
+		</root>
+
+	</loggers>
+
+</configuration>
