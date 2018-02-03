@@ -31,8 +31,8 @@
 			<groupId>com.gxd</groupId>
 			<artifactId>gxd-commons</artifactId>
 			<version>1.0-SNAPSHOT</version>
-			<scope>system</scope>
-			<systemPath>D:/.m2/repository/com/gxd/gxd-commons/1.0-SNAPSHOT/gxd-commons-1.0-SNAPSHOT.jar</systemPath>
+			<!--<scope>system</scope>-->
+			<!--<systemPath>D:/.m2/repository/com/gxd/gxd-commons/1.0-SNAPSHOT/gxd-commons-1.0-SNAPSHOT.jar</systemPath>-->
 		</dependency>
 		<dependency>
 			<groupId>com.gxd</groupId>
@@ -150,6 +150,10 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-context</artifactId>
 			<version>1.3.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
 		</dependency>
     </dependencies>
 

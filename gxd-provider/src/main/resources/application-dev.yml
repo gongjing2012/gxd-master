@@ -1,3 +1,0 @@
-spring:
-  zipkin:
-    base-url: http://gxd-zipkin-server:9411

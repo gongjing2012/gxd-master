@@ -23,6 +23,7 @@
         <option value="$PROJECT_DIR$/gxd-apollo-config/pom.xml" />
         <option value="$PROJECT_DIR$/gxd-zipkin/pom.xml" />
         <option value="$PROJECT_DIR$/gxd-sleuth-zipkin/pom.xml" />
+        <option value="$PROJECT_DIR$/gxd-components-es/pom.xml" />
       </list>
     </option>
   </component>

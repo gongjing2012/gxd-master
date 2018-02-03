@@ -6,6 +6,8 @@ spring:
     active: dev
   application:
     name: gxd-provider
+  zipkin:
+    base-url: http://gxd-zipkin-server:9411
   redis:
     # database: 0
     hostName: 127.0.0.1
