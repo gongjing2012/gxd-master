@@ -46,7 +46,7 @@ hystrix:
           thread:
             timeoutInMilliseconds: 5000
 
-provider:
+gxd-provider:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 
