@@ -7,7 +7,13 @@ spring:
   application:
     name: gxd-provider
   zipkin:
-    base-url: http://gxd-zipkin-server:9411
+    base-url: http://GXD-ZIPKIN-SERVER:9411
+  sleuth:
+     #监控开关
+    enabled: true
+     #采样率
+    sampler:
+      percentage: 1
   redis:
     # database: 0
     hostName: 127.0.0.1
@@ -29,7 +35,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:1111/eureka/
+      defaultZone: http://127.0.0.1:1111/eureka/,http://127.0.0.1:1112/eureka/,http://127.0.0.1:1113/eureka/
 
 #management:
   #security:
