@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <!--**阻止**生成注释，默认为false-->
+            <property name="suppressAllComments" value="true"></property>
+            <!--**阻止**生成的注释包含时间戳，默认为false-->
+            <property name="suppressDate" value="true"></property>
+            <!--生成的代码编码格式-->
+            <property name="javaFileEncoding" value="utf-8"/>
+        </commentGenerator>
+        <!--数据库链接地址账号密码-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/test"
+                        userId="root"
+                        password="123456">
+        </jdbcConnection>
+        <javaTypeResolver type="org.mybatis.generator.internal.types.JavaTypeResolverDefaultImpl">
+            <!--
+                true：使用BigDecimal对应DECIMAL和 NUMERIC数据类型
+                false：默认,
+                    scale>0;length>18：使用BigDecimal;
+                    scale=0;length[10,18]：使用Long；
+                    scale=0;length[5,9]：使用Integer；
+                    scale=0;length<5：使用Short；
+             -->
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+        <!--该元素用来控制生成的实体类,即生成模型的包名和位置-->
+        <!--targetPackage:生成实体类存放的包名-->
+        <!--targetProject:指定目标项目路径，使用的是文件系统的绝对路径-->
+        <!-- java模型创建器，是必须要的元素
+          负责：1，key类（见context的defaultModelType）；2，java类；3，查询类
+          targetPackage：生成的类要放的包，真实的包受enableSubPackages属性控制；
+          targetProject：目标项目，指定一个存在的目录下，生成的内容会放到指定目录中，如果目录不存在，MBG不会自动建目录
+       -->
+        <javaModelGenerator targetPackage="com.gxd.model" targetProject="src/main/java">
+            <!-- 是否允许子包，即targetPackage.schemaName.tableName -->
+            <property name="enableSubPackages" value="true"/>
+            <!-- 是否对model添加 构造函数 -->
+            <property name="constructorBased" value="true"/>
+            <!-- 是否对类CHAR类型的列的数据进行trim操作 -->
+            <property name="trimStrings" value="true"/>
+            <!-- 建立的Model对象是否 不可改变  即生成的Model对象不会有 setter方法，只有构造方法 -->
+            <property name="immutable" value="false"/>
+        </javaModelGenerator>
+
+        <!--生成mapper映射文件的包名和位置-->
+
+        <!--XMLMAPPER:所有的方法都在XML中，接口调用依赖XML文件。-->
+        <!-- 生成SQL map的XML文件生成器，
+           注意，在Mybatis3之后，我们可以使用mapper.xml文件+Mapper接口（或者不用mapper接口），
+               或者只使用Mapper接口+Annotation，
+               所以，如果 javaClientGenerator配置中配置了需要生成XML的话，这个元素就必须配置
+           targetPackage/targetProject:同javaModelGenerator
+        -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
+            <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!-- 生成DAO的包名和位置-->
+        <!--ANNOTATEDMAPPER:基于注解的Mapper接口，不会有对应的XML映射文件-->
+        <!--MIXEDMAPPER:XML和注解的混合形式，(上面这种情况中的)SqlProvider注解方法会被XML替代。-->
+        <!--XMLMAPPER:所有的方法都在XML中，接口调用依赖XML文件。-->
+        <!-- 对于mybatis来说，即生成Mapper接口，注意，如果没有配置该元素，那么默认不会生成Mapper接口
+          targetPackage/targetProject:同javaModelGenerator
+          type：选择怎么生成mapper接口（在MyBatis3/MyBatis3Simple下）：
+              1，ANNOTATEDMAPPER：会生成使用Mapper接口+Annotation的方式创建（SQL生成在annotation中），不会生成对应的XML；
+              2，MIXEDMAPPER：使用混合配置，会生成Mapper接口，并适当添加合适的Annotation，但是XML会生成在XML中；
+              3，XMLMAPPER：会生成Mapper接口，接口完全依赖XML；
+          注意，如果context是MyBatis3Simple：只支持ANNOTATEDMAPPER和XMLMAPPER
+      -->
+        <javaClientGenerator targetPackage="com.gxd.mapper" targetProject="src/main/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <table tableName="t_test">
+            <generatedKey column="id"  sqlStatement="Mysql"  identity="true"  />
+        </table>
+    </context>
+</generatorConfiguration>

@@ -1,13 +1,14 @@
 server:
   port: 8082
-
+info:
+  component: provider1 to fetch configuration
 spring:
   profiles:
     active: dev
   application:
     name: gxd-provider
   zipkin:
-    base-url: http://gxd-zipkin-server:9411
+    base-url: http://GXD-ZIPKIN-SERVER:9411
   redis:
     # database: 0
     hostName: 127.0.0.1

@@ -1,6 +1,7 @@
 server:
   port: 8080
-
+info:
+  component: provider to fetch configuration
 spring:
   profiles:
     active: dev
