@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f117f7d-61e2-4ebf-8ad3-dadbc6ffd616" name="Default" comment="">
+    <list default="true" id="6f117f7d-61e2-4ebf-8ad3-dadbc6ffd616" name="Default" comment="提交代码">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/simple/impl/NewsServiceImpl.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/simple/impl/NewsServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/pom.xml" afterPath="$PROJECT_DIR$/gxd-provider1/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/gxd-commons/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/simple/impl/NewsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
-              <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+              <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -151,7 +151,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <push-targets>
-      <push-target-info target-remote="gitosc" target-branch="1.0" repo="$PROJECT_DIR$" source="1.1" />
+      <push-target-info target-remote="gitosc" target-branch="1.1" repo="$PROJECT_DIR$" source="1.1" />
     </push-targets>
   </component>
   <component name="GradleLocalSettings">
@@ -817,7 +817,7 @@
       <option name="presentableId" value="Default" />
       <updated>1517663935225</updated>
       <workItem from="1517663937499" duration="12434000" />
-      <workItem from="1517676855993" duration="744000" />
+      <workItem from="1517676855993" duration="2573000" />
     </task>
     <task id="LOCAL-00001" summary="提交代码">
       <created>1517665502709</created>
@@ -875,11 +875,25 @@
       <option name="project" value="LOCAL" />
       <updated>1517674545675</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="提交代码">
+      <created>1517677623292</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1517677623292</updated>
+    </task>
+    <task id="LOCAL-00010" summary="提交代码">
+      <created>1517678253760</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1517678253760</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13178000" />
+    <option name="totallyTimeSpent" value="15007000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1329,7 +1343,7 @@
     <entry file="file://$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/simple/impl/NewsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
           <folding />
         </state>
       </provider>
