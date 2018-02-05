@@ -196,21 +196,47 @@
       <artifactId>fastjson</artifactId>
       <version>${fastjson.version}</version>
     </dependency>
-
   </dependencies>
+  <!--指定仓库 -->
+  <repositories>
+    <repository>
+      <id>central</id>
+      <url>http://192.168.50.37:9903/nexus/content/groups/public/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+  <!--指定插件仓库 -->
+  <pluginRepositories>
+    <pluginRepository>
+      <id>central</id>
+      <url>http://192.168.50.37:9903/nexus/content/groups/public/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
+  <!--自动发布构件到远程仓库-->
+  <distributionManagement>
+    <repository>
+      <id>user-release</id>
+      <name>User Project Release</name><!--这个ID需要与你的release仓库的Repository ID一致-->
+      <url>http://192.168.50.37:9903/nexus/content/repositories/releases/</url>
+    </repository>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-dependencies</artifactId>
-        <version>Edgware.RELEASE</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
+    <snapshotRepository>
+      <id>user-snapshots</id><!--这个ID需要与你的snapshots仓库的Repository ID一致-->
+      <name>User Project SNAPSHOTS</name>
+      <url>http://192.168.50.37:9903/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
   <build>
     <plugins>
       <plugin>

@@ -23,12 +23,17 @@
 	</properties>
 
 	<dependencies>
+		<!--<dependency>-->
+			<!--<groupId>com.gxd</groupId>-->
+			<!--<artifactId>gxd-es</artifactId>-->
+			<!--<version>1.0-SNAPSHOT</version>-->
+			<!--<scope>system</scope>-->
+			<!--<systemPath>E:/idea4/gxd-master/gxd-components-es/src/lib/elasticsearch-search.jar</systemPath>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>com.gxd</groupId>
-			<artifactId>gxd-es</artifactId>
-			<version>1.0-SNAPSHOT</version>
-			<scope>system</scope>
-			<systemPath>E:/idea4/gxd-master/gxd-components-es/src/lib/elasticsearch-search.jar</systemPath>
+			<artifactId>elasticsearch-search</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

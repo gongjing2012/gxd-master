@@ -5,7 +5,7 @@
 
 	<groupId>com.gxd</groupId>
 	<artifactId>gxd-sso</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>gxd-sso</name>
@@ -29,20 +29,21 @@
 		<dependency>
 			<groupId>com.gxd</groupId>
 			<artifactId>gxd-components-redis</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>0.0.1-SNAPSHOT</version>
 			<scope>system</scope>
 			<systemPath>D:/.m2/repository/com/gxd/gxd-components-redis/1.0-SNAPSHOT/gxd-components-redis-1.0-SNAPSHOT.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>com.gxd</groupId>
 			<artifactId>gxd-commons</artifactId>
-			<version>1.0-SNAPSHOT</version>
-			<scope>system</scope>
-			<systemPath>D:/.m2/repository/com/gxd/gxd-commons/1.0-SNAPSHOT/gxd-commons-1.0-SNAPSHOT.jar</systemPath>
+			<version>0.0.1-SNAPSHOT</version>
+			<!--<scope>system</scope>-->
+			<!--<systemPath>D:/.m2/repository/com/gxd/gxd-commons/1.0-SNAPSHOT/gxd-commons-1.0-SNAPSHOT.jar</systemPath>-->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<version>1.4.2.RELEASE</version>
 			<exclusions>
 				<exclusion>
 					<artifactId>spring-cloud-commons</artifactId>

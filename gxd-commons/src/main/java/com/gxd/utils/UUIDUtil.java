@@ -35,7 +35,7 @@ public class UUIDUtil {
         return java.util.UUID.randomUUID().toString().replaceAll("-", "");
     }
 
-//    public static void main(String[] args) {
-//        System.out.println("随机" + UUIDUtil.getRandom32PK().length() + "位：" + UUIDUtil.getRandom32PK());
-//    }
+    public static void main(String[] args) {
+        System.out.println("随机" + UUIDUtil.getRandom32PK().length() + "位：" + UUIDUtil.getRandom32PK());
+    }
 }

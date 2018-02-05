@@ -5,9 +5,8 @@
 
 	<groupId>com.gxd</groupId>
 	<artifactId>gxd-components-rocketmq</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-
 	<name>gxd-components-rocketmq</name>
 	<description>Demo project for Spring Boot</description>
 
