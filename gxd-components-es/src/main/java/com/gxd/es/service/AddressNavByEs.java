@@ -34,7 +34,7 @@ public class AddressNavByEs {
                 Map<String, Object> indexMap = new HashMap();
                 indexMap = hit.getSourceAsMap();
                 addressId = indexMap.get("ADDRESS_ID") == null ? "" : indexMap.get("ADDRESS_ID").toString();
-                if (hit.getIndex().equals("adress")) {
+                if (hit.getIndex().equals("address")) {
                     fullName = indexMap.get("FULL_NAME") == null ? "" : indexMap.get("FULL_NAME").toString();
                     resultSet.add("{ADDRESS_ID:" + addressId + ",FULL_NAME:" + fullName + "}");
                 } else if (hit.getIndex().equals("street")) {

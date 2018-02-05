@@ -10,6 +10,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone:  http://localhost:1111/eureka/
+    registry-fetch-interval-seconds:  5 #对于api-gateway，如果要迅速获取服务注册状态，可以缩小该值，比如5秒
 zuul:
   routes:
     wx:

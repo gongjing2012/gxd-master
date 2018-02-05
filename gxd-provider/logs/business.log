@@ -173,3 +173,4 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2018/02/04 22:01:06,770 DEBUG  main                  com.gxd.mapper.TTestMapper.insert!selectKey.debug(BaseJdbcLogger.java:181) - ==>  Preparing: SELECT LAST_INSERT_ID() 
 2018/02/04 22:01:07,063 DEBUG  main                  com.gxd.mapper.TTestMapper.insert!selectKey.debug(BaseJdbcLogger.java:181) - ==> Parameters: 
 2018/02/04 22:01:07,671 DEBUG  main                  com.gxd.mapper.TTestMapper.insert!selectKey.debug(BaseJdbcLogger.java:181) - <==      Total: 1
+2018/02/04 22:46:48,403 INFO   Thread-7              org.springframework.web.context.support.GenericWebApplicationContext.doClose(AbstractApplicationContext.java:984) - Closing org.springframework.web.context.support.GenericWebApplicationContext@44a085e5: startup date [Sun Feb 04 22:00:23 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7ed9ae94

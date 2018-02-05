@@ -9892,79 +9892,79 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.3.jar:4.5.3]
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
 	... 10 more
+2018/02/04 22:08:11,454 ERROR  TaskBatchingWorker-target_127.0.0.1-11 com.netflix.eureka.cluster.ReplicationTaskProcessor.logNetworkErrorSample(ReplicationTaskProcessor.java:113) - Network level connection to peer 127.0.0.1; retrying after delay
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48) ~[eureka-core-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.eureka.transport.JerseyReplicationClient.submitBatchUpdates(JerseyReplicationClient.java:116) ~[eureka-core-1.7.0.jar:1.7.0]
+	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:71) [eureka-core-1.7.0.jar:1.7.0]
+	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:187) [eureka-core-1.7.0.jar:1.7.0]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.8.0_152]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[?:1.8.0_152]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[?:1.8.0_152]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_152]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.8.jar:4.4.8]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.8.jar:4.4.8]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:278) ~[httpcore-4.4.8.jar:4.4.8]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.8.jar:4.4.8]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:286) ~[httpcore-4.4.8.jar:4.4.8]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.8.jar:4.4.8]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.8.jar:4.4.8]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.3.jar:4.5.3]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 10 more
+2018/02/04 22:32:33,491 ERROR  TaskBatchingWorker-target_127.0.0.1-4 com.netflix.eureka.cluster.ReplicationTaskProcessor.logNetworkErrorSample(ReplicationTaskProcessor.java:113) - Network level connection to peer 127.0.0.1; retrying after delay
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48) ~[eureka-core-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.eureka.transport.JerseyReplicationClient.submitBatchUpdates(JerseyReplicationClient.java:116) ~[eureka-core-1.7.0.jar:1.7.0]
+	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:71) [eureka-core-1.7.0.jar:1.7.0]
+	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:187) [eureka-core-1.7.0.jar:1.7.0]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.8.0_152]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[?:1.8.0_152]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[?:1.8.0_152]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_152]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.8.jar:4.4.8]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.8.jar:4.4.8]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:278) ~[httpcore-4.4.8.jar:4.4.8]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.8.jar:4.4.8]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:286) ~[httpcore-4.4.8.jar:4.4.8]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.8.jar:4.4.8]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.8.jar:4.4.8]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.3.jar:4.5.3]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 10 more
 Resource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
-	at com.netflix.eureka.transport.JerseyReplicationClient.submitBatchUpdates(JerseyReplicationClient.java:116) ~[eureka-core-1.7.0.jar:1.7.0]
-	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:71) [eureka-core-1.7.0.jar:1.7.0]
-	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:187) [eureka-core-1.7.0.jar:1.7.0]
-	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
-Caused by: java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.8.0_152]
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[?:1.8.0_152]
-	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[?:1.8.0_152]
-	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_152]
-	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:278) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:286) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.3.jar:4.5.3]
-	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
-	... 10 more
-2018/02/04 19:50:30,312 ERROR  TaskBatchingWorker-target_127.0.0.1-3 com.netflix.eureka.cluster.ReplicationTaskProcessor.logNetworkErrorSample(ReplicationTaskProcessor.java:113) - Network level connection to peer 127.0.0.1; retrying after delay
-com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
-	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
-	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48) ~[eureka-core-1.7.0.jar:1.7.0]
-	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.7.0.jar:1.7.0]
-	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
-	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
-	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
-	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
-	at com.netflix.eureka.transport.JerseyReplicationClient.submitBatchUpdates(JerseyReplicationClient.java:116) ~[eureka-core-1.7.0.jar:1.7.0]
-	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:71) [eureka-core-1.7.0.jar:1.7.0]
-	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:187) [eureka-core-1.7.0.jar:1.7.0]
-	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
-Caused by: java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.8.0_152]
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[?:1.8.0_152]
-	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[?:1.8.0_152]
-	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_152]
-	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:278) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:286) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.3.jar:4.5.3]
-	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
-	... 10 more
-2018/02/04 19:50:30,312 ERROR  TaskBatchingWorker-target_127.0.0.1-16 com.netflix.eureka.cluster.ReplicationTaskProcessor.logNetworkErrorSample(ReplicationTaskProcessor.java:113) - Network level connection to peer 127.0.0.1; retrying after delay
-com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
-	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
-	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48) ~[eureka-core-1.7.0.jar:1.7.0]
-	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.7.0.jar:1.7.0]
-	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
-	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
-	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
-	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
 	at com.netflix.eureka.transport.JerseyReplicationClient.submitBatchUpdates(JerseyReplicationClient.java:116) ~[eureka-core-1.7.0.jar:1.7.0]
 	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:71) [eureka-core-1.7.0.jar:1.7.0]
 	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:187) [eureka-core-1.7.0.jar:1.7.0]
@@ -10820,28 +10820,7 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.3.jar:4.5.3]
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
 	... 10 more
-cketRead(SocketInputStream.java:116) ~[?:1.8.0_152]
-	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[?:1.8.0_152]
-	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_152]
-	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:278) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:286) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.3.jar:4.5.3]
-	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
-	... 10 more
-2018/02/04 19:51:41,710 ERROR  TaskBatchingWorker-target_127.0.0.1-11 com.netflix.eureka.cluster.ReplicationTaskProcessor.logNetworkErrorSample(ReplicationTaskProcessor.java:113) - Network level connection to peer 127.0.0.1; retrying after delay
+2018/02/04 22:04:57,371 ERROR  TaskBatchingWorker-target_127.0.0.1-5 com.netflix.eureka.cluster.ReplicationTaskProcessor.logNetworkErrorSample(ReplicationTaskProcessor.java:113) - Network level connection to peer 127.0.0.1; retrying after delay
 com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
 	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48) ~[eureka-core-1.7.0.jar:1.7.0]
@@ -10877,8 +10856,8 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.3.jar:4.5.3]
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
 	... 10 more
-2018/02/04 19:51:46,719 ERROR  TaskBatchingWorker-target_127.0.0.1-5 com.netflix.eureka.cluster.ReplicationTaskProcessor.logNetworkErrorSample(ReplicationTaskProcessor.java:113) - Network level connection to peer 127.0.0.1; retrying after delay
-com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+2018/02/04 22:46:39,300 ERROR  TaskBatchingWorker-target_127.0.0.1-9 com.netflix.eureka.cluster.ReplicationTaskProcessor.logNetworkErrorSample(ReplicationTaskProcessor.java:113) - Network level connection to peer 127.0.0.1; retrying after delay
+com.sun.jersey.api.client.ClientHandlerException: org.apache.http.conn.ConnectTimeoutException: Connect to 127.0.0.1:1111 timed out
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
 	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48) ~[eureka-core-1.7.0.jar:1.7.0]
 	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.7.0.jar:1.7.0]
@@ -10890,50 +10869,68 @@ com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutExceptio
 	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:71) [eureka-core-1.7.0.jar:1.7.0]
 	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:187) [eureka-core-1.7.0.jar:1.7.0]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
-Caused by: java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.8.0_152]
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[?:1.8.0_152]
-	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[?:1.8.0_152]
-	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_152]
-	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:278) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:286) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684) ~[httpclient-4.5.3.jar:4.5.3]
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486) ~[httpclient-4.5.3.jar:4.5.3]
+Caused by: org.apache.http.conn.ConnectTimeoutException: Connect to 127.0.0.1:1111 timed out
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:123) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445) ~[httpclient-4.5.3.jar:4.5.3]
 	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.3.jar:4.5.3]
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.3.jar:4.5.3]
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.3.jar:4.5.3]
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
 	... 10 more
-2018/02/04 19:56:45,028 ERROR  TaskBatchingWorker-target_127.0.0.1-19 com.netflix.eureka.cluster.ReplicationTaskProcessor.logNetworkErrorSample(ReplicationTaskProcessor.java:113) - Network level connection to peer 127.0.0.1; retrying after delay
-com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+2018/02/04 22:46:43,167 ERROR  DiscoveryClient-HeartbeatExecutor-1 com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91) - Request execution error
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
-	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48) ~[eureka-core-1.7.0.jar:1.7.0]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
 	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.7.0.jar:1.7.0]
 	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
 	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
 	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
-	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
-	at com.netflix.eureka.transport.JerseyReplicationClient.submitBatchUpdates(JerseyReplicationClient.java:116) ~[eureka-core-1.7.0.jar:1.7.0]
-	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:71) [eureka-core-1.7.0.jar:1.7.0]
-	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:187) [eureka-core-1.7.0.jar:1.7.0]
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:824) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1388) [eureka-client-1.7.0.jar:1.7.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_152]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_152]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
-Caused by: java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.8.0_152]
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[?:1.8.0_152]
-	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[?:1.8.0_152]
-	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_152]
-	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.8.jar:4.4.8]
-	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:278) ~[httpcore-4.4.8.jar:4.4.8]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_152]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_152]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_152]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_152]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_152]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.3.jar:4.5.3]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 26 more
+tpcore-4.4.8.jar:4.4.8]
 	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.3.jar:4.5.3]
 	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.3.jar:4.5.3]
 	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.8.jar:4.4.8]
@@ -12088,74 +12085,181 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 2018/02/04 21:52:30,588 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
 2018/02/04 21:57:30,613 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
 2018/02/04 22:02:30,660 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
-Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018/02/04 12:45:40,464 INFO   restartedMain         org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
-2018/02/04 12:45:40,465 INFO   restartedMain         org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018/02/04 12:45:40,465 INFO   restartedMain         org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018/02/04 12:45:40,467 INFO   restartedMain         org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
-2018/02/04 12:45:40,468 INFO   restartedMain         org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
-2018/02/04 12:45:40,470 INFO   restartedMain         org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
-2018/02/04 12:45:40,470 INFO   restartedMain         org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018/02/04 12:45:40,472 INFO   restartedMain         org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
-2018/02/04 12:45:40,472 INFO   restartedMain         org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018/02/04 12:45:40,473 INFO   restartedMain         org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018/02/04 12:45:40,474 INFO   restartedMain         org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018/02/04 12:45:40,475 INFO   restartedMain         org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
-2018/02/04 12:45:40,476 INFO   restartedMain         org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
-2018/02/04 12:45:40,476 INFO   restartedMain         org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018/02/04 12:45:40,477 INFO   restartedMain         org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/features || /features.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018/02/04 12:45:40,739 INFO   restartedMain         springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69) - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2018/02/04 12:45:41,171 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@139e5967: startup date [Sun Feb 04 12:44:56 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4ed2952b
-2018/02/04 12:45:41,263 INFO   restartedMain         org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:362) - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018/02/04 12:45:41,263 INFO   restartedMain         org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:362) - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018/02/04 12:45:41,352 INFO   restartedMain         org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:362) - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018/02/04 12:45:43,957 WARN   restartedMain         org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer(OptionalLiveReloadServer.java:62) - Unable to start LiveReload server
-2018/02/04 12:45:44,508 INFO   restartedMain         org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler.initialize(ExecutorConfigurationSupport.java:165) - Initializing ExecutorService 
-2018/02/04 12:45:44,588 WARN   restartedMain         org.springframework.cloud.starter.eureka.EurekaStarterDeprecationWarningAutoConfiguration.logWarning(EurekaStarterDeprecationWarningAutoConfiguration.java:19) - spring-cloud-starter-eureka is deprecated as of Spring Cloud Netflix 1.4.0, please migrate to spring-cloud-starter-netflix-eureka
-2018/02/04 12:45:45,027 INFO   restartedMain         org.springframework.jmx.export.annotation.AnnotationMBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) - Registering beans for JMX exposure on startup
-2018/02/04 12:45:45,037 INFO   restartedMain         org.springframework.jmx.export.annotation.AnnotationMBeanExporter.autodetect(MBeanExporter.java:916) - Bean with name 'environmentManager' has been autodetected for JMX exposure
-2018/02/04 12:45:45,041 INFO   restartedMain         org.springframework.jmx.export.annotation.AnnotationMBeanExporter.autodetect(MBeanExporter.java:916) - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
-2018/02/04 12:45:45,042 INFO   restartedMain         org.springframework.jmx.export.annotation.AnnotationMBeanExporter.autodetect(MBeanExporter.java:916) - Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
-2018/02/04 12:45:45,043 INFO   restartedMain         org.springframework.jmx.export.annotation.AnnotationMBeanExporter.autodetect(MBeanExporter.java:916) - Bean with name 'serviceRegistryEndpoint' has been autodetected for JMX exposure
-2018/02/04 12:45:45,046 INFO   restartedMain         org.springframework.jmx.export.annotation.AnnotationMBeanExporter.autodetect(MBeanExporter.java:916) - Bean with name 'refreshScope' has been autodetected for JMX exposure
-2018/02/04 12:45:45,049 INFO   restartedMain         org.springframework.jmx.export.annotation.AnnotationMBeanExporter.registerBeanInstance(MBeanExporter.java:678) - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
-2018/02/04 12:45:45,055 INFO   restartedMain         org.springframework.jmx.export.annotation.AnnotationMBeanExporter.registerBeanInstance(MBeanExporter.java:678) - Located managed bean 'serviceRegistryEndpoint': registering with JMX server as MBean [org.springframework.cloud.client.serviceregistry.endpoint:name=serviceRegistryEndpoint,type=ServiceRegistryEndpoint]
-2018/02/04 12:45:45,062 INFO   restartedMain         org.springframework.jmx.export.annotation.AnnotationMBeanExporter.registerBeanInstance(MBeanExporter.java:678) - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
-2018/02/04 12:45:45,072 INFO   restartedMain         org.springframework.jmx.export.annotation.AnnotationMBeanExporter.registerBeanInstance(MBeanExporter.java:678) - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=139e5967,type=ConfigurationPropertiesRebinder]
-2018/02/04 12:45:45,083 INFO   restartedMain         org.springframework.jmx.export.annotation.AnnotationMBeanExporter.registerBeanInstance(MBeanExporter.java:678) - Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
-2018/02/04 12:45:45,085 INFO   restartedMain         org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) - Registering beans for JMX exposure on startup
-2018/02/04 12:45:45,107 INFO   restartedMain         org.springframework.context.support.DefaultLifecycleProcessor.start(DefaultLifecycleProcessor.java:343) - Starting beans in phase 0
-2018/02/04 12:45:45,111 INFO   restartedMain         org.springframework.cloud.netflix2018/02/04 12:46:54,875 INFO   http-nio-8080-exec-1  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log(DirectJDKLog.java:179) - Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018/02/04 12:46:54,876 INFO   http-nio-8080-exec-1  org.springframework.web.servlet.DispatcherServlet.initServletBean(FrameworkServlet.java:489) - FrameworkServlet 'dispatcherServlet': initialization started
-2018/02/04 12:46:54,971 INFO   http-nio-8080-exec-1  org.springframework.web.servlet.DispatcherServlet.initServletBean(FrameworkServlet.java:508) - FrameworkServlet 'dispatcherServlet': initialization completed in 94 ms
-2018/02/04 12:46:55,168 DEBUG  http-nio-8080-exec-1  com.gxd.web.remote.impl.auth.AuthRemoteClientImpl.findUserByName(AuthRemoteClientImpl.java:43) - # findUserByName , parameter=test 
-2018/02/04 12:46:56,413 DEBUG  http-nio-8080-exec-2  com.gxd.web.remote.impl.auth.AuthRemoteClientImpl.findUserByName(AuthRemoteClientImpl.java:43) - # findUserByName , parameter=test 
-2018/02/04 12:46:57,485 INFO   http-nio-8080-exec-1  com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:922) - {dataSource-1} inited
-2018/02/04 12:46:57,501 DEBUG  http-nio-8080-exec-1  com.gxd.mapper.auth.UserMapper.findUserByName.debug(BaseJdbcLogger.java:181) - ==>  Preparing: SELECT ID , CREATE_TIME , EMAIL , LAST_LOGIN_TIME , MODIFY_TIME , USERNAME , ORGANIZE_ID , `PASSWORD` , SALT , `STATUS` , TRUE_NAME FROM T_SYS_USER WHERE USERNAME=? 
-2018/02/04 12:46:57,501 DEBUG  http-nio-8080-exec-2  com.gxd.mapper.auth.UserMapper.findUserByName.debug(BaseJdbcLogger.java:181) - ==>  Preparing: SELECT ID , CREATE_TIME , EMAIL , LAST_LOGIN_TIME , MODIFY_TIME , USERNAME , ORGANIZE_ID , `PASSWORD` , SALT , `STATUS` , TRUE_NAME FROM T_SYS_USER WHERE USERNAME=? 
-2018/02/04 12:46:58,555 DEBUG  http-nio-8080-exec-2  com.gxd.mapper.auth.UserMapper.findUserByName.debug(BaseJdbcLogger.java:181) - ==> Parameters: test(String)
-2018/02/04 12:46:58,555 DEBUG  http-nio-8080-exec-1  com.gxd.mapper.auth.UserMapper.findUserByName.debug(BaseJdbcLogger.java:181) - ==> Parameters: test(String)
-2018/02/04 12:46:58,587 DEBUG  http-nio-8080-exec-1  com.gxd.mapper.auth.UserMapper.findUserByName.debug(BaseJdbcLogger.java:181) - <==      Total: 1
-2018/02/04 12:46:58,622 DEBUG  http-nio-8080-exec-1  com.gxd.web.remote.impl.auth.AuthRemoteClientImpl.findUserByName(AuthRemoteClientImpl.java:45) - # findUserByName , result={"createTime":1499653077000,"email":"wangxin@139.com","id":"2017100500000000002","limit":10,"offset":0,"organizeId":"2017100300000000002","password":"88224c07ca4cb62fae285bff8cf176efc46b1230","salt":"b70a35c29470e7cc","status":1,"trueName":"test","username":"test"}
-2018/02/04 12:46:59,009 DEBUG  http-nio-8080-exec-2  com.gxd.mapper.auth.UserMapper.findUserByName.debug(BaseJdbcLogger.java:181) - <==      Total: 1
-2018/02/04 12:46:59,012 DEBUG  http-nio-8080-exec-2  com.gxd.web.remote.impl.auth.AuthRemoteClientImpl.findUserByName(AuthRemoteClientImpl.java:45) - # findUserByName , result={"createTime":1499653077000,"email":"wangxin@139.com","id":"2017100500000000002","limit":10,"offset":0,"organizeId":"2017100300000000002","password":"88224c07ca4cb62fae285bff8cf176efc46b1230","salt":"b70a35c29470e7cc","status":1,"trueName":"test","username":"test"}
-2018/02/04 12:47:01,120 DEBUG  http-nio-8080-exec-3  com.gxd.web.remote.impl.auth.AuthRemoteClientImpl.findRoleByUserId(AuthRemoteClientImpl.java:53) - # findRoleByUserId , parameter=2017100500000000002 
-2018/02/04 12:47:01,128 DEBUG  http-nio-8080-exec-3  com.gxd.mapper.auth.RoleMapper.findRoleByUserId.debug(BaseJdbcLogger.java:181) - ==>  Preparing: SELECT R.ID , R.NAME , R.CODE , R.REMARK FROM T_SYS_ROLE R , T_SYS_USER_ROLE UR WHERE R.ID=UR.ROLE_ID AND UR.USER_ID=? 
-2018/02/04 12:47:01,303 DEBUG  http-nio-8080-exec-3  com.gxd.mapper.auth.RoleMapper.findRoleByUserId.debug(BaseJdbcLogger.java:181) - ==> Parameters: 2017100500000000002(String)
-2018/02/04 12:47:01,616 DEBUG  http-nio-8080-exec-3  com.gxd.mapper.auth.RoleMapper.findRoleByUserId.debug(BaseJdbcLogger.java:181) - <==      Total: 1
-2018/02/04 12:47:01,625 DEBUG  http-nio-8080-exec-3  com.gxd.web.remote.impl.auth.AuthRemoteClientImpl.findRoleByUserId(AuthRemoteClientImpl.java:55) - # findRoleByUserId , result=[{"code":"common_role","id":"2017100300000000002","limit":10,"name":"普通用户","offset":0,"remark":"普通用户"}]
-2018/02/04 12:47:02,677 DEBUG  http-nio-8080-exec-4  com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.findNewsByPage(NewsRemoteClientImpl.java:69) - # parameter , null , null
-2018/02/04 12:47:02,723 DEBUG  http-nio-8080-exec-4  com.gxd.mapper.simple.NewsMapper.findNewsByPage.debug(BaseJdbcLogger.java:181) - ==>  Preparing: SELECT ID , ADDRESS , CREATE_TIME , DESCRIPTION , NEWS_TIME , TITLE FROM T_NEWS order by create_time asc 
-2018/02/04 12:47:02,728 DEBUG  http-nio-8080-exec-4  com.gxd.mapper.simple.NewsMapper.findNewsByPage.debug(BaseJdbcLogger.java:181) - ==> Parameters: 
-2018/02/04 12:47:02,830 DEBUG  http-nio-8080-exec-4  com.gxd.mapper.simple.NewsMapper.findNewsByPage.debug(BaseJdbcLogger.java:181) - <==      Total: 8
-2018/02/04 12:47:02,831 INFO   http-nio-8080-exec-4  com.gxd.service.simple.impl.NewsServiceImpl.findNewsByPage(NewsServiceImpl.java:98) - # 查询默认数据库 page.toString()=PageInfo{pageNum=1, pageSize=8, size=8, startRow=0, endRow=7, total=8, pages=1, list=[com.gxd.model.simple.News@3d7e3ce0, com.gxd.model.simple.News@636e7c12, com.gxd.model.simple.News@421d61b3, com.gxd.model.simple.News@72d29100, com.gxd.model.simple.News@3e872a86, com.gxd.model.simple.News@2e994fa8, com.gxd.model.simple.News@720b331, com.gxd.model.simple.News@611c7844], prePage=0, nextPage=0, isFirstPage=true, isLastPage=true, hasPreviousPage=false, hasNextPage=false, navigatePages=8, navigateFirstPage1, navigateLastPage1, navigatepageNums=[1]}
-2018/02/04 12:47:02,842 DEBUG  http-nio-8080-exec-4  com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.findNewsByPage(NewsRemoteClientImpl.java:71) - {"endRow":7,"firstPage":1,"hasNextPage":false,"hasPreviousPage":false,"isFirstPage":true,"isLastPage":true,"lastPage":1,"list":[{"address":"string","createTime":1483200000000,"description":"string","id":"8a09c775ded443319d873f776e032c33","limit":10,"newsTime":1483200000000,"offset":0,"title":"BB"},{"address":"BB","createTime":1499662333000,"description":"BB","id":"f40d6da72fa448ada5d7b9d17e19c582","limit":10,"newsTime":1499662560000,"offset":0,"title":"test"},{"address":"AA","createTime":1499662374000,"description":"AA","id":"31c673070cfa480e9a89bb7d389767c5","limit":10,"newsTime":1499662603000,"offset":0,"title":"AA"},{"address":"DD","createTime":1499662737000,"description":"DD","id":"8714509c7bfb4e2b9a944d3c82b0d001","limit":10,"newsTime":1499663356000,"offset":0,"title":"DD"},{"address":"CC","createTime":1499663248000,"description":"CC","id":"6c0517e1ec0c4831ab93a6c967aacbec","limit":10,"newsTime":1499663353000,"offset":0,"title":"CC"},{"address":"www.baidu.com","createTime":1517535896000,"description":"pring Cloud Sleuth 主要功能就是在分布式系统中提供追踪解决方案，并且兼容支持了 zipkin，你只需要在pom文件中引入相应的依赖即可。微服务架构上通过业务来划分服务的，通过REST调用，对外暴露的一个接口，可能需要很多个服务协同才能完成这个接口功能，如果链路上任何一个服务出现问题或者网络超时，都会形成导致接口调用失败。随着业务的不断扩张，服务之间互相调用会越来越复杂。","id":"b32054a0fcfe48338fe832885f0eedc5","limit":10,"newsTime":1518745440000,"offset":0,"title":"服务链路追踪(Spring Cloud Sleuth)"},{"address":"武汉","createTime":1517564003000,"description":"新闻类","id":"504360db25694d1d92847bc0b6648235","limit":10,"newsTime":1483200000000,"offset":0,"title":"新闻测试"},{"address":"1434324","createTime":1517564258000,"description":"cesh","id":"74e0a63d72b246a3a031bc5b419b1fe4","limit":10,"newsTime":1517564220000,"offset":0,"title":"test"}],"navigateFirstPage":1,"navigateLastPage":1,"navigatePages":8,"navigatepageNums":[1],"nextPage":0,"pageNum":1,"pageSize":8,"pages":1,"prePage":0,"size":8,"startRow":0,"total":8}
-2018/02/04 12:47:27,819 DEBUG  http-nio-8080-exec-6  com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.findNewsByPage(NewsRemoteClientImpl.java:69) - # parameter , null , null
-2018/02/04 12:47:27,821 DEBUG  http-nio-8080-exec-6  com.gxd.mapper.simple.NewsMapper.findNewsByPage.debug(BaseJdbcLogger.java:181) - ==>  Preparing: SELECT ID , ADDRESS , CREATE_TIME , DESCRIPTION , NEWS_TIME , TITLE FROM T_NEWS order by create_time asc 
-2018/02/04 12:47:27,822 DEBUG  http-nio-8080-exec-6  com.gxd.mapper.simple.NewsMapper.findNewsByPage.debug(BaseJdbcLogger.java:181) - ==> Parameters: 
-2018/02/04 12:47:27,831 DEBUG  http-nio-8080-exec-6  com.gxd.mapper.simple.NewsMapper.findNewsByPage.debug(BaseJdbcLogger.java:181) - <==      Total: 8
-2018/02/04 12:47:27,833 INFO   http-nio-8080-exec-6  com.gxd.service.simple.impl.NewsServiceImpl.findNewsByPage(NewsServiceImpl.java:98) - # 查询默认数据库 page.toString()=PageInfo{pageNum=1, pageSize=8, size=8, startRow=0, endRow=7, total=8, pages=1, list=[com.gxd.model.simple.News@979dc5a, com.gxd.model.simple.News@79dfa3f8, com.gxd.model.simple.News@2aaca8fa, com.gxd.model.simple.News@2e7c1c27, com.gxd.model.simple.News@69209ebe, com.gxd.model.simple.News@6de43001, com.gxd.model.simple.News@22c0ae3f, com.gxd.model.simple.News@6c130364], prePage=0, nextPage=0, isFirstPage=true, isLastPage=true, hasPreviousPage=false, hasNextPage=false, navigatePages=8, navigateFirstPage1, navigateLastPage1, navigatepageNums=[1]}
-2018/02/04 12:47:27,837 DEBUG  http-nio-8080-exec-6  com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.findNewsByPage(NewsRemoteClientImpl.java:71) - {"endRow":7,"firstPage":1,"hasNextPage":false,"hasPreviousPage":false,"isFirstPage":true,"isLastPage":true,"lastPage":1,"list":[{"address":"string","createTime":1483200000000,"description":"string","id":"8a09c775ded443319d873f776e032c33","limit":10,"newsTime":1483200000000,"offset":0,"title":"BB"},{"address":"BB","createTime":1499662333000,"description":"BB","id":"f40d6da72fa448ada5d7b9d17e19c582","limit":10,"newsTime":1499662560000,"offset":0,"title":"test"},{"address":"AA","createTime":1499662374000,"description":"AA","id":"31c673070cfa480e9a89bb7d389767c5","limit":10,"newsTime":1499662603000,"offset":0,"title":"AA"},{"address":"DD","createTime":1499662737000,"description":"DD","id":"8714509c7bfb4e2b9a944d3c82b0d001","limit":10,"newsTime":1499663356000,"offset":0,"title":"DD"},{"address":"CC","createTime":1499663248000,"description":"CC","id":"6c0517e1ec0c4831ab93a6c967aacbec","limit":10,"newsTime":1499663353000,"offset":0,"title":"CC"},{"address":"www.baidu.com","createTime":1517535896000,"description":"pring Cloud Sleuth 主要功能就是在分布式系统中提供追踪解决方案，并且兼容支持了 zipkin，你只需要在pom文件中引入相应的依赖即可。微服务架构上通过业务来划分服务的，通过REST调用，对外暴露的一个接口，可能需要很多个服务协同才能完成这个接口功能，如果链路上任何一个服务出现问题或者网络超时，都会形成导致接口调用失败。随着业务的不断扩张，服务之间互相调用会越来越复杂。","id":"b32054a0fcfe48338fe832885f0eedc5","limit":10,"newsTime":1518745440000,"offset":0,"title":"服务链路追踪(Spring Cloud Sleuth)"},{"address":"武汉","createTime":1517564003000,"description":"新闻类","id":"504360db25694d1d92847bc0b6648235","limit":10,"newsTime":1483200000000,"offset":0,"title":"新闻测试"},{"address":"1434324","createTime":1517564258000,"description":"cesh","id":"74e0a63d72b246a3a031bc5b419b1fe4","limit":10,"newsTime":1517564220000,"offset":0,"title":"test"}],"navigateFirstPage":1,"navigateLastPage":1,"navigatePages":8,"navigatepageNums":[1],"nextPage":0,"pageNum":1,"pageSize":8,"pages":1,"prePage":0,"size":8,"startRow":0,"total":8}
+2018/02/04 22:07:30,681 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:12:30,683 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:17:30,685 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:22:30,688 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:27:30,690 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:32:30,692 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:37:30,693 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:42:30,696 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:46:46,898 ERROR  DiscoveryClient-HeartbeatExecutor-0 com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91) - Request execution error
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:824) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1388) [eureka-client-1.7.0.jar:1.7.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_152]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_152]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_152]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_152]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_152]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_152]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_152]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.3.jar:4.5.3]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 26 more
+2018/02/04 22:46:47,119 WARN   DiscoveryClient-HeartbeatExecutor-0 com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:129) - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2018/02/04 22:46:48,153 ERROR  DiscoveryClient-HeartbeatExecutor-0 com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:83) - Request execution error
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:824) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1388) [eureka-client-1.7.0.jar:1.7.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_152]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_152]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_152]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_152]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_152]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_152]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_152]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.3.jar:4.5.3]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 27 more
+2018/02/04 22:46:48,169 WARN   DiscoveryClient-HeartbeatExecutor-0 com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:129) - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2018/02/04 22:46:49,190 ERROR  DiscoveryClient-HeartbeatExecutor-0 com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:83) - Request execution error
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:824) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1388) [eureka-client-1.7.0.jar:1.7.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_152]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_152]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_152]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_152]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_152]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_152]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_152]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.3.jar:4.5.3]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 27 more
+2018/02/04 22:46:49,206 WARN   DiscoveryClient-HeartbeatExecutor-0 com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:129) - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2018/02/04 22:46:49,317 ERROR  DiscoveryClient-HeartbeatExecutor-0 com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:833) - DiscoveryClient_GXD-HYSTRIX/192.168.0.5:gxd-hystrix:2001 - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Retry limit reached; giving up on completing the request
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:138) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:824) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1388) [eureka-client-1.7.0.jar:1.7.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_152]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_152]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
+ndNewsByPage(NewsRemoteClientImpl.java:71) - {"endRow":7,"firstPage":1,"hasNextPage":false,"hasPreviousPage":false,"isFirstPage":true,"isLastPage":true,"lastPage":1,"list":[{"address":"string","createTime":1483200000000,"description":"string","id":"8a09c775ded443319d873f776e032c33","limit":10,"newsTime":1483200000000,"offset":0,"title":"BB"},{"address":"BB","createTime":1499662333000,"description":"BB","id":"f40d6da72fa448ada5d7b9d17e19c582","limit":10,"newsTime":1499662560000,"offset":0,"title":"test"},{"address":"AA","createTime":1499662374000,"description":"AA","id":"31c673070cfa480e9a89bb7d389767c5","limit":10,"newsTime":1499662603000,"offset":0,"title":"AA"},{"address":"DD","createTime":1499662737000,"description":"DD","id":"8714509c7bfb4e2b9a944d3c82b0d001","limit":10,"newsTime":1499663356000,"offset":0,"title":"DD"},{"address":"CC","createTime":1499663248000,"description":"CC","id":"6c0517e1ec0c4831ab93a6c967aacbec","limit":10,"newsTime":1499663353000,"offset":0,"title":"CC"},{"address":"www.baidu.com","createTime":1517535896000,"description":"pring Cloud Sleuth 主要功能就是在分布式系统中提供追踪解决方案，并且兼容支持了 zipkin，你只需要在pom文件中引入相应的依赖即可。微服务架构上通过业务来划分服务的，通过REST调用，对外暴露的一个接口，可能需要很多个服务协同才能完成这个接口功能，如果链路上任何一个服务出现问题或者网络超时，都会形成导致接口调用失败。随着业务的不断扩张，服务之间互相调用会越来越复杂。","id":"b32054a0fcfe48338fe832885f0eedc5","limit":10,"newsTime":1518745440000,"offset":0,"title":"服务链路追踪(Spring Cloud Sleuth)"},{"address":"武汉","createTime":1517564003000,"description":"新闻类","id":"504360db25694d1d92847bc0b6648235","limit":10,"newsTime":1483200000000,"offset":0,"title":"新闻测试"},{"address":"1434324","createTime":1517564258000,"description":"cesh","id":"74e0a63d72b246a3a031bc5b419b1fe4","limit":10,"newsTime":1517564220000,"offset":0,"title":"test"}],"navigateFirstPage":1,"navigateLastPage":1,"navigatePages":8,"navigatepageNums":[1],"nextPage":0,"pageNum":1,"pageSize":8,"pages":1,"prePage":0,"size":8,"startRow":0,"total":8}
 2018/02/04 12:47:30,166 DEBUG  http-nio-8080-exec-7  com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.findNewsByPage(NewsRemoteClientImpl.java:69) - # parameter , null , null
 2018/02/04 12:47:30,167 DEBUG  http-nio-8080-exec-7  com.gxd.mapper.simple.NewsMapper.findNewsByPage.debug(BaseJdbcLogger.java:181) - ==>  Preparing: SELECT ID , ADDRESS , CREATE_TIME , DESCRIPTION , NEWS_TIME , TITLE FROM T_NEWS order by create_time asc 
 2018/02/04 12:47:30,170 DEBUG  http-nio-8080-exec-7  com.gxd.mapper.simple.NewsMapper.findNewsByPage.debug(BaseJdbcLogger.java:181) - ==> Parameters: 
@@ -12920,8 +13024,16 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 2018/02/04 21:49:34,669 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
 2018/02/04 21:54:34,670 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
 2018/02/04 21:59:34,675 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
-mple.impl.NewsServiceImpl.findNewsByPage(NewsServiceImpl.java:98) - # 查询默认数据库 page.toString()=PageInfo{pageNum=1, pageSize=8, size=8, startRow=0, endRow=7, total=8, pages=1, list=[com.gxd.model.simple.News@5ce61c50, com.gxd.model.simple.News@58d99314, com.gxd.model.simple.News@1ddb166b, com.gxd.model.simple.News@40e42f6c, com.gxd.model.simple.News@2c8cafbc, com.gxd.model.simple.News@3859c80a, com.gxd.model.simple.News@7df4e924, com.gxd.model.simple.News@1c8a26b9], prePage=0, nextPage=0, isFirstPage=true, isLastPage=true, hasPreviousPage=false, hasNextPage=false, navigatePages=8, navigateFirstPage1, navigateLastPage1, navigatepageNums=[1]}
-2018/02/04 12:58:31,805 DEBUG  http-nio-8080-exec-3  com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.findNewsByPage(NewsRemoteClientImpl.java:71) - {"endRow":7,"firstPage":1,"hasNextPage":false,"hasPreviousPage":false,"isFirstPage":true,"isLastPage":true,"lastPage":1,"list":[{"address":"string","createTime":1483200000000,"description":"string","id":"8a09c775ded443319d873f776e032c33","limit":10,"newsTime":1483200000000,"offset":0,"title":"BB"},{"address":"BB","createTime":1499662333000,"description":"BB","id":"f40d6da72fa448ada5d7b9d17e19c582","limit":10,"newsTime":1499662560000,"offset":0,"title":"test"},{"address":"AA","createTime":1499662374000,"description":"AA","id":"31c673070cfa480e9a89bb7d389767c5","limit":10,"newsTime":1499662603000,"offset":0,"title":"AA"},{"address":"DD","createTime":1499662737000,"description":"DD","id":"8714509c7bfb4e2b9a944d3c82b0d001","limit":10,"newsTime":1499663356000,"offset":0,"title":"DD"},{"address":"CC","createTime":1499663248000,"description":"CC","id":"6c0517e1ec0c4831ab93a6c967aacbec","limit":10,"newsTime":1499663353000,"offset":0,"title":"CC"},{"address":"www.baidu.com","createTime":1517535896000,"description":"pring Cloud Sleuth 主要功能就是在分布式系统中提供追踪解决方案，并且兼容支持了 zipkin，你只需要在pom文件中引入相应的依赖即可。微服务架构上通过业务来划分服务的，通过REST调用，对外暴露的一个接口，可能需要很多个服务协同才能完成这个接口功能，如果链路上任何一个服务出现问题或者网络超时，都会形成导致接口调用失败。随着业务的不断扩张，服务之间互相调用会越来越复杂。","id":"b32054a0fcfe48338fe832885f0eedc5","limit":10,"newsTime":1518745440000,"offset":0,"title":"服务链路追踪(Spring Cloud Sleuth)"},{"address":"武汉","createTime":1517564003000,"description":"新闻类","id":"504360db25694d1d92847bc0b6648235","limit":10,"newsTime":1483200000000,"offset":0,"title":"新闻测试"},{"address":"1434324","createTime":1517564258000,"description":"cesh","id":"74e0a63d72b246a3a031bc5b419b1fe4","limit":10,"newsTime":1517564220000,"offset":0,"title":"test"}],"navigateFirstPage":1,"navigateLastPage":1,"navigatePages":8,"navigatepageNums":[1],"nextPage":0,"pageNum":1,"pageSize":8,"pages":1,"prePage":0,"size":8,"startRow":0,"total":8}
+2018/02/04 22:04:34,703 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:09:34,721 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:14:34,724 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:19:34,726 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:24:34,728 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:29:34,730 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:34:34,731 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:39:34,736 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+2018/02/04 22:44:34,747 INFO   AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+��过REST调用，对外暴露的一个接口，可能需要很多个服务协同才能完成这个接口功能，如果链路上任何一个服务出现问题或者网络超时，都会形成导致接口调用失败。随着业务的不断扩张，服务之间互相调用会越来越复杂。","id":"b32054a0fcfe48338fe832885f0eedc5","limit":10,"newsTime":1518745440000,"offset":0,"title":"服务链路追踪(Spring Cloud Sleuth)"},{"address":"武汉","createTime":1517564003000,"description":"新闻类","id":"504360db25694d1d92847bc0b6648235","limit":10,"newsTime":1483200000000,"offset":0,"title":"新闻测试"},{"address":"1434324","createTime":1517564258000,"description":"cesh","id":"74e0a63d72b246a3a031bc5b419b1fe4","limit":10,"newsTime":1517564220000,"offset":0,"title":"test"}],"navigateFirstPage":1,"navigateLastPage":1,"navigatePages":8,"navigatepageNums":[1],"nextPage":0,"pageNum":1,"pageSize":8,"pages":1,"prePage":0,"size":8,"startRow":0,"total":8}
 2018/02/04 12:58:52,281 INFO   http-nio-8080-exec-5  com.gxd.GxdProviderApplication$$EnhancerBySpringCGLIB$$11c0a8c4.callHome(GxdProviderApplication.java:40) - calling trace service-hi  
 2018/02/04 12:58:52,519 ERROR  http-nio-8080-exec-5  org.springframework.cloud.sleuth.instrument.web.TraceFilter.doFilter(TraceFilter.java:169) - Uncaught exception thrown
 org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.web.client.HttpClientErrorException: 404 null

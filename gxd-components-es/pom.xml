@@ -5,7 +5,7 @@
 
 	<groupId>com.gxd</groupId>
 	<artifactId>gxd-components-es</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.9-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>gxd-components-es</name>

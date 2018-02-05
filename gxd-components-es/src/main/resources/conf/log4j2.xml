@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+ <?xml version="1.0" encoding="UTF-8"?>
 <!-- status=debug 可以查看log4j的装配过程 -->
 <configuration status="off" monitorInterval="1800">
 
