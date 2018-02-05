@@ -197,32 +197,6 @@
       <version>${fastjson.version}</version>
     </dependency>
   </dependencies>
-  <!--指定仓库 -->
-  <repositories>
-    <repository>
-      <id>central</id>
-      <url>http://192.168.50.37:9903/nexus/content/groups/public/</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-  <!--指定插件仓库 -->
-  <pluginRepositories>
-    <pluginRepository>
-      <id>central</id>
-      <url>http://192.168.50.37:9903/nexus/content/groups/public/</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>
   <!--自动发布构件到远程仓库-->
   <distributionManagement>
     <repository>
