@@ -64,7 +64,7 @@ public class LoginController {
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public String login(HttpServletResponse httpServletResponse, LoginDTO loginDTO, String redirect, Model model){
         if (loginDTO == null || !credentials.containsKey(loginDTO.getLoginAccount()) || !credentials.get(loginDTO.getLoginAccount()).equals(loginDTO.getPassword())){
-            model.addAttribute("state", "-1");
+            model.addAttribute("state", "-12");
             model.addAttribute("message", "Invalid username or password!");
             return "login";
         }

@@ -1,15 +1,16 @@
 /* 登录页
  ================================== */
 $(function () {
-    if (state != null && state != undefined) {
+    if (state != null && state != undefined && state != 0) {
         if (state == -1 || state == -2) {
             addTip($('#validCode'), message);
-        } else if (state = -11) {
+        } else if (state == -11) {
             addTip($('input[name=loginAccount]'), message);
-        } else if (state = -12) {
-            addTip($('input[name=password]'), message);
-        } else if (state = -13 || state == -14) {
-            addTip($('.sprite'), message);
+        } else if (state == -12) {
+            addTip($('input[type=password]'), message);
+        } else if (state == -13 || state == -14) {
+            // addTip($('.sprite'), message);
+            addTip($('#loginBtn'), message);
         } else {
             addTip($('#validCode'), message);
         }
@@ -44,7 +45,12 @@ $(function () {
     function checkForm() {
         var result = false;
         $.each(valid, function (i, n) {
-            var input = $('input[name=' + i + ']');
+            var input;
+            if(i == "password"){
+                input = $('input[type=' + i + ']')
+            }else{
+                input = $('input[name=' + i + ']')
+            }
             if (n.required && !$.trim(input.val())) {
                 addTip(input, n.message);
                 result = false;
@@ -54,18 +60,28 @@ $(function () {
                 result = true;
             }
         });
+        encryptionPassword();
         return result;
     }
 
+    function encryptionPassword(){
+        var hash = $.md5($.md5($("input[type='password']").val()).toUpperCase()+$('#validCode').val().toUpperCase());
+        $("input[name='password']").val(hash);
+    }
     // 获取焦点事件
     $('input').bind('focus', function () {
-        $(this).removeClass('danger');
+        $(this).parents(".form-group").removeClass('has-error');
         $(this).siblings('.help-block').remove();
     });
 
     // 失去焦点事件
     $.each(valid, function (i, n) {
-        var input = $('input[name=' + i + ']');
+        var input;
+        if(i == "password"){
+            input = $('input[type=' + i + ']')
+        }else{
+            input = $('input[name=' + i + ']')
+        }
         input.bind('blur', function () {
             if (n.required && !$.trim(input.val())) {
                 addTip(input, n.message);
@@ -80,7 +96,7 @@ $(function () {
 
     // 加入提示消息
     function addTip(input, tip) {
-        input.addClass('danger');
+        input.parents(".form-group").addClass('has-error');
         input.parent().find('.help-block').remove();
         input.parent().append(helpBlock(tip));
     }
@@ -95,7 +111,7 @@ $(function () {
         $('.validImg').attr('src', ctx + '/validateCode.action?' + Math.random());
         return false;
     });
-    // 重新获取验证码
+    // // 重新获取验证码
     $(".validImg").click(function () {
         $(this).attr("src", ctx + "/validateCode?" + Math.random());
     });

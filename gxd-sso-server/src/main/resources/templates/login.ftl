@@ -29,8 +29,8 @@
                         <input type="text" name="loginAccount" value="${loginAccount!''}" placeholder="请输入用户名" tabIndex=1>
                     </div>
                     <div class="item">
-                        <label>密码：</label><a href="#" id="getPassword">忘记密码?</a>
-                        <input type="password" name="password" value="" placeholder="请输入密码" tabIndex=2>
+                        <#--<label>密码：</label><a href="#" id="getPassword">忘记密码?</a>-->
+                        <input type="password" value="" placeholder="请输入密码" tabIndex=2>
                     </div>
                     <div class="item">
                         <label>验证码：</label>
@@ -52,7 +52,7 @@
         <p class="copyright">&copy; 2018 CINDATA 版权所有</p>
     </div>
 </body>
-<script src="${ctx}/static/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="${ctx}/static/plugins/jQuery/jquery-3.3.1.js"></script>
 <script src="${ctx}/static/plugins/md5/jQuery.md5.js"></script>
 <script src="${ctx}/static/js/login.js"></script>
 <script type="text/javascript">
