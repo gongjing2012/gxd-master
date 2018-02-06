@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f117f7d-61e2-4ebf-8ad3-dadbc6ffd616" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/web/LoginController.java" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/web/LoginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/business.log" afterPath="$PROJECT_DIR$/logs/business.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/gxd-commons/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,8 +46,8 @@
       <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/web/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
+            <state relative-caret-position="134">
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1005,7 +1003,7 @@
       <workItem from="1517676855993" duration="17006000" />
       <workItem from="1517791983349" duration="19675000" />
       <workItem from="1517835237470" duration="2129000" />
-      <workItem from="1517881288024" duration="26022000" />
+      <workItem from="1517881288024" duration="26190000" />
     </task>
     <task id="LOCAL-00001" summary="提交代码">
       <created>1517665502709</created>
@@ -1154,7 +1152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517934717841</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="增加密码验证">
+      <created>1517935283925</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1517935283925</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1172,7 +1177,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77266000" />
+    <option name="totallyTimeSpent" value="77434000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1289,14 +1294,8 @@
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/web/LoginController.java</url>
-          <line>70</line>
-          <properties />
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="27" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -4632,8 +4631,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/web/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
+        <state relative-caret-position="134">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
