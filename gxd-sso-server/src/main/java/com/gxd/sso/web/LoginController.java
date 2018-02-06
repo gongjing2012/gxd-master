@@ -64,8 +64,8 @@ public class LoginController {
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public String login(HttpServletRequest request,HttpServletResponse httpServletResponse, LoginDTO loginDTO, String redirect, Model model){
         String validateCode = cookieUtils.getValue(request,validateCodeKey);
-        String cachevalidCode = redisUtils.get(validateCode);
-        String passwordDb = "hellosso";//此处从数据库取密码
+        String cachevalidCode = redisUtils.get(validateCode).toUpperCase();
+        String passwordDb = Digests.MD5Encode("hellosso").toUpperCase();//此处从数据库取密码
         String passwordValidateCodeMd5 = Digests.MD5Encode(passwordDb+cachevalidCode);
 
         if (loginDTO.getPassword() == null ||

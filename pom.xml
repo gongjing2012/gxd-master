@@ -26,6 +26,7 @@
     <module>gxd-components-fastdfs</module>
     <module>gxd-components-es</module>
     <module>gxd-sso</module>
+    <module>gxd-sso-server</module>
     <module>gxd-api-gateway</module>
     <module>gxd-apollo-config</module>
     <module>gxd-sleuth-zipkin</module>
