@@ -219,5 +219,20 @@
       </plugin>
     </plugins>
   </build>
+  <organization>
+    <name>北京信达泰和数据技术有限公司</name>
+    <url>http://www.gxdgroup.com.cn/</url>
+  </organization>
 
+  <developers>
+    <developer>
+      <name>gongjing</name>
+      <email>gongjing@cindata.cn</email>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+      <organization>北京信达泰和数据技术有限公司</organization>
+    </developer>
+  </developers>
 </project>
