@@ -2,253 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f117f7d-61e2-4ebf-8ad3-dadbc6ffd616" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/img/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/img/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/img/loginFormBg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/img/loginFormBg1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/img/loginFormBg2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/img/logo-lg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/img/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/img/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/img/validCode.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/img/wave.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_20_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_20_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_20_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_20_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_20_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_java_zipkin_2_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_java_zipkin_autoconfigure_ui_2_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_java_zipkin_server_2_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_java_zipkin_ui_2_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_1_3_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/salt/TranscodeUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/annotation/IsLogin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/config/ApplicationContext.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/config/WebMvcConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/enums/LoginResponseCode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/enums/MemberResponseCode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/enums/ResponseCode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/interceptor/InterceptorConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/interceptor/SSOInterceptor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/model/LoginDTO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/utils/CookieUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/utils/JwtUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/web/LoginController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/conf/log4j2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/css/login.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/js/login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/plugins/jQuery/jquery-2.2.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/plugins/jQuery/jquery.form.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/plugins/md5/jQuery.md5.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/templates/login.ftl" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_4_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_openhft_zero_allocation_hashing_0_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/BaseEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/Result.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/ValidAdmin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/ValidMember.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/auth/Permission.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/auth/PermissionVo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/auth/Role.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/auth/RolePermission.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/auth/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/auth/UserRole.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/console/Admin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/console/AdminRole.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/console/ConsoleRole.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/console/Log.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/console/Menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/console/RoleMenu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/member/Member.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/model/simple/News.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/AssertUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/Constants.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/DomainJsonUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/ExceptionLog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/FastJsonUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/GsonUtils$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/GsonUtils$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/GsonUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/IPAddressUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/ImageCaptcha.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/LRUCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/ListUtils$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/ListUtils$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/ListUtils$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/ListUtils$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/ListUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/MathtUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/NetUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/ReflectionUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/RegXUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/StringUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/UUIDUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/utils/VerificationUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gxd-components-es/src/lib/elasticsearch-search.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/common/exception/BusinessException.class" afterPath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/common/exception/BusinessException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/common/salt/Digests.class" afterPath="$PROJECT_DIR$/gxd-commons/target/classes/com/gxd/common/salt/Digests.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-api-gateway/pom.xml" afterPath="$PROJECT_DIR$/gxd-api-gateway/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/exception/BusinessException.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/exception/BusinessException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/salt/Digests.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/salt/Digests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-components-fastdfs/src/main/java/com/gxd/fastdfs/web/UploadController.java" afterPath="$PROJECT_DIR$/gxd-components-fastdfs/src/main/java/com/gxd/fastdfs/web/UploadController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-components-redis/pom.xml" afterPath="$PROJECT_DIR$/gxd-components-redis/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-components-redis/src/main/java/com/gxd/redis/lock/RedissonProperties.java" afterPath="$PROJECT_DIR$/gxd-components-redis/src/main/java/com/gxd/redis/lock/RedissonProperties.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-components-redis/src/main/java/com/gxd/redis/utils/RedisUtils.java" afterPath="$PROJECT_DIR$/gxd-components-redis/src/main/java/com/gxd/redis/utils/RedisUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-consumer-freemarker/src/main/java/com/gxd/common/shiro/AuthorizingRealmImpl.java" afterPath="$PROJECT_DIR$/gxd-consumer-freemarker/src/main/java/com/gxd/common/shiro/AuthorizingRealmImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-consumer-freemarker/src/main/java/com/gxd/common/shiro/vo/PermissionEnumUtil.java" afterPath="$PROJECT_DIR$/gxd-consumer-freemarker/src/main/java/com/gxd/common/shiro/vo/PermissionEnumUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-consumer-freemarker/src/main/java/com/gxd/common/shiro/vo/PermissionVo.java" afterPath="$PROJECT_DIR$/gxd-consumer-freemarker/src/main/java/com/gxd/common/shiro/vo/PermissionVo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-consumer-freemarker/src/main/java/com/gxd/common/shiro/vo/Principal.java" afterPath="$PROJECT_DIR$/gxd-consumer-freemarker/src/main/java/com/gxd/common/shiro/vo/Principal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-consumer-freemarker/src/main/java/com/gxd/common/shiro/vo/RoleEnumUtil.java" afterPath="$PROJECT_DIR$/gxd-consumer-freemarker/src/main/java/com/gxd/common/shiro/vo/RoleEnumUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-consumer-freemarker/src/main/java/com/gxd/web/controller/auth/LoginController.java" afterPath="$PROJECT_DIR$/gxd-consumer-freemarker/src/main/java/com/gxd/web/controller/auth/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-consumer-freemarker/src/main/java/com/gxd/web/controller/simple/NewsController.java" afterPath="$PROJECT_DIR$/gxd-consumer-freemarker/src/main/java/com/gxd/web/controller/simple/NewsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-consumer-thymeleaf/src/main/java/com/gxd/common/shiro/AuthorizingRealmImpl.java" afterPath="$PROJECT_DIR$/gxd-consumer-thymeleaf/src/main/java/com/gxd/common/shiro/AuthorizingRealmImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-consumer-thymeleaf/src/main/java/com/gxd/common/shiro/vo/PermissionEnumUtil.java" afterPath="$PROJECT_DIR$/gxd-consumer-thymeleaf/src/main/java/com/gxd/common/shiro/vo/PermissionEnumUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-consumer-thymeleaf/src/main/java/com/gxd/common/shiro/vo/PermissionVo.java" afterPath="$PROJECT_DIR$/gxd-consumer-thymeleaf/src/main/java/com/gxd/common/shiro/vo/PermissionVo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-consumer-thymeleaf/src/main/java/com/gxd/common/shiro/vo/Principal.java" afterPath="$PROJECT_DIR$/gxd-consumer-thymeleaf/src/main/java/com/gxd/common/shiro/vo/Principal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-consumer-thymeleaf/src/main/java/com/gxd/common/shiro/vo/RoleEnumUtil.java" afterPath="$PROJECT_DIR$/gxd-consumer-thymeleaf/src/main/java/com/gxd/common/shiro/vo/RoleEnumUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-eureka-server/src/main/resources/application-server1.yml" afterPath="$PROJECT_DIR$/gxd-eureka-server/src/main/resources/application-server1.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-eureka-server/src/main/resources/application-server2.yml" afterPath="$PROJECT_DIR$/gxd-eureka-server/src/main/resources/application-server2.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-eureka-server/src/main/resources/application-server3.yml" afterPath="$PROJECT_DIR$/gxd-eureka-server/src/main/resources/application-server3.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-feign/src/main/java/com/gxd/web/hystrix/auth/AuthRemoteClientHystrix.java" afterPath="$PROJECT_DIR$/gxd-feign/src/main/java/com/gxd/web/hystrix/auth/AuthRemoteClientHystrix.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-feign/src/main/java/com/gxd/web/hystrix/simple/NewsRemoteClientHystrix.java" afterPath="$PROJECT_DIR$/gxd-feign/src/main/java/com/gxd/web/hystrix/simple/NewsRemoteClientHystrix.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-feign/src/main/java/com/gxd/web/remote/auth/AuthRemoteClient.java" afterPath="$PROJECT_DIR$/gxd-feign/src/main/java/com/gxd/web/remote/auth/AuthRemoteClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-feign/src/main/java/com/gxd/web/remote/simple/NewsRemoteClient.java" afterPath="$PROJECT_DIR$/gxd-feign/src/main/java/com/gxd/web/remote/simple/NewsRemoteClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-hystrix/src/main/java/com/gxd/web/HystrixSimpleController.java" afterPath="$PROJECT_DIR$/gxd-hystrix/src/main/java/com/gxd/web/HystrixSimpleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/logs/business.log" afterPath="$PROJECT_DIR$/gxd-provider/logs/business.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/auth/PermissionMapper.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/auth/PermissionMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/auth/RoleMapper.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/auth/RoleMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/auth/RolePermissionMapper.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/auth/RolePermissionMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/auth/UserMapper.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/auth/UserMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/auth/UserRoleMapper.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/auth/UserRoleMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/console/AdminMapper.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/console/AdminMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/console/AdminRoleMapper.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/console/AdminRoleMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/console/ConsoleRoleMapper.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/console/ConsoleRoleMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/console/LogMapper.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/console/LogMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/console/MenuMapper.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/console/MenuMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/console/RoleMenuMapper.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/console/RoleMenuMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/member/MemberMapper.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/member/MemberMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/simple/NewsMapper.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/mapper/simple/NewsMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/AuthService.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/AuthService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/PermissionService.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/PermissionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/RoleService.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/RoleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/UserService.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/impl/AuthServiceImpl.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/impl/AuthServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/impl/PermissionServiceImpl.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/impl/PermissionServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/impl/RoleServiceImpl.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/impl/RoleServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/auth/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/simple/NewsService.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/simple/NewsService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/simple/impl/NewsServiceImpl.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/service/simple/impl/NewsServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/web/remote/impl/auth/AuthRemoteClientImpl.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/web/remote/impl/auth/AuthRemoteClientImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/web/remote/impl/simple/NewsRemoteClientImpl.java" afterPath="$PROJECT_DIR$/gxd-provider/src/main/java/com/gxd/web/remote/impl/simple/NewsRemoteClientImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/gxd-provider/src/main/resources/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/auth/PermissionMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/auth/PermissionMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/auth/RoleMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/auth/RoleMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/auth/RolePermissionMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/auth/RolePermissionMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/auth/UserMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/auth/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/auth/UserRoleMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/auth/UserRoleMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/console/AdminMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/console/AdminMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/console/AdminRoleMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/console/AdminRoleMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/console/ConsoleRoleMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/console/ConsoleRoleMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/console/LogMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/console/LogMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/console/MenuMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/console/MenuMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/console/RoleMenuMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/console/RoleMenuMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/member/MemberMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/member/MemberMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/simple/NewsMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider/src/main/resources/mapper/simple/NewsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/main/resources/mybatis-generator.xml" afterPath="$PROJECT_DIR$/gxd-provider/src/main/resources/mybatis-generator.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/src/test/java/com/gxd/GxdProviderApplicationTests.java" afterPath="$PROJECT_DIR$/gxd-provider/src/test/java/com/gxd/GxdProviderApplicationTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/auth/PermissionMapper.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/auth/PermissionMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/auth/RoleMapper.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/auth/RoleMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/auth/RolePermissionMapper.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/auth/RolePermissionMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/auth/UserMapper.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/auth/UserMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/auth/UserRoleMapper.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/auth/UserRoleMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/console/AdminMapper.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/console/AdminMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/console/AdminRoleMapper.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/console/AdminRoleMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/console/ConsoleRoleMapper.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/console/ConsoleRoleMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/console/LogMapper.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/console/LogMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/console/MenuMapper.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/console/MenuMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/console/RoleMenuMapper.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/console/RoleMenuMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/member/MemberMapper.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/member/MemberMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/simple/NewsMapper.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/mapper/simple/NewsMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/AuthService.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/AuthService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/PermissionService.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/PermissionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/RoleService.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/RoleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/UserService.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/impl/AuthServiceImpl.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/impl/AuthServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/impl/PermissionServiceImpl.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/impl/PermissionServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/impl/RoleServiceImpl.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/impl/RoleServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/auth/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/simple/NewsService.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/simple/NewsService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/simple/impl/NewsServiceImpl.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/service/simple/impl/NewsServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/web/remote/impl/auth/AuthRemoteClientImpl.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/web/remote/impl/auth/AuthRemoteClientImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/web/remote/impl/simple/NewsRemoteClientImpl.java" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/java/com/gxd/web/remote/impl/simple/NewsRemoteClientImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/resources/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/auth/PermissionMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/auth/PermissionMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/auth/RoleMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/auth/RoleMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/auth/RolePermissionMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/auth/RolePermissionMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/auth/UserMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/auth/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/auth/UserRoleMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/auth/UserRoleMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/console/AdminMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/console/AdminMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/console/AdminRoleMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/console/AdminRoleMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/console/ConsoleRoleMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/console/ConsoleRoleMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/console/LogMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/console/LogMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/console/MenuMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/console/MenuMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/console/RoleMenuMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/console/RoleMenuMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/member/MemberMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/member/MemberMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/simple/NewsMapper.xml" afterPath="$PROJECT_DIR$/gxd-provider1/src/main/resources/mapper/simple/NewsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-sso/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/gxd-sso/src/main/resources/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/business.2017-12-27.log" afterPath="$PROJECT_DIR$/logs/business.2017-12-27.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/business.2018-01-03.log" afterPath="$PROJECT_DIR$/logs/business.2018-01-03.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/business.2018-01-05.log" afterPath="$PROJECT_DIR$/logs/business.2018-01-05.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/business.2018-01-06.log" afterPath="$PROJECT_DIR$/logs/business.2018-01-06.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/business.2018-01-17.log" afterPath="$PROJECT_DIR$/logs/business.2018-01-17.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/business.2018-01-20.log" afterPath="$PROJECT_DIR$/logs/business.2018-01-20.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/web/LoginController.java" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/web/LoginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/business.log" afterPath="$PROJECT_DIR$/logs/business.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_17_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_20_Final.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_17_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_20_Final.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_17_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_20_Final.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_redisson_redisson_3_5_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_redisson_redisson_3_6_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/BaseEntity.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/BaseEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/Result.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/Result.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/ValidAdmin.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/ValidAdmin.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/ValidMember.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/ValidMember.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/auth/Permission.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/auth/Permission.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/auth/PermissionVo.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/auth/PermissionVo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/auth/Role.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/auth/Role.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/auth/RolePermission.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/auth/RolePermission.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/auth/User.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/auth/User.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/auth/UserRole.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/auth/UserRole.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/console/Admin.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/console/Admin.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/console/AdminRole.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/console/AdminRole.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/console/ConsoleRole.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/console/ConsoleRole.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/console/Log.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/console/Log.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/console/Menu.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/console/Menu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/console/RoleMenu.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/console/RoleMenu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/member/Member.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/member/Member.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/model/simple/News.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/model/simple/News.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/AssertUtils.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/AssertUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/Constants.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/Constants.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/DomainJsonUtils.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/DomainJsonUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/ExceptionLog.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/ExceptionLog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/FastJsonUtils.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/FastJsonUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/GsonUtils.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/GsonUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/IPAddressUtils.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/IPAddressUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/ImageCaptcha.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/ImageCaptcha.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/LRUCache.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/LRUCache.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/ListUtils.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/ListUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/MathtUtils.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/MathtUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/NetUtils.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/NetUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/ReflectionUtils.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/ReflectionUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/RegXUtils.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/RegXUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/StringUtils.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/StringUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/UUIDUtil.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/UUIDUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/utils/VerificationUtils.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/VerificationUtils.java" />
     </list>
     <ignored path="$PROJECT_DIR$/gxd-commons/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -288,12 +44,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/web/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="21">
+              <caret line="64" column="141" lean-forward="false" selection-start-line="64" selection-start-column="141" selection-end-line="64" selection-end-column="141" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -311,8 +69,8 @@
       <file leaf-file-name="CookieUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/utils/CookieUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+            <state relative-caret-position="167">
+              <caret line="42" column="19" lean-forward="false" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -328,13 +86,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.ftl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/resources/templates/login.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="54" column="61" lean-forward="false" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
+            <state relative-caret-position="139">
+              <caret line="56" column="35" lean-forward="false" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
               <folding>
-                <element signature="e#2226#2232#0#HTML" expanded="true" />
+                <element signature="e#2217#2223#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -353,11 +111,9 @@
       <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/js/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1322">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="13" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="1134">
+              <caret line="115" column="32" lean-forward="true" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -493,9 +249,9 @@
         <option value="$PROJECT_DIR$/gxd-sso-server/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/utils/CookieUtils.java" />
         <option value="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/config/WebMvcConfig.java" />
+        <option value="$PROJECT_DIR$/gxd-sso-server/src/main/resources/templates/login.ftl" />
         <option value="$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/js/login.js" />
         <option value="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/web/LoginController.java" />
-        <option value="$PROJECT_DIR$/gxd-sso-server/src/main/resources/templates/login.ftl" />
       </list>
     </option>
   </component>
@@ -1021,11 +777,11 @@
       <recent name="com.gxd.sso.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\idea4\gxd-master\gxd-sso-server\src\main\resources\static\js" />
       <recent name="E:\idea4\gxd-master\gxd-sso-server\src\main\resources\static\plugins\jQuery" />
       <recent name="E:\idea4\gxd-master\gxd-commons\src\main\java\com\gxd\common\salt" />
       <recent name="E:\idea4\gxd-master\gxd-sso-server\src\main\java\com\gxd\sso" />
       <recent name="E:\idea4\gxd-master\gxd-sso-server\src\main\java\com\gxd\sso\interceptor" />
-      <recent name="E:\idea4\gxd-master\gxd-sso-server\src\main\resources\static\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1640,7 +1396,7 @@
       <workItem from="1517676855993" duration="17006000" />
       <workItem from="1517791983349" duration="19675000" />
       <workItem from="1517835237470" duration="2129000" />
-      <workItem from="1517881288024" duration="24001000" />
+      <workItem from="1517881288024" duration="25427000" />
     </task>
     <task id="LOCAL-00001" summary="提交代码">
       <created>1517665502709</created>
@@ -1768,7 +1524,21 @@
       <option name="project" value="LOCAL" />
       <updated>1517881767610</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="修改common,以及增加单点登录sso-server模块">
+      <created>1517933277894</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1517933277894</updated>
+    </task>
+    <task id="LOCAL-00020" summary="密码加密传输">
+      <created>1517934136462</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1517934136462</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1786,7 +1556,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75245000" />
+    <option name="totallyTimeSpent" value="76671000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1812,7 +1582,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37704918" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26393443" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1866,7 +1636,8 @@
     <MESSAGE value="增加私服" />
     <MESSAGE value="修改pom文件" />
     <MESSAGE value="修改common,以及增加单点登录sso-server模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改common,以及增加单点登录sso-server模块" />
+    <MESSAGE value="密码加密传输" />
+    <option name="LAST_COMMIT_MESSAGE" value="密码加密传输" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -5147,14 +4918,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/utils/CookieUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/config/WebMvcConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -5200,11 +4963,21 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/web/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/plugins/jQuery/jquery-2.2.3.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/resources/templates/login.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="56" column="35" lean-forward="false" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+          <folding>
+            <element signature="e#2217#2223#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -5216,30 +4989,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/plugins/jQuery/jquery-2.2.3.min.js">
+    <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1134">
+          <caret line="115" column="32" lean-forward="true" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/resources/static/js/login.js">
+    <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/utils/CookieUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1322">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="167">
+          <caret line="42" column="19" lean-forward="false" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/resources/templates/login.ftl">
+    <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/web/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="54" column="61" lean-forward="false" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
+        <state relative-caret-position="21">
+          <caret line="64" column="141" lean-forward="false" selection-start-line="64" selection-start-column="141" selection-end-line="64" selection-end-column="141" />
           <folding>
-            <element signature="e#2226#2232#0#HTML" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -62,11 +62,17 @@ public class LoginController {
     }
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
-    public String login(HttpServletResponse httpServletResponse, LoginDTO loginDTO, String redirect, Model model){
-        if (loginDTO == null || !credentials.containsKey(loginDTO.getLoginAccount()) || !credentials.get(loginDTO.getLoginAccount()).equals(loginDTO.getPassword())){
+    public String login(HttpServletRequest request,HttpServletResponse httpServletResponse, LoginDTO loginDTO, String redirect, Model model){
+        String validateCode = cookieUtils.getValue(request,validateCodeKey);
+        String cachevalidCode = redisUtils.get(validateCode);
+        String passwordDb = "hellosso";//此处从数据库取密码
+        String passwordValidateCodeMd5 = Digests.MD5Encode(passwordDb+cachevalidCode);
+
+        if (loginDTO.getPassword() == null ||
+                !loginDTO.getPassword().toUpperCase().equals(passwordValidateCodeMd5.toUpperCase())) {
             model.addAttribute("state", "-12");
             model.addAttribute("message", "Invalid username or password!");
-            return "login";
+            return "redirect:" + redirect;
         }
         Integer maxAge = Integer.valueOf(cookieMaxAge);
         String token = jwtUtils.generateToken(signingKey, loginDTO.getLoginAccount());
