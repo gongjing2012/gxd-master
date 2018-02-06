@@ -1,9 +1,9 @@
 package com.gxd.service.auth.impl;
 
 import com.gxd.common.exception.BusinessException;
-import com.gxd.utils.UUIDUtil;
-import com.gxd.model.auth.Permission;
-import com.gxd.model.auth.PermissionVo;
+import com.gxd.common.utils.UUIDUtil;
+import com.gxd.common.model.auth.Permission;
+import com.gxd.common.model.auth.PermissionVo;
 import com.gxd.mapper.auth.PermissionMapper;
 import com.gxd.service.auth.PermissionService;
 import org.apache.commons.collections.CollectionUtils;

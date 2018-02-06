@@ -6,7 +6,6 @@
     <file url="file://$PROJECT_DIR$/gxd-apollo-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-commons" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-components-es" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gxd-components-es" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-components-fastdfs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-components-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-components-redis/src/main/resources/application.yml" charset="UTF-8" />
@@ -20,8 +19,8 @@
     <file url="file://$PROJECT_DIR$/gxd-provider1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-sleuth-zipkin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-sso" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gxd-sso-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-turbine" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gxd-zipkin" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

@@ -1,6 +1,6 @@
 package com.gxd.service.auth;
 
-import com.gxd.model.auth.Role;
+import com.gxd.common.model.auth.Role;
 
 import java.util.List;
 

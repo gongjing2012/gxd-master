@@ -2,7 +2,7 @@ package com.gxd.redis.utils;
 
 import com.google.common.base.Strings;
 import com.gxd.redis.config.ClusterConfigurationProperties;
-import com.gxd.utils.FastJsonUtils;
+import com.gxd.common.utils.FastJsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

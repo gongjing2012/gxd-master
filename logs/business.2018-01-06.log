@@ -779,7 +779,7 @@ redis.clients.jedis.exceptions.JedisDataException: NOAUTH Authentication require
 	at org.springframework.data.redis.core.DefaultSetOperations.add(DefaultSetOperations.java:43) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at org.springframework.data.redis.core.DefaultBoundSetOperations.add(DefaultBoundSetOperations.java:47) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at com.gxd.redis.config.RedisService.sadd(RedisService.java:409) ~[classes/:?]
-	at com.gxd.utils.JwtUtils.generateToken(JwtUtils.java:34) ~[classes/:?]
+	at com.gxd.common.utils.JwtUtils.generateToken(JwtUtils.java:34) ~[classes/:?]
 	at com.gxd.web.LoginController.login(LoginController.java:45) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -1019,14 +1019,14 @@ javax.servlet.ServletException: Could not resolve view with name 'redirect:null'
 2018/01/06 00:31:04,110 WARN   http-nio-2032-exec-4  org.springframework.web.servlet.PageNotFound.noHandlerFound(DispatcherServlet.java:1176) - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
 sg],methods=[GET]}" onto public java.lang.String com.gxd.web.controller.SystemController.msg()
 2018/01/06 00:24:55,333 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.gxd.web.controller.SystemController.swaggerui()
-2018/01/06 00:24:55,339 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/auth/getPermissions/{userId}],methods=[GET]}" onto public java.util.List<com.gxd.model.auth.PermissionVo> com.gxd.web.remote.impl.auth.AuthRemoteClientImpl.getPermissions(java.lang.String)
-2018/01/06 00:24:55,340 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/auth/findRoleByUserId/{userId}],methods=[GET]}" onto public java.util.List<com.gxd.model.auth.Role> com.gxd.web.remote.impl.auth.AuthRemoteClientImpl.findRoleByUserId(java.lang.String)
-2018/01/06 00:24:55,340 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/auth/findUserByName/{username}],methods=[GET]}" onto public com.gxd.model.auth.User com.gxd.web.remote.impl.auth.AuthRemoteClientImpl.findUserByName(java.lang.String)
-2018/01/06 00:24:55,343 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/simple/findNewsById/{id}],methods=[GET]}" onto public com.gxd.model.simple.News com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.findNewsById(java.lang.String)
-2018/01/06 00:24:55,344 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/simple/findNewsByPage],methods=[GET]}" onto public com.github.pagehelper.PageInfo<com.gxd.model.simple.News> com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.findNewsByPage(java.lang.String,java.lang.Integer)
-2018/01/06 00:24:55,345 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/simple/addNews],methods=[POST]}" onto public java.lang.Boolean com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.addNews(com.gxd.model.simple.News)
-2018/01/06 00:24:55,346 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/simple/getNews],methods=[GET]}" onto public com.gxd.model.simple.News com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.getNews()
-2018/01/06 00:24:55,348 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/simple/editNews],methods=[POST]}" onto public java.lang.Boolean com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.editNews(com.gxd.model.simple.News)
+2018/01/06 00:24:55,339 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/auth/getPermissions/{userId}],methods=[GET]}" onto public java.util.List<com.gxd.common.model.auth.PermissionVo> com.gxd.web.remote.impl.auth.AuthRemoteClientImpl.getPermissions(java.lang.String)
+2018/01/06 00:24:55,340 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/auth/findRoleByUserId/{userId}],methods=[GET]}" onto public java.util.List<com.gxd.common.model.auth.Role> com.gxd.web.remote.impl.auth.AuthRemoteClientImpl.findRoleByUserId(java.lang.String)
+2018/01/06 00:24:55,340 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/auth/findUserByName/{username}],methods=[GET]}" onto public com.gxd.common.model.auth.User com.gxd.web.remote.impl.auth.AuthRemoteClientImpl.findUserByName(java.lang.String)
+2018/01/06 00:24:55,343 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/simple/findNewsById/{id}],methods=[GET]}" onto public com.gxd.common.model.simple.News com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.findNewsById(java.lang.String)
+2018/01/06 00:24:55,344 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/simple/findNewsByPage],methods=[GET]}" onto public com.github.pagehelper.PageInfo<com.gxd.common.model.simple.News> com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.findNewsByPage(java.lang.String,java.lang.Integer)
+2018/01/06 00:24:55,345 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/simple/addNews],methods=[POST]}" onto public java.lang.Boolean com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.addNews(com.gxd.common.model.simple.News)
+2018/01/06 00:24:55,346 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/simple/getNews],methods=[GET]}" onto public com.gxd.common.model.simple.News com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.getNews()
+2018/01/06 00:24:55,348 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/simple/editNews],methods=[POST]}" onto public java.lang.Boolean com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.editNews(com.gxd.common.model.simple.News)
 2018/01/06 00:24:55,353 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
 2018/01/06 00:24:55,354 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
 2018/01/06 00:24:55,356 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
@@ -1145,13 +1145,13 @@ sg],methods=[GET]}" onto public java.lang.String com.gxd.web.controller.SystemCo
 2018/01/06 00:29:56,309 DEBUG  http-nio-2030-exec-8  com.gxd.mapper.simple.NewsMapper.findNewsByPage.debug(BaseJdbcLogger.java:181) - ==>  Preparing: SELECT ID , ADDRESS , CREATE_TIME , DESCRIPTION , NEWS_TIME , TITLE FROM T_NEWS order by create_time asc 
 2018/01/06 00:29:56,311 DEBUG  http-nio-2030-exec-8  com.gxd.mapper.simple.NewsMapper.findNewsByPage.debug(BaseJdbcLogger.java:181) - ==> Parameters: 
 2018/01/06 00:29:56,320 DEBUG  http-nio-2030-exec-8  com.gxd.mapper.simple.NewsMapper.findNewsByPage.debug(BaseJdbcLogger.java:181) - <==      Total: 4
-2018/01/06 00:29:56,322 INFO   http-nio-2030-exec-8  com.gxd.service.simple.impl.NewsServiceImpl.findNewsByPage(NewsServiceImpl.java:98) - # 查询默认数据库 page.toString()=PageInfo{pageNum=1, pageSize=4, size=4, startRow=0, endRow=3, total=4, pages=1, list=[com.gxd.model.simple.News@5df3ef87, com.gxd.model.simple.News@554c7db3, com.gxd.model.simple.News@2a2be7b7, com.gxd.model.simple.News@66fe1ea5], prePage=0, nextPage=0, isFirstPage=true, isLastPage=true, hasPreviousPage=false, hasNextPage=false, navigatePages=8, navigateFirstPage1, navigateLastPage1, navigatepageNums=[1]}
+2018/01/06 00:29:56,322 INFO   http-nio-2030-exec-8  com.gxd.service.simple.impl.NewsServiceImpl.findNewsByPage(NewsServiceImpl.java:98) - # 查询默认数据库 page.toString()=PageInfo{pageNum=1, pageSize=4, size=4, startRow=0, endRow=3, total=4, pages=1, list=[com.gxd.common.model.simple.News@5df3ef87, com.gxd.common.model.simple.News@554c7db3, com.gxd.common.model.simple.News@2a2be7b7, com.gxd.common.model.simple.News@66fe1ea5], prePage=0, nextPage=0, isFirstPage=true, isLastPage=true, hasPreviousPage=false, hasNextPage=false, navigatePages=8, navigateFirstPage1, navigateLastPage1, navigatepageNums=[1]}
 2018/01/06 00:29:56,332 DEBUG  http-nio-2030-exec-8  com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.findNewsByPage(NewsRemoteClientImpl.java:70) - {"endRow":3,"firstPage":1,"hasNextPage":false,"hasPreviousPage":false,"isFirstPage":true,"isLastPage":true,"lastPage":1,"list":[{"address":"BB","createTime":1499662333000,"description":"BB","id":"f40d6da72fa448ada5d7b9d17e19c582","limit":10,"newsTime":1499662560000,"offset":0,"title":"BB"},{"address":"AA","createTime":1499662374000,"description":"AA","id":"31c673070cfa480e9a89bb7d389767c5","limit":10,"newsTime":1499662603000,"offset":0,"title":"AA"},{"address":"DD","createTime":1499662737000,"description":"DD","id":"8714509c7bfb4e2b9a944d3c82b0d001","limit":10,"newsTime":1499663356000,"offset":0,"title":"DD"},{"address":"CC","createTime":1499663248000,"description":"CC","id":"6c0517e1ec0c4831ab93a6c967aacbec","limit":10,"newsTime":1499663353000,"offset":0,"title":"CC"}],"navigateFirstPage":1,"navigateLastPage":1,"navigatePages":8,"navigatepageNums":[1],"nextPage":0,"pageNum":1,"pageSize":4,"pages":1,"prePage":0,"size":4,"startRow":0,"total":4}
 2018/01/06 00:31:14,373 DEBUG  http-nio-2030-exec-9  com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.findNewsByPage(NewsRemoteClientImpl.java:68) - # parameter , null , null
 2018/01/06 00:31:14,375 DEBUG  http-nio-2030-exec-9  com.gxd.mapper.simple.NewsMapper.findNewsByPage.debug(BaseJdbcLogger.java:181) - ==>  Preparing: SELECT ID , ADDRESS , CREATE_TIME , DESCRIPTION , NEWS_TIME , TITLE FROM T_NEWS order by create_time asc 
 2018/01/06 00:31:14,376 DEBUG  http-nio-2030-exec-9  com.gxd.mapper.simple.NewsMapper.findNewsByPage.debug(BaseJdbcLogger.java:181) - ==> Parameters: 
 2018/01/06 00:31:14,378 DEBUG  http-nio-2030-exec-9  com.gxd.mapper.simple.NewsMapper.findNewsByPage.debug(BaseJdbcLogger.java:181) - <==      Total: 4
-2018/01/06 00:31:14,379 INFO   http-nio-2030-exec-9  com.gxd.service.simple.impl.NewsServiceImpl.findNewsByPage(NewsServiceImpl.java:98) - # 查询默认数据库 page.toString()=PageInfo{pageNum=1, pageSize=4, size=4, startRow=0, endRow=3, total=4, pages=1, list=[com.gxd.model.simple.News@2d81f124, com.gxd.model.simple.News@29be604c, com.gxd.model.simple.News@6cbcfb1f, com.gxd.model.simple.News@7fb0125f], prePage=0, nextPage=0, isFirstPage=true, isLastPage=true, hasPreviousPage=false, hasNextPage=false, navigatePages=8, navigateFirstPage1, navigateLastPage1, navigatepageNums=[1]}
+2018/01/06 00:31:14,379 INFO   http-nio-2030-exec-9  com.gxd.service.simple.impl.NewsServiceImpl.findNewsByPage(NewsServiceImpl.java:98) - # 查询默认数据库 page.toString()=PageInfo{pageNum=1, pageSize=4, size=4, startRow=0, endRow=3, total=4, pages=1, list=[com.gxd.common.model.simple.News@2d81f124, com.gxd.common.model.simple.News@29be604c, com.gxd.common.model.simple.News@6cbcfb1f, com.gxd.common.model.simple.News@7fb0125f], prePage=0, nextPage=0, isFirstPage=true, isLastPage=true, hasPreviousPage=false, hasNextPage=false, navigatePages=8, navigateFirstPage1, navigateLastPage1, navigatepageNums=[1]}
 2018/01/06 00:31:14,380 DEBUG  http-nio-2030-exec-9  com.gxd.web.remote.impl.simple.NewsRemoteClientImpl.findNewsByPage(NewsRemoteClientImpl.java:70) - {"endRow":3,"firstPage":1,"hasNextPage":false,"hasPreviousPage":false,"isFirstPage":true,"isLastPage":true,"lastPage":1,"list":[{"address":"BB","createTime":1499662333000,"description":"BB","id":"f40d6da72fa448ada5d7b9d17e19c582","limit":10,"newsTime":1499662560000,"offset":0,"title":"BB"},{"address":"AA","createTime":1499662374000,"description":"AA","id":"31c673070cfa480e9a89bb7d389767c5","limit":10,"newsTime":1499662603000,"offset":0,"title":"AA"},{"address":"DD","createTime":1499662737000,"description":"DD","id":"8714509c7bfb4e2b9a944d3c82b0d001","limit":10,"newsTime":1499663356000,"offset":0,"title":"DD"},{"address":"CC","createTime":1499663248000,"description":"CC","id":"6c0517e1ec0c4831ab93a6c967aacbec","limit":10,"newsTime":1499663353000,"offset":0,"title":"CC"}],"navigateFirstPage":1,"navigateLastPage":1,"navigatePages":8,"navigatepageNums":[1],"nextPage":0,"pageNum":1,"pageSize":4,"pages":1,"prePage":0,"size":4,"startRow":0,"total":4}
 d.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/view/project/add2],methods=[GET]}" onto java.lang.String com.gxd.web.controller.simple.ViewController.project_add2()
 2018/01/06 00:25:35,564 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/view/project/add4],methods=[GET]}" onto java.lang.String com.gxd.web.controller.simple.ViewController.project_add4()
@@ -1407,20 +1407,20 @@ d.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.
 2018/01/06 00:32:35,064 INFO   restartedMain         com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
 2018/01/06 00:32:35,565 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3171a4d1: startup date [Sat Jan 06 00:32:22 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1646daba
 2018/01/06 00:32:35,888 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/logout]}" onto public java.lang.String com.gxd.web.controller.auth.LoginController.logout()
-2018/01/06 00:32:35,892 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.gxd.web.controller.auth.LoginController.login(com.gxd.model.auth.User,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018/01/06 00:32:35,892 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.gxd.web.controller.auth.LoginController.login(com.gxd.common.model.auth.User,org.springframework.web.servlet.mvc.support.RedirectAttributes)
 2018/01/06 00:32:35,892 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/login],methods=[GET]}" onto java.lang.String com.gxd.web.controller.auth.LoginController.login(org.springframework.ui.Model)
 2018/01/06 00:32:35,893 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/403]}" onto public java.lang.String com.gxd.web.controller.auth.LoginController.unauthorizedRole()
 2018/01/06 00:32:35,895 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/error],methods=[POST || GET]}" onto java.lang.String com.gxd.web.controller.MainController.error(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
 2018/01/06 00:32:35,895 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/ || /index]}" onto java.lang.String com.gxd.web.controller.MainController.home()
 2018/01/06 00:32:35,896 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/leftnav],methods=[GET]}" onto java.lang.String com.gxd.web.controller.MainController.leftnav()
 2018/01/06 00:32:35,896 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/topnav],methods=[GET]}" onto java.lang.String com.gxd.web.controller.MainController.topnav()
-2018/01/06 00:32:35,898 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/news/add],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.String> com.gxd.web.controller.simple.NewsController.add(com.gxd.model.simple.News)
+2018/01/06 00:32:35,898 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/news/add],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.String> com.gxd.web.controller.simple.NewsController.add(com.gxd.common.model.simple.News)
 2018/01/06 00:32:35,899 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/news/add],methods=[GET]}" onto public java.lang.String com.gxd.web.controller.simple.NewsController.add()
 2018/01/06 00:32:35,899 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/news/load/{id}],methods=[GET]}" onto public java.lang.String com.gxd.web.controller.simple.NewsController.load(java.lang.String,org.springframework.ui.ModelMap)
 2018/01/06 00:32:35,900 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/news/list],methods=[GET]}" onto public java.lang.String com.gxd.web.controller.simple.NewsController.list(org.springframework.ui.ModelMap)
 2018/01/06 00:32:35,900 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/news/list_page],methods=[POST]}" onto public java.lang.String com.gxd.web.controller.simple.NewsController.list_page(java.lang.String,java.lang.Integer,org.springframework.ui.ModelMap)
-2018/01/06 00:32:35,901 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/news/edit],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.String> com.gxd.web.controller.simple.NewsController.edit(com.gxd.model.simple.News)
-2018/01/06 00:32:35,901 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/wx],methods=[GET]}" onto public com.gxd.model.simple.News com.gxd.web.controller.simple.NewsController.getNews()
+2018/01/06 00:32:35,901 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/news/edit],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.String> com.gxd.web.controller.simple.NewsController.edit(com.gxd.common.model.simple.News)
+2018/01/06 00:32:35,901 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/wx],methods=[GET]}" onto public com.gxd.common.model.simple.News com.gxd.web.controller.simple.NewsController.getNews()
 2018/01/06 00:32:35,903 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/info || /msg],methods=[GET]}" onto public java.lang.String com.gxd.web.controller.simple.SystemController.msg()
 2018/01/06 00:32:35,910 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/view/project/add4],methods=[GET]}" onto java.lang.String com.gxd.web.controller.simple.ViewController.project_add4()
 2018/01/06 00:32:35,911 INFO   restartedMain         org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/view/project/openProject],methods=[GET]}" onto java.lang.String com.gxd.web.controller.simple.ViewController.openProject()
@@ -1651,7 +1651,7 @@ java.lang.IllegalArgumentException: An invalid domain [127.0.0.1:2032] was speci
 	at org.apache.catalina.connector.Response.generateCookieString(Response.java:1019) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
 	at org.apache.catalina.connector.Response.addCookie(Response.java:967) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
 	at org.apache.catalina.connector.ResponseFacade.addCookie(ResponseFacade.java:386) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
-	at com.gxd.utils.CookieUtils.create(CookieUtils.java:141) ~[classes/:?]
+	at com.gxd.common.utils.CookieUtils.create(CookieUtils.java:141) ~[classes/:?]
 	at com.gxd.web.LoginController.login(LoginController.java:46) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -1699,7 +1699,7 @@ java.lang.IllegalArgumentException: An invalid domain [127.0.0.1:2032] was speci
 	at org.apache.catalina.connector.Response.generateCookieString(Response.java:1019) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
 	at org.apache.catalina.connector.Response.addCookie(Response.java:967) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
 	at org.apache.catalina.connector.ResponseFacade.addCookie(ResponseFacade.java:386) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
-	at com.gxd.utils.CookieUtils.create(CookieUtils.java:141) ~[classes/:?]
+	at com.gxd.common.utils.CookieUtils.create(CookieUtils.java:141) ~[classes/:?]
 	at com.gxd.web.LoginController.login(LoginController.java:46) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -1747,7 +1747,7 @@ java.lang.IllegalArgumentException: An invalid domain [127.0.0.1:2032] was speci
 	at org.apache.catalina.connector.Response.generateCookieString(Response.java:1019) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
 	at org.apache.catalina.connector.Response.addCookie(Response.java:967) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
 	at org.apache.catalina.connector.ResponseFacade.addCookie(ResponseFacade.java:386) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
-	at com.gxd.utils.CookieUtils.create(CookieUtils.java:141) ~[classes/:?]
+	at com.gxd.common.utils.CookieUtils.create(CookieUtils.java:141) ~[classes/:?]
 	at com.gxd.web.LoginController.login(LoginController.java:46) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -1803,7 +1803,7 @@ java.lang.IllegalArgumentException: An invalid domain [127.0.0.1:2032] was speci
 	at org.apache.catalina.connector.Response.generateCookieString(Response.java:1019) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
 	at org.apache.catalina.connector.Response.addCookie(Response.java:967) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
 	at org.apache.catalina.connector.ResponseFacade.addCookie(ResponseFacade.java:386) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
-	at com.gxd.utils.CookieUtils.create(CookieUtils.java:141) ~[classes/:?]
+	at com.gxd.common.utils.CookieUtils.create(CookieUtils.java:141) ~[classes/:?]
 	at com.gxd.web.LoginController.login(LoginController.java:46) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -1851,7 +1851,7 @@ java.lang.IllegalArgumentException: An invalid domain [127.0.0.1:2032] was speci
 	at org.apache.catalina.connector.Response.generateCookieString(Response.java:1019) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
 	at org.apache.catalina.connector.Response.addCookie(Response.java:967) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
 	at org.apache.catalina.connector.ResponseFacade.addCookie(ResponseFacade.java:386) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
-	at com.gxd.utils.CookieUtils.create(CookieUtils.java:141) ~[classes/:?]
+	at com.gxd.common.utils.CookieUtils.create(CookieUtils.java:141) ~[classes/:?]
 	at com.gxd.web.LoginController.login(LoginController.java:46) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -2194,7 +2194,7 @@ java.lang.IllegalArgumentException: An invalid domain [/] was specified for this
 	at org.apache.catalina.connector.Response.generateCookieString(Response.java:1019) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
 	at org.apache.catalina.connector.Response.addCookie(Response.java:967) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
 	at org.apache.catalina.connector.ResponseFacade.addCookie(ResponseFacade.java:386) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
-	at com.gxd.utils.CookieUtils.create(CookieUtils.java:141) ~[classes/:?]
+	at com.gxd.common.utils.CookieUtils.create(CookieUtils.java:141) ~[classes/:?]
 	at com.gxd.web.LoginController.login(LoginController.java:46) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -3225,8 +3225,8 @@ java.lang.IllegalArgumentException: An invalid domain [/] was specified for this
 2018/01/06 02:06:22,773 INFO   http-nio-2032-exec-1  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log(DirectJDKLog.java:179) - Initializing Spring FrameworkServlet 'dispatcherServlet'
 2018/01/06 02:06:22,773 INFO   http-nio-2032-exec-1  org.springframework.web.servlet.DispatcherServlet.initServletBean(FrameworkServlet.java:489) - FrameworkServlet 'dispatcherServlet': initialization started
 2018/01/06 02:06:22,821 INFO   http-nio-2032-exec-1  org.springframework.web.servlet.DispatcherServlet.initServletBean(FrameworkServlet.java:508) - FrameworkServlet 'dispatcherServlet': initialization completed in 48 ms
-2018/01/06 02:07:03,624 ERROR  http-nio-2032-exec-4  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: com.gxd.model.RedisLoginDTO cannot be cast to java.lang.String] with root cause
-java.lang.ClassCastException: com.gxd.model.RedisLoginDTO cannot be cast to java.lang.String
+2018/01/06 02:07:03,624 ERROR  http-nio-2032-exec-4  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: com.gxd.common.model.RedisLoginDTO cannot be cast to java.lang.String] with root cause
+java.lang.ClassCastException: com.gxd.common.model.RedisLoginDTO cannot be cast to java.lang.String
 	at com.gxd.redis.config.RedisService.get(RedisService.java:35) ~[classes/:?]
 	at com.gxd.web.HelloWorldController.test(HelloWorldController.java:18) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
@@ -3268,8 +3268,8 @@ java.lang.ClassCastException: com.gxd.model.RedisLoginDTO cannot be cast to java
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_152]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.23.jar:8.5.23]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
-2018/01/06 02:07:16,567 ERROR  http-nio-2032-exec-3  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: com.gxd.model.RedisLoginDTO cannot be cast to java.lang.String] with root cause
-java.lang.ClassCastException: com.gxd.model.RedisLoginDTO cannot be cast to java.lang.String
+2018/01/06 02:07:16,567 ERROR  http-nio-2032-exec-3  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: com.gxd.common.model.RedisLoginDTO cannot be cast to java.lang.String] with root cause
+java.lang.ClassCastException: com.gxd.common.model.RedisLoginDTO cannot be cast to java.lang.String
 	at com.gxd.redis.config.RedisService.get(RedisService.java:35) ~[classes/:?]
 	at com.gxd.web.HelloWorldController.test(HelloWorldController.java:18) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
@@ -3358,8 +3358,8 @@ java.lang.ClassCastException: com.gxd.model.RedisLoginDTO cannot be cast to java
 2018/01/06 02:09:32,089 INFO   http-nio-2032-exec-1  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log(DirectJDKLog.java:179) - Initializing Spring FrameworkServlet 'dispatcherServlet'
 2018/01/06 02:09:32,090 INFO   http-nio-2032-exec-1  org.springframework.web.servlet.DispatcherServlet.initServletBean(FrameworkServlet.java:489) - FrameworkServlet 'dispatcherServlet': initialization started
 2018/01/06 02:09:32,131 INFO   http-nio-2032-exec-1  org.springframework.web.servlet.DispatcherServlet.initServletBean(FrameworkServlet.java:508) - FrameworkServlet 'dispatcherServlet': initialization completed in 41 ms
-2018/01/06 02:09:36,098 ERROR  http-nio-2032-exec-1  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: com.gxd.model.RedisLoginDTO cannot be cast to com.gxd.model.RedisLoginDTO] with root cause
-java.lang.ClassCastException: com.gxd.model.RedisLoginDTO cannot be cast to com.gxd.model.RedisLoginDTO
+2018/01/06 02:09:36,098 ERROR  http-nio-2032-exec-1  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: com.gxd.common.model.RedisLoginDTO cannot be cast to com.gxd.common.model.RedisLoginDTO] with root cause
+java.lang.ClassCastException: com.gxd.common.model.RedisLoginDTO cannot be cast to com.gxd.common.model.RedisLoginDTO
 	at com.gxd.web.HelloWorldController.test(HelloWorldController.java:19) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -3400,8 +3400,8 @@ java.lang.ClassCastException: com.gxd.model.RedisLoginDTO cannot be cast to com.
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_152]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.23.jar:8.5.23]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
-2018/01/06 02:11:24,105 ERROR  http-nio-2032-exec-2  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: com.gxd.model.RedisLoginDTO cannot be cast to com.gxd.model.RedisLoginDTO] with root cause
-java.lang.ClassCastException: com.gxd.model.RedisLoginDTO cannot be cast to com.gxd.model.RedisLoginDTO
+2018/01/06 02:11:24,105 ERROR  http-nio-2032-exec-2  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: com.gxd.common.model.RedisLoginDTO cannot be cast to com.gxd.common.model.RedisLoginDTO] with root cause
+java.lang.ClassCastException: com.gxd.common.model.RedisLoginDTO cannot be cast to com.gxd.common.model.RedisLoginDTO
 	at com.gxd.web.HelloWorldController.test(HelloWorldController.java:19) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -3489,8 +3489,8 @@ java.lang.ClassCastException: com.gxd.model.RedisLoginDTO cannot be cast to com.
 2018/01/06 02:11:55,363 INFO   http-nio-2032-exec-1  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log(DirectJDKLog.java:179) - Initializing Spring FrameworkServlet 'dispatcherServlet'
 2018/01/06 02:11:55,364 INFO   http-nio-2032-exec-1  org.springframework.web.servlet.DispatcherServlet.initServletBean(FrameworkServlet.java:489) - FrameworkServlet 'dispatcherServlet': initialization started
 2018/01/06 02:11:55,401 INFO   http-nio-2032-exec-1  org.springframework.web.servlet.DispatcherServlet.initServletBean(FrameworkServlet.java:508) - FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
-2018/01/06 02:12:06,075 ERROR  http-nio-2032-exec-1  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: com.gxd.model.RedisLoginDTO cannot be cast to com.gxd.model.RedisLoginDTO] with root cause
-java.lang.ClassCastException: com.gxd.model.RedisLoginDTO cannot be cast to com.gxd.model.RedisLoginDTO
+2018/01/06 02:12:06,075 ERROR  http-nio-2032-exec-1  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: com.gxd.common.model.RedisLoginDTO cannot be cast to com.gxd.common.model.RedisLoginDTO] with root cause
+java.lang.ClassCastException: com.gxd.common.model.RedisLoginDTO cannot be cast to com.gxd.common.model.RedisLoginDTO
 	at com.gxd.web.HelloWorldController.test(HelloWorldController.java:19) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -3578,8 +3578,8 @@ java.lang.ClassCastException: com.gxd.model.RedisLoginDTO cannot be cast to com.
 2018/01/06 02:13:04,467 INFO   http-nio-2032-exec-1  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log(DirectJDKLog.java:179) - Initializing Spring FrameworkServlet 'dispatcherServlet'
 2018/01/06 02:13:04,468 INFO   http-nio-2032-exec-1  org.springframework.web.servlet.DispatcherServlet.initServletBean(FrameworkServlet.java:489) - FrameworkServlet 'dispatcherServlet': initialization started
 2018/01/06 02:13:04,515 INFO   http-nio-2032-exec-1  org.springframework.web.servlet.DispatcherServlet.initServletBean(FrameworkServlet.java:508) - FrameworkServlet 'dispatcherServlet': initialization completed in 47 ms
-2018/01/06 02:13:10,230 ERROR  http-nio-2032-exec-1  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.core.serializer.support.SerializationFailedException: Failed to deserialize payload. Is the byte array a result of corresponding serialization for DefaultDeserializer?; nested exception is java.io.InvalidClassException: com.gxd.model.RedisLoginDTO; class invalid for deserialization] with root cause
-java.io.InvalidClassException: com.gxd.model.RedisLoginDTO; class invalid for deserialization
+2018/01/06 02:13:10,230 ERROR  http-nio-2032-exec-1  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.core.serializer.support.SerializationFailedException: Failed to deserialize payload. Is the byte array a result of corresponding serialization for DefaultDeserializer?; nested exception is java.io.InvalidClassException: com.gxd.common.model.RedisLoginDTO; class invalid for deserialization] with root cause
+java.io.InvalidClassException: com.gxd.common.model.RedisLoginDTO; class invalid for deserialization
 	at java.io.ObjectStreamClass$ExceptionInfo.newInvalidClassException(ObjectStreamClass.java:157) ~[?:1.8.0_152]
 	at java.io.ObjectStreamClass.checkDeserialize(ObjectStreamClass.java:862) ~[?:1.8.0_152]
 	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2038) ~[?:1.8.0_152]
@@ -3683,8 +3683,8 @@ java.io.InvalidClassException: com.gxd.model.RedisLoginDTO; class invalid for de
 2018/01/06 02:14:03,957 INFO   http-nio-2032-exec-2  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log(DirectJDKLog.java:179) - Initializing Spring FrameworkServlet 'dispatcherServlet'
 2018/01/06 02:14:03,957 INFO   http-nio-2032-exec-2  org.springframework.web.servlet.DispatcherServlet.initServletBean(FrameworkServlet.java:489) - FrameworkServlet 'dispatcherServlet': initialization started
 2018/01/06 02:14:04,009 INFO   http-nio-2032-exec-2  org.springframework.web.servlet.DispatcherServlet.initServletBean(FrameworkServlet.java:508) - FrameworkServlet 'dispatcherServlet': initialization completed in 51 ms
-2018/01/06 02:14:07,740 ERROR  http-nio-2032-exec-2  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.core.serializer.support.SerializationFailedException: Failed to deserialize payload. Is the byte array a result of corresponding serialization for DefaultDeserializer?; nested exception is java.io.InvalidClassException: com.gxd.model.RedisLoginDTO; class invalid for deserialization] with root cause
-java.io.InvalidClassException: com.gxd.model.RedisLoginDTO; class invalid for deserialization
+2018/01/06 02:14:07,740 ERROR  http-nio-2032-exec-2  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.core.serializer.support.SerializationFailedException: Failed to deserialize payload. Is the byte array a result of corresponding serialization for DefaultDeserializer?; nested exception is java.io.InvalidClassException: com.gxd.common.model.RedisLoginDTO; class invalid for deserialization] with root cause
+java.io.InvalidClassException: com.gxd.common.model.RedisLoginDTO; class invalid for deserialization
 	at java.io.ObjectStreamClass$ExceptionInfo.newInvalidClassException(ObjectStreamClass.java:157) ~[?:1.8.0_152]
 	at java.io.ObjectStreamClass.checkDeserialize(ObjectStreamClass.java:862) ~[?:1.8.0_152]
 	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2038) ~[?:1.8.0_152]
@@ -4226,8 +4226,8 @@ javax.servlet.ServletException: Could not resolve view with name 'test' in servl
 2018/01/06 02:49:38,431 INFO   http-nio-2032-exec-1  org.springframework.web.servlet.DispatcherServlet.initServletBean(FrameworkServlet.java:489) - FrameworkServlet 'dispatcherServlet': initialization started
 2018/01/06 02:49:38,511 INFO   http-nio-2032-exec-1  org.springframework.web.servlet.DispatcherServlet.initServletBean(FrameworkServlet.java:508) - FrameworkServlet 'dispatcherServlet': initialization completed in 79 ms
 2018/01/06 02:49:42,781 WARN   http-nio-2032-exec-3  org.springframework.web.servlet.PageNotFound.noHandlerFound(DispatcherServlet.java:1176) - No mapping found for HTTP request with URI [/null] in DispatcherServlet with name 'dispatcherServlet'
-2018/01/06 02:50:15,553 ERROR  http-nio-2032-exec-2  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: [B cannot be cast to com.gxd.model.RedisLoginDTO] with root cause
-java.lang.ClassCastException: [B cannot be cast to com.gxd.model.RedisLoginDTO
+2018/01/06 02:50:15,553 ERROR  http-nio-2032-exec-2  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet].log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: [B cannot be cast to com.gxd.common.model.RedisLoginDTO] with root cause
+java.lang.ClassCastException: [B cannot be cast to com.gxd.common.model.RedisLoginDTO
 	at com.gxd.web.HelloWorldController.test(HelloWorldController.java:19) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -4544,7 +4544,7 @@ redis.clients.jedis.exceptions.JedisMovedDataException: MOVED 13360 192.168.50.3
 	at org.springframework.data.redis.core.DefaultSetOperations.add(DefaultSetOperations.java:43) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at org.springframework.data.redis.core.DefaultBoundSetOperations.add(DefaultBoundSetOperations.java:47) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at com.gxd.redis.config.RedisService.sadd(RedisService.java:414) ~[classes/:?]
-	at com.gxd.utils.JwtUtils.generateToken(JwtUtils.java:35) ~[classes/:?]
+	at com.gxd.common.utils.JwtUtils.generateToken(JwtUtils.java:35) ~[classes/:?]
 	at com.gxd.web.LoginController.login(LoginController.java:44) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -4856,7 +4856,7 @@ redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachabl
 	at org.springframework.data.redis.core.DefaultSetOperations.add(DefaultSetOperations.java:43) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at org.springframework.data.redis.core.DefaultBoundSetOperations.add(DefaultBoundSetOperations.java:47) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at com.gxd.redis.config.RedisService.sadd(RedisService.java:414) ~[classes/:?]
-	at com.gxd.utils.JwtUtils.generateToken(JwtUtils.java:35) ~[classes/:?]
+	at com.gxd.common.utils.JwtUtils.generateToken(JwtUtils.java:35) ~[classes/:?]
 	at com.gxd.web.LoginController.login(LoginController.java:44) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -4913,7 +4913,7 @@ redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachabl
 	at org.springframework.data.redis.core.DefaultSetOperations.add(DefaultSetOperations.java:43) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at org.springframework.data.redis.core.DefaultBoundSetOperations.add(DefaultBoundSetOperations.java:47) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at com.gxd.redis.config.RedisService.sadd(RedisService.java:414) ~[classes/:?]
-	at com.gxd.utils.JwtUtils.generateToken(JwtUtils.java:35) ~[classes/:?]
+	at com.gxd.common.utils.JwtUtils.generateToken(JwtUtils.java:35) ~[classes/:?]
 	at com.gxd.web.LoginController.login(LoginController.java:44) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -4970,7 +4970,7 @@ redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachabl
 	at org.springframework.data.redis.core.DefaultSetOperations.add(DefaultSetOperations.java:43) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at org.springframework.data.redis.core.DefaultBoundSetOperations.add(DefaultBoundSetOperations.java:47) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at com.gxd.redis.config.RedisService.sadd(RedisService.java:414) ~[classes/:?]
-	at com.gxd.utils.JwtUtils.generateToken(JwtUtils.java:35) ~[classes/:?]
+	at com.gxd.common.utils.JwtUtils.generateToken(JwtUtils.java:35) ~[classes/:?]
 	at com.gxd.web.LoginController.login(LoginController.java:44) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -5027,7 +5027,7 @@ redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachabl
 	at org.springframework.data.redis.core.DefaultSetOperations.add(DefaultSetOperations.java:43) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at org.springframework.data.redis.core.DefaultBoundSetOperations.add(DefaultBoundSetOperations.java:47) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at com.gxd.redis.config.RedisService.sadd(RedisService.java:414) ~[classes/:?]
-	at com.gxd.utils.JwtUtils.generateToken(JwtUtils.java:35) ~[classes/:?]
+	at com.gxd.common.utils.JwtUtils.generateToken(JwtUtils.java:35) ~[classes/:?]
 	at com.gxd.web.LoginController.login(LoginController.java:44) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -5084,7 +5084,7 @@ redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachabl
 	at org.springframework.data.redis.core.DefaultSetOperations.add(DefaultSetOperations.java:43) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at org.springframework.data.redis.core.DefaultBoundSetOperations.add(DefaultBoundSetOperations.java:47) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at com.gxd.redis.config.RedisService.sadd(RedisService.java:414) ~[classes/:?]
-	at com.gxd.utils.JwtUtils.generateToken(JwtUtils.java:35) ~[classes/:?]
+	at com.gxd.common.utils.JwtUtils.generateToken(JwtUtils.java:35) ~[classes/:?]
 	at com.gxd.web.LoginController.login(LoginController.java:44) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]
@@ -5188,7 +5188,7 @@ redis.clients.jedis.exceptions.JedisDataException: NOAUTH Authentication require
 	at org.springframework.data.redis.core.DefaultSetOperations.add(DefaultSetOperations.java:43) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at org.springframework.data.redis.core.DefaultBoundSetOperations.add(DefaultBoundSetOperations.java:47) ~[spring-data-redis-1.8.9.RELEASE.jar:?]
 	at com.gxd.redis.config.RedisService.sadd(RedisService.java:414) ~[classes/:?]
-	at com.gxd.utils.JwtUtils.generateToken(JwtUtils.java:35) ~[classes/:?]
+	at com.gxd.common.utils.JwtUtils.generateToken(JwtUtils.java:35) ~[classes/:?]
 	at com.gxd.web.LoginController.login(LoginController.java:44) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_152]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_152]

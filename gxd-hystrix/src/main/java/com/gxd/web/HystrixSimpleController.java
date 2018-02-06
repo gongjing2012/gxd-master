@@ -1,6 +1,6 @@
 package com.gxd.web;
 
-import com.gxd.model.simple.News;
+import com.gxd.common.model.simple.News;
 import com.gxd.web.remote.simple.NewsRemoteClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

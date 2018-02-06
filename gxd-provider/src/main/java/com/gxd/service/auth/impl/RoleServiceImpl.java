@@ -1,10 +1,10 @@
 package com.gxd.service.auth.impl;
 
 import com.gxd.common.exception.BusinessException;
-import com.gxd.utils.UUIDUtil;
-import com.gxd.model.auth.Permission;
-import com.gxd.model.auth.Role;
-import com.gxd.model.auth.RolePermission;
+import com.gxd.common.utils.UUIDUtil;
+import com.gxd.common.model.auth.Permission;
+import com.gxd.common.model.auth.Role;
+import com.gxd.common.model.auth.RolePermission;
 import com.gxd.mapper.auth.PermissionMapper;
 import com.gxd.mapper.auth.RoleMapper;
 import com.gxd.mapper.auth.RolePermissionMapper;

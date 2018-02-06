@@ -1,6 +1,6 @@
 package com.gxd.common.shiro.vo;
 
-import com.gxd.model.auth.Permission;
+import com.gxd.common.model.auth.Permission;
 
 import java.util.List;
 

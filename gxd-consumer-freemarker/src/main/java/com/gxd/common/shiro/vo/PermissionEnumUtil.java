@@ -1,7 +1,7 @@
 package com.gxd.common.shiro.vo;
 
 import com.gxd.common.constants.Constants;
-import com.gxd.model.auth.Permission;
+import com.gxd.common.model.auth.Permission;
 
 import java.util.ArrayList;
 import java.util.List;

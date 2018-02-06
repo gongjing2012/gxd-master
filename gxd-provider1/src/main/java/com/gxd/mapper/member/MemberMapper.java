@@ -5,7 +5,7 @@
 package com.gxd.mapper.member;
 
 import com.gxd.mapper.console.CustomerMapper;
-import com.gxd.model.member.Member;
+import com.gxd.common.model.member.Member;
 import org.springframework.stereotype.Service;
 
 @Service

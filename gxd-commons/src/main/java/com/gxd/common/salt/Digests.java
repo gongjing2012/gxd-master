@@ -1,11 +1,14 @@
 package com.gxd.common.salt;
 
 import org.apache.commons.lang3.Validate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.GeneralSecurityException;
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
 /**
@@ -15,7 +18,7 @@ import java.security.SecureRandom;
  * @Date: 11:42 2017/12/27
  */
 public class Digests {
-
+    private static final Logger logger = LoggerFactory.getLogger(Digests.class);
     private static final String SHA1 = "SHA-1";
     private static final String MD5 = "MD5";
 
@@ -104,5 +107,24 @@ public class Digests {
             throw Exceptions.unchecked(e);
         }
     }
+    public static String MD5Encode(String data) {
+        return encryptEncode(MD5, data);
+    }
 
+    /**
+     * 信息摘要算法
+     *
+     * @param algorithm 算法类型
+     * @param data 要加密的字符串
+     * @return 返回加密后的摘要信息
+     */
+    private static String encryptEncode(String algorithm, String data) {
+        try {
+            MessageDigest md = MessageDigest.getInstance(algorithm);
+            return TranscodeUtils.byteArrayToHexStr(md.digest(data.getBytes()));
+        } catch (NoSuchAlgorithmException ex) {
+            logger.error("信息摘要算法异常:"+ex.getMessage());
+        }
+        return null;
+    }
 }

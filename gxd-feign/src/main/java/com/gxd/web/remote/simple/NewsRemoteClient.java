@@ -2,7 +2,7 @@ package com.gxd.web.remote.simple;
 
 import com.github.pagehelper.PageInfo;
 import com.gxd.common.exception.BusinessException;
-import com.gxd.model.simple.News;
+import com.gxd.common.model.simple.News;
 import com.gxd.web.hystrix.simple.NewsRemoteClientHystrix;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.*;

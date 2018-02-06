@@ -1,7 +1,7 @@
 package com.gxd.service.auth;
 
-import com.gxd.model.auth.Permission;
-import com.gxd.model.auth.PermissionVo;
+import com.gxd.common.model.auth.Permission;
+import com.gxd.common.model.auth.PermissionVo;
 import java.util.List;
 
 public interface PermissionService {

@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* Gerenal
+================================== */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td
+{margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline;background: transparent;}
+ol,ul {list-style:none;}
+table{border-collapse: collapse;border-spacing:0;}
+.clearFix{*zoom: 1;clear:both;}
+.clearFix:after{content:'\20';display:block;height:0;visibility:hidden;clear:both;}
+.hidden{display:none;}
+.noBorder{border:0 !important;}
+body {font-family:Microsoft Yahei,Arial,Helvetica,SimHei,SimSun,sans-serif;font-size:12px;color:#000;text-align:center;background:#3A4D54 url(../img/wave.png) repeat-x center top;}
+a{color:#3C8DBD;text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* Login
+================================== */
+.sprite{background:url(../img/sprite.png) no-repeat;}
+.wrapper{width:640px;margin:140px auto 0 auto;}
+#loginForm{height:390px;background:url(../img/loginFormBg.png) no-repeat;text-align:left;position: relative;}
+.loginForm{width:270px;margin-left:346px;padding:15px 0;}
+.copyright{color:#758388;line-height:36px;}
+
+.logo {position: absolute;width:280px;top:110px;left:20px;text-align: center;}
+.logo .name {margin-top:30px;}
+.logo .name h2{color:#fff;font-size:25px;font-weight: normal;}
+.logo .name p{color:#777;}
+
+.loginForm .hd{margin-bottom:15px;text-align:center;}
+.loginForm .hd h2{margin:0 auto;height:36px;width:144px;background-position:0 -144px;text-indent:-9999px;}
+
+.loginForm .ft{margin-top:5px;}
+.loginForm .item{padding-bottom:22px;_padding-bottom:24px;position:relative;zoom:1;}
+label{font-size:14px;font-weight:bold;}
+input{display:block;height:32px;line-height:28px;border:1px #ccc solid;margin-top:5px;width:100%;padding-left:5px;box-sizing: border-box;*height:28px;*line-height: 26px;}
+
+#getPassword{float:right;*margin-top:-18px;}
+.validIntro{float:right;color:#999;*margin-top:-18px;}
+#validCode{width:45%;display:inline-block;margin-top:0;vertical-align: top;}
+.validImg{margin:0 5px -10px 5px;vertical-align: top;display: inline-block;}
+.validInput{display:block;padding-top:5px;}
+.validInput a{line-height: 32px;display: inline-block;}
+
+/*.help-block{display:block;color:#DD4A38;position: absolute;bottom:5px;left:0;}*/
+.help-block{display:block;color:#DD4A38;position: absolute;left:0;}
+.danger{border-color:#DD4A38;}
+
+#loginBtn{display:block;height:38px;line-height:38px;text-align:center;background-color:#3C8DBD;font-size:16px;color:#fff;border-radius:3px;}
+#loginBtn:hover{background-color:#307096;text-decoration:none;}

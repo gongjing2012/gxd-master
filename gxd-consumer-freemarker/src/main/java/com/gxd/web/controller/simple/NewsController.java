@@ -3,7 +3,7 @@ package com.gxd.web.controller.simple;
 import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.PageInfo;
 import com.gxd.common.exception.BusinessException;
-import com.gxd.model.simple.News;
+import com.gxd.common.model.simple.News;
 import com.gxd.web.remote.simple.NewsRemoteClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

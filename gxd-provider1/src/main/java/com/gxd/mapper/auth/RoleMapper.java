@@ -1,7 +1,7 @@
 package com.gxd.mapper.auth;
 
 import com.gxd.mapper.BaseMapper;
-import com.gxd.model.auth.Role;
+import com.gxd.common.model.auth.Role;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

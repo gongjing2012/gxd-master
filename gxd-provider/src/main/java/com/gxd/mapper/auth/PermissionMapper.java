@@ -1,6 +1,6 @@
 package com.gxd.mapper.auth;
 
-import com.gxd.model.auth.Permission;
+import com.gxd.common.model.auth.Permission;
 import com.gxd.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

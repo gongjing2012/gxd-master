@@ -4,7 +4,7 @@
 
 package com.gxd.mapper.console;
 
-import com.gxd.model.console.Log;
+import com.gxd.common.model.console.Log;
 import org.springframework.stereotype.Service;
 @Service
 public interface LogMapper extends CustomerMapper<Log> {

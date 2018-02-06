@@ -3,7 +3,7 @@
 
 <mapper namespace="com.gxd.mapper.auth.UserMapper">
 
-	<resultMap id="userMap" type="com.gxd.model.auth.User">
+	<resultMap id="userMap" type="com.gxd.common.model.auth.User">
 		<result column="ID" property="id" />
 		<result column="EMAIL" property="email" />
 		<result column="USERNAME" property="username" />
@@ -17,7 +17,7 @@
 		<result column="MODIFY_TIME" property="modifyTime" />
 	</resultMap>
 	
-	<insert id="insert" parameterType="com.gxd.model.auth.User">
+	<insert id="insert" parameterType="com.gxd.common.model.auth.User">
 		INSERT INTO T_SYS_USER (ID , CREATE_TIME , EMAIL , LAST_LOGIN_TIME ,  MODIFY_TIME , USERNAME , ORGANIZE_ID , `PASSWORD` , SALT , `STATUS` , TRUE_NAME)
 		VALUES(#{id} , #{createTime} , #{email} , #{lastLoginTime} , #{modifyTime} , #{username} , #{organizeId} , #{password} , #{salt} , #{status} , #{trueName})
 	</insert>
@@ -91,7 +91,7 @@
 		<include refid="from_xxx" />
 	</select>
 
-	<update id="update" parameterType="com.gxd.model.auth.User">
+	<update id="update" parameterType="com.gxd.common.model.auth.User">
 		UPDATE T_SYS_USER
 		<set>
 			<if test="email != null">

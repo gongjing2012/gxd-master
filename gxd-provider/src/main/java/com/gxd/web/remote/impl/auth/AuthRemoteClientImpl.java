@@ -1,9 +1,9 @@
 package com.gxd.web.remote.impl.auth;
 
 import com.alibaba.fastjson.JSON;
-import com.gxd.model.auth.PermissionVo;
-import com.gxd.model.auth.Role;
-import com.gxd.model.auth.User;
+import com.gxd.common.model.auth.PermissionVo;
+import com.gxd.common.model.auth.Role;
+import com.gxd.common.model.auth.User;
 import com.gxd.service.auth.AuthService;
 import com.gxd.service.auth.PermissionService;
 import com.gxd.service.auth.RoleService;

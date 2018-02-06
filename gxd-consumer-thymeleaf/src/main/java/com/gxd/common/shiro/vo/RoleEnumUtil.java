@@ -1,6 +1,6 @@
 package com.gxd.common.shiro.vo;
 
-import com.gxd.model.auth.Role;
+import com.gxd.common.model.auth.Role;
 
 public enum RoleEnumUtil {
 

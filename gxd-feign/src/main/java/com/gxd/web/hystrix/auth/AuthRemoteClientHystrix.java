@@ -2,9 +2,9 @@ package com.gxd.web.hystrix.auth;
 
 import com.gxd.common.exception.BusinessException;
 import com.gxd.common.exception.RemoteRequestExcepton;
-import com.gxd.model.auth.PermissionVo;
-import com.gxd.model.auth.Role;
-import com.gxd.model.auth.User;
+import com.gxd.common.model.auth.PermissionVo;
+import com.gxd.common.model.auth.Role;
+import com.gxd.common.model.auth.User;
 import com.gxd.web.remote.auth.AuthRemoteClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

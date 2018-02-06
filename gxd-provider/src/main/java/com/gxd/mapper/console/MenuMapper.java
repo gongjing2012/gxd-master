@@ -1,6 +1,6 @@
 package com.gxd.mapper.console;
 
-import com.gxd.model.console.Menu;
+import com.gxd.common.model.console.Menu;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

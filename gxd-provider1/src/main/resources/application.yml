@@ -76,7 +76,7 @@ custom:
 
 mybatis:
   mapperLocations: classpath*:mapper/**/*.xml
-  typeAliasesPackage: com.gxd.model
+  typeAliasesPackage: com.gxd.common.model
 
 pagehelper:
   helperDialect: mysql

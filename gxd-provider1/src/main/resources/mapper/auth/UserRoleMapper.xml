@@ -3,13 +3,13 @@
 
 <mapper namespace="com.gxd.mapper.auth.UserRoleMapper">
 
-	<resultMap id="userRoleMap" type="com.gxd.model.auth.UserRole">
+	<resultMap id="userRoleMap" type="com.gxd.common.model.auth.UserRole">
 		<result property="id" column="ID" />
 		<result property="userId" column="USER_ID" />
 		<result property="roleId" column="ROLE_ID" />
 	</resultMap>
 	
-	<insert id="insert" parameterType="com.gxd.model.auth.UserRole">
+	<insert id="insert" parameterType="com.gxd.common.model.auth.UserRole">
 		INSERT INTO T_SYS_USER_ROLE(ID , USER_ID , ROLE_ID) VALUES(#{id} , #{userId} , #{roleId})
 	</insert>
 
@@ -52,7 +52,7 @@
 		<include refid="where_xxx" />
 	</select>
 
-	<update id="update" parameterType="com.gxd.model.auth.UserRole">
+	<update id="update" parameterType="com.gxd.common.model.auth.UserRole">
 		UPDATE T_SYS_USER_ROLE
 		<set>
 			<if test="userId != null">

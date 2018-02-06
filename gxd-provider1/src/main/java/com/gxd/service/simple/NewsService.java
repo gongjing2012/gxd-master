@@ -1,7 +1,7 @@
 package com.gxd.service.simple;
 
 import com.github.pagehelper.PageInfo;
-import com.gxd.model.simple.News;
+import com.gxd.common.model.simple.News;
 
 import java.util.List;
 

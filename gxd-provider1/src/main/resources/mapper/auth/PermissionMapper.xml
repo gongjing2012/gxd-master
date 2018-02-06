@@ -3,7 +3,7 @@
 
 <mapper namespace="com.gxd.mapper.auth.PermissionMapper">
 
-	<resultMap id="permissionMap" type="com.gxd.model.auth.Permission">
+	<resultMap id="permissionMap" type="com.gxd.common.model.auth.Permission">
 		<result property="id" column="ID" />
 		<result property="name" column="NAME" />
 		<result property="cssClass" column="CSS_CLASS" />
@@ -15,7 +15,7 @@
 		<result property="parentKey" column="PARENT_KEY" />
 	</resultMap>
 
-	<insert id="insert" parameterType="com.gxd.model.auth.Permission">
+	<insert id="insert" parameterType="com.gxd.common.model.auth.Permission">
 		INSERT INTO T_SYS_PERMISSION(ID , NAME , CSS_CLASS, SKEY , HIDE , URL, LEV, SORT , PARENT_KEY) 
 		VALUES(#{id} , #{name} , #{cssClass} , #{key} , ${hide} , #{url} , ${lev} , ${sort} , #{parentKey})
 	</insert>
@@ -83,7 +83,7 @@
 		<include refid="where_xxx" />
 	</select>
 
-	<update id="update" parameterType="com.gxd.model.auth.Permission">
+	<update id="update" parameterType="com.gxd.common.model.auth.Permission">
 		UPDATE T_SYS_PERMISSION
 		<set>
 			<if test="hide != null">

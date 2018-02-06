@@ -1,6 +1,6 @@
 package com.gxd.mapper.simple;
 
-import com.gxd.model.simple.News;
+import com.gxd.common.model.simple.News;
 import com.gxd.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

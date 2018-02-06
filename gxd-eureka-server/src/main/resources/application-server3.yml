@@ -1,7 +1,7 @@
 server:
   port: 1113
 info:
-  component: gxd-eureka-server to fetch configuration
+  component: hostname 192.168.50.37 to fetch configuration
 spring:
     profiles:
       active: dev

@@ -1,7 +1,7 @@
 package com.gxd.common.shiro.vo;
 
-import com.gxd.model.auth.Role;
-import com.gxd.model.auth.User;
+import com.gxd.common.model.auth.Role;
+import com.gxd.common.model.auth.User;
 
 import java.io.Serializable;
 import java.util.List;

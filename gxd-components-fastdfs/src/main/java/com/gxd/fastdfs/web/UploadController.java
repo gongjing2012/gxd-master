@@ -2,7 +2,7 @@ package com.gxd.fastdfs.web;
 
 import com.github.tobato.fastdfs.domain.FileInfo;
 import com.gxd.fastdfs.client.FastDFSClient;
-import com.gxd.model.Result;
+import com.gxd.common.model.Result;
 import com.xiaoleilu.hutool.date.DateUtil;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;

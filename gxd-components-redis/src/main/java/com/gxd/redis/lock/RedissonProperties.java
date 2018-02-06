@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import java.util.ArrayList;
 import java.util.List;
 
-@ConfigurationProperties(prefix = "spring.task.pool")
+@ConfigurationProperties(prefix = "spring.redisson")
 public class RedissonProperties {
 
     private int timeout = 3000;

@@ -3,14 +3,14 @@
 
 <mapper namespace="com.gxd.mapper.auth.RoleMapper">
 
-	<resultMap id="roleMap" type="com.gxd.model.auth.Role">
+	<resultMap id="roleMap" type="com.gxd.common.model.auth.Role">
 		<result property="id" column="ID" />
 		<result property="name" column="NAME" />
 		<result property="code" column="CODE" />
 		<result property="remark" column="REMARK" />
 	</resultMap>
 
-	<insert id="insert" parameterType="com.gxd.model.auth.Role">
+	<insert id="insert" parameterType="com.gxd.common.model.auth.Role">
 		 <![CDATA[ INSERT INTO T_SYS_ROLE(ID , NAME, CODE , REMARK) VALUES(#{id} , #{name} , #{code} , #{remark} ) ]]>
 	</insert>
 
@@ -70,7 +70,7 @@
 		<include refid="where_xxx" />
 	</select>
 
-	<update id="update" parameterType="com.gxd.model.auth.Role">
+	<update id="update" parameterType="com.gxd.common.model.auth.Role">
 		UPDATE T_SYS_ROLE
 		<set>
 			<if test="name != null">

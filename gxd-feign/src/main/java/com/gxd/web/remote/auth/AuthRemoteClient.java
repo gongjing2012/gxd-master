@@ -1,9 +1,9 @@
 package com.gxd.web.remote.auth;
 
 import com.gxd.common.exception.BusinessException;
-import com.gxd.model.auth.PermissionVo;
-import com.gxd.model.auth.Role;
-import com.gxd.model.auth.User;
+import com.gxd.common.model.auth.PermissionVo;
+import com.gxd.common.model.auth.Role;
+import com.gxd.common.model.auth.User;
 import com.gxd.web.hystrix.auth.AuthRemoteClientHystrix;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;

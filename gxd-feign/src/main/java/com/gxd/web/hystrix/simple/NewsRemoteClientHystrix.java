@@ -3,7 +3,7 @@ package com.gxd.web.hystrix.simple;
 import com.github.pagehelper.PageInfo;
 import com.gxd.common.exception.BusinessException;
 import com.gxd.common.exception.RemoteRequestExcepton;
-import com.gxd.model.simple.News;
+import com.gxd.common.model.simple.News;
 import com.gxd.web.remote.simple.NewsRemoteClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

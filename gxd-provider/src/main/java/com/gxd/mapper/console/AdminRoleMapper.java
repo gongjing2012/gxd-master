@@ -1,6 +1,6 @@
 package com.gxd.mapper.console;
 
-import com.gxd.model.console.AdminRole;
+import com.gxd.common.model.console.AdminRole;
 import org.springframework.stereotype.Service;
 
 @Service

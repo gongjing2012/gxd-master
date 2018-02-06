@@ -2,7 +2,7 @@ package com.gxd.web.remote.impl.simple;
 
 import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.PageInfo;
-import com.gxd.model.simple.News;
+import com.gxd.common.model.simple.News;
 import com.gxd.service.simple.NewsService;
 import com.gxd.web.remote.simple.NewsRemoteClient;
 import io.swagger.annotations.Api;

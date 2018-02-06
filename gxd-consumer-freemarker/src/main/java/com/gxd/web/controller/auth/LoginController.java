@@ -1,6 +1,6 @@
 package com.gxd.web.controller.auth;
 
-import com.gxd.model.auth.User;
+import com.gxd.common.model.auth.User;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;

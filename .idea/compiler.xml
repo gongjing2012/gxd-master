@@ -23,6 +23,7 @@
         <module name="gxd-provider1" />
         <module name="gxd-sleuth-zipkin" />
         <module name="gxd-sso" />
+        <module name="gxd-sso-server" />
         <module name="gxd-turbine" />
         <module name="gxd-zipkin" />
       </profile>
@@ -51,6 +52,7 @@
       <module name="gxd-provider1" target="1.8" />
       <module name="gxd-sleuth-zipkin" target="1.8" />
       <module name="gxd-sso" target="1.8" />
+      <module name="gxd-sso-server" target="1.8" />
       <module name="gxd-turbine" target="1.8" />
       <module name="gxd-zipkin" target="1.8" />
     </bytecodeTargetLevel>
