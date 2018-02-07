@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>登录-CINDATA-统一权限管理服务平台</title>
+    <title>登录-CINDATA-AMP平台</title>
     <link href="${ctx}/static/css/login.css" rel="stylesheet">
 </head>
 <body>
@@ -16,7 +16,7 @@
                 <img src="${ctx}/static/img/logo-lg.png" alt="">
               </div>
               <div class="name">
-                <h2>CINDATA统一权限管理服务平台</h2>
+                <h2>CINDATA——AMP平台</h2>
               </div>
             </div>
             <div class="loginForm">

@@ -14974,3 +14974,167 @@ f65b62cae472f7317277028ebb14f016269b824d 192.168.50.37:7005@17005 slave d93dee06
 9fe0adbe7c1be50a4f305791c7c81a1841ef4d46 192.168.50.36:7001@17001 master - 0 1517935370515 2 connected 6554-9829
 d93dee069bd61864df2f66700d6f8ae4783801fc 192.168.50.36:7000@17000 master - 0 1517935367201 1 connected 0-3276
 
+2018/02/07 00:44:02,107 DEBUG  redisson-netty-1-7    org.redisson.cluster.ClusterConnectionManager.operationComplete(ClusterConnectionManager.java:431) - cluster nodes state from /192.168.50.36:7009:
+7c4f09e9d9b67cc536df15524bb5998145c28964 192.168.50.37:7003@17003 slave 002ebbfe1dd53595594a4e6032c42405f637bb1f 0 1517935373226 11 connected
+002ebbfe1dd53595594a4e6032c42405f637bb1f 192.168.50.36:7007@17007 master - 0 1517935376238 11 connected 3277-6553
+37420b0ca786c3d811db93bdbe076421ff6caa46 192.168.50.36:7002@17002 master - 0 1517935375232 3 connected 13107-16383
+2d00c4deb61c418357fb93fc416efab934847e63 192.168.50.37:7006@17006 slave 9fe0adbe7c1be50a4f305791c7c81a1841ef4d46 0 1517935374000 9 connected
+f65b62cae472f7317277028ebb14f016269b824d 192.168.50.37:7005@17005 slave d93dee069bd61864df2f66700d6f8ae4783801fc 0 1517935371218 8 connected
+815125bf6533b177589feae4f8eace7ae4fce646 192.168.50.37:7008@17008 slave 37420b0ca786c3d811db93bdbe076421ff6caa46 0 1517935374233 10 connected
+6930990aa7a0fcfedf4ba84d345a45e2384e2689 192.168.50.37:7004@17004 slave 06ca9838b4b2e302993911d40d4998a896010f65 0 1517935370000 12 connected
+06ca9838b4b2e302993911d40d4998a896010f65 192.168.50.36:7009@17009 myself,master - 0 1517935371000 12 connected 9830-13106
+9fe0adbe7c1be50a4f305791c7c81a1841ef4d46 192.168.50.36:7001@17001 master - 0 1517935370515 2 connected 6554-9829
+d93dee069bd61864df2f66700d6f8ae4783801fc 192.168.50.36:7000@17000 master - 0 1517935375000 1 connected 0-3276
+
+2018/02/07 00:44:08,639 ERROR  redisson-netty-1-8    org.redisson.cluster.ClusterConnectionManager.operationComplete(ClusterConnectionManager.java:416) - Can't execute CLUSTER_NODES with /192.168.50.36:7009
+org.redisson.client.RedisTimeoutException: Command execution timeout for /192.168.50.36:7009
+	at org.redisson.client.RedisConnection$2.run(RedisConnection.java:212) [redisson-3.6.0.jar:?]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) [netty-transport-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
+2018/02/07 00:44:15,165 ERROR  redisson-netty-1-1    org.redisson.cluster.ClusterConnectionManager.operationComplete(ClusterConnectionManager.java:416) - Can't execute CLUSTER_NODES with /192.168.50.36:7001
+org.redisson.client.RedisTimeoutException: Command execution timeout for /192.168.50.36:7001
+	at org.redisson.client.RedisConnection$2.run(RedisConnection.java:212) [redisson-3.6.0.jar:?]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) [netty-transport-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
+2018/02/07 00:44:21,668 ERROR  redisson-netty-1-2    org.redisson.cluster.ClusterConnectionManager.operationComplete(ClusterConnectionManager.java:416) - Can't execute CLUSTER_NODES with /192.168.50.36:7000
+org.redisson.client.RedisTimeoutException: Command execution timeout for /192.168.50.36:7000
+	at org.redisson.client.RedisConnection$2.run(RedisConnection.java:212) [redisson-3.6.0.jar:?]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) [netty-transport-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
+2018/02/07 00:44:28,170 ERROR  redisson-netty-1-4    org.redisson.cluster.ClusterConnectionManager.operationComplete(ClusterConnectionManager.java:416) - Can't execute CLUSTER_NODES with /192.168.50.36:7007
+org.redisson.client.RedisTimeoutException: Command execution timeout for /192.168.50.36:7007
+	at org.redisson.client.RedisConnection$2.run(RedisConnection.java:212) [redisson-3.6.0.jar:?]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) [netty-transport-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.20.Final.jar:4.1.20.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
+2018/02/07 09:30:28,578 INFO   restartedMain         com.gxd.GxdSsoServerApplication.logStartupProfileInfo(SpringApplication.java:593) - No active profile set, falling back to default profiles: default
+2018/02/07 09:30:28,623 INFO   restartedMain         org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh(AbstractApplicationContext.java:583) - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ec8595: startup date [Wed Feb 07 09:30:28 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@48a89aa6
+2018/02/07 09:30:31,218 INFO   restartedMain         org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:165) - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018/02/07 09:30:31,719 INFO   restartedMain         org.springframework.cloud.context.scope.GenericScope.setSerializationId(GenericScope.java:287) - BeanFactory id=c1f91a45-8486-37f9-9c06-340fda0b299b
+2018/02/07 09:30:31,770 INFO   restartedMain         org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:155) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018/02/07 09:30:32,033 INFO   restartedMain         org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:327) - Bean 'clusterConfigurationProperties' of type [org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018/02/07 09:30:32,036 INFO   restartedMain         org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:327) - Bean 'clusterConfigurationProperties' of type [com.gxd.redis.config.ClusterConfigurationProperties$$EnhancerBySpringCGLIB$$ae05dc7b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018/02/07 09:30:32,038 INFO   restartedMain         org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:327) - Bean 'cacheConfig' of type [com.gxd.redis.config.CacheConfig$$EnhancerBySpringCGLIB$$ec0c3846] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018/02/07 09:30:32,137 INFO   restartedMain         org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:327) - Bean 'org.springframework.cache.jcache.config.ProxyJCacheConfiguration' of type [org.springframework.cache.jcache.config.ProxyJCacheConfiguration$$EnhancerBySpringCGLIB$$6fbff2cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018/02/07 09:30:32,211 INFO   restartedMain         org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:327) - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$968a666c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018/02/07 09:30:32,275 INFO   restartedMain         org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:327) - Bean 'org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration' of type [org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration$$EnhancerBySpringCGLIB$$7fa4d68f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018/02/07 09:30:32,296 INFO   restartedMain         org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:327) - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$6992334b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018/02/07 09:30:33,414 INFO   restartedMain         org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) - Tomcat initialized with port(s): 8080 (http)
+2018/02/07 09:30:33,430 INFO   restartedMain         org.apache.catalina.core.StandardService.log(DirectJDKLog.java:179) - Starting service [Tomcat]
+2018/02/07 09:30:33,432 INFO   restartedMain         org.apache.catalina.core.StandardEngine.log(DirectJDKLog.java:179) - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018/02/07 09:30:33,908 INFO   localhost-startStop-1 org.apache.jasper.servlet.TldScanner.log(DirectJDKLog.java:179) - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018/02/07 09:30:33,916 INFO   localhost-startStop-1 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log(DirectJDKLog.java:179) - Initializing Spring embedded WebApplicationContext
+2018/02/07 09:30:33,917 INFO   localhost-startStop-1 org.springframework.web.context.ContextLoader.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) - Root WebApplicationContext: initialization completed in 5294 ms
+2018/02/07 09:30:34,447 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) - Mapping servlet: 'dispatcherServlet' to [/]
+2018/02/07 09:30:34,454 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'metricsFilter' to: [/*]
+2018/02/07 09:30:34,455 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018/02/07 09:30:34,455 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018/02/07 09:30:34,455 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018/02/07 09:30:34,456 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'requestContextFilter' to: [/*]
+2018/02/07 09:30:34,456 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2018/02/07 09:30:34,456 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'applicationContextIdFilter' to: [/*]
+2018/02/07 09:30:34,542 INFO   restartedMain         com.gxd.sso.config.ApplicationContext.setServletContext(ApplicationContext.java:24) - # version=2018-30-07 , contextPath=
+2018/02/07 09:30:34,592 INFO   restartedMain         com.gxd.redis.config.CacheConfig.connectionFactory(CacheConfig.java:82) - load redis cluster success [192.168.50.36:7000, 192.168.50.36:7001, 192.168.50.36:7002, 192.168.50.36:7007, 192.168.50.36:7009, 192.168.50.37:7003, 192.168.50.37:7004, 192.168.50.37:7005, 192.168.50.37:7006, 192.168.50.37:7008] 
+2018/02/07 09:30:35,106 INFO   restartedMain         org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.initialize(ExecutorConfigurationSupport.java:165) - Initializing ExecutorService 
+2018/02/07 09:30:35,126 DEBUG  restartedMain         com.gxd.redis.config.CacheConfig.redisTemplate(CacheConfig.java:113) - RedisTemplate 初始化成功......
+2018/02/07 09:30:35,444 WARN   restartedMain         org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext.refresh(AbstractApplicationContext.java:551) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'distributedLocker' defined in class path resource [com/gxd/redis/lock/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'distributedLocker' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.redisson.api.RedissonClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2018/02/07 09:30:35,446 INFO   restartedMain         org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown(ExecutorConfigurationSupport.java:202) - Shutting down ExecutorService
+2018/02/07 09:30:35,450 INFO   restartedMain         org.apache.catalina.core.StandardService.log(DirectJDKLog.java:179) - Stopping service [Tomcat]
+2018/02/07 09:30:35,548 INFO   restartedMain         org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer.logAutoConfigurationReport(AutoConfigurationReportLoggingInitializer.java:101) - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018/02/07 09:30:36,105 ERROR  restartedMain         org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42) - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method distributedLocker in com.gxd.redis.lock.RedissonAutoConfiguration required a bean of type 'org.redisson.api.RedissonClient' that could not be found.
+	- Bean method 'redissonCluster' in 'RedissonAutoConfiguration' not loaded because @ConditionalOnProperty (spring.redisson.nodeAddresses) did not find property 'spring.redisson.nodeAddresses'
+	- Bean method 'redissonSentinel' in 'RedissonAutoConfiguration' not loaded because @ConditionalOnProperty (spring.redisson.master-name) did not find property 'spring.redisson.master-name'
+	- Bean method 'redissonSingle' in 'RedissonAutoConfiguration' not loaded because @ConditionalOnProperty (spring.redisson.address) did not find property 'spring.redisson.address'
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'org.redisson.api.RedissonClient' in your configuration.
+
+2018/02/07 09:52:27,167 INFO   restartedMain         com.gxd.GxdSsoServerApplication.logStartupProfileInfo(SpringApplication.java:593) - No active profile set, falling back to default profiles: default
+2018/02/07 09:52:27,187 INFO   restartedMain         org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh(AbstractApplicationContext.java:583) - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7755bf4c: startup date [Wed Feb 07 09:52:27 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2037d2c1
+2018/02/07 09:52:29,680 INFO   restartedMain         org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:165) - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018/02/07 09:52:30,180 INFO   restartedMain         org.springframework.cloud.context.scope.GenericScope.setSerializationId(GenericScope.java:287) - BeanFactory id=c1f91a45-8486-37f9-9c06-340fda0b299b
+2018/02/07 09:52:30,232 INFO   restartedMain         org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:155) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018/02/07 09:52:30,504 INFO   restartedMain         org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:327) - Bean 'clusterConfigurationProperties' of type [org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018/02/07 09:52:30,507 INFO   restartedMain         org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:327) - Bean 'clusterConfigurationProperties' of type [com.gxd.redis.config.ClusterConfigurationProperties$$EnhancerBySpringCGLIB$$459d79ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018/02/07 09:52:30,508 INFO   restartedMain         org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:327) - Bean 'cacheConfig' of type [com.gxd.redis.config.CacheConfig$$EnhancerBySpringCGLIB$$c5ae594d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018/02/07 09:52:30,607 INFO   restartedMain         org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:327) - Bean 'org.springframework.cache.jcache.config.ProxyJCacheConfiguration' of type [org.springframework.cache.jcache.config.ProxyJCacheConfiguration$$EnhancerBySpringCGLIB$$496213d3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018/02/07 09:52:30,674 INFO   restartedMain         org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:327) - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$702c8773] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018/02/07 09:52:30,728 INFO   restartedMain         org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:327) - Bean 'org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration' of type [org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration$$EnhancerBySpringCGLIB$$5946f796] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018/02/07 09:52:30,744 INFO   restartedMain         org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:327) - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$43345452] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018/02/07 09:52:31,693 INFO   restartedMain         org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) - Tomcat initialized with port(s): 8080 (http)
+2018/02/07 09:52:31,708 INFO   restartedMain         org.apache.catalina.core.StandardService.log(DirectJDKLog.java:179) - Starting service [Tomcat]
+2018/02/07 09:52:31,711 INFO   restartedMain         org.apache.catalina.core.StandardEngine.log(DirectJDKLog.java:179) - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018/02/07 09:52:32,093 INFO   localhost-startStop-1 org.apache.jasper.servlet.TldScanner.log(DirectJDKLog.java:179) - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018/02/07 09:52:32,098 INFO   localhost-startStop-1 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log(DirectJDKLog.java:179) - Initializing Spring embedded WebApplicationContext
+2018/02/07 09:52:32,099 INFO   localhost-startStop-1 org.springframework.web.context.ContextLoader.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) - Root WebApplicationContext: initialization completed in 4912 ms
+2018/02/07 09:52:32,523 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) - Mapping servlet: 'dispatcherServlet' to [/]
+2018/02/07 09:52:32,529 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'metricsFilter' to: [/*]
+2018/02/07 09:52:32,530 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018/02/07 09:52:32,530 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018/02/07 09:52:32,530 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018/02/07 09:52:32,530 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'requestContextFilter' to: [/*]
+2018/02/07 09:52:32,531 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2018/02/07 09:52:32,531 INFO   localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'applicationContextIdFilter' to: [/*]
+2018/02/07 09:52:32,610 INFO   restartedMain         com.gxd.sso.config.ApplicationContext.setServletContext(ApplicationContext.java:24) - # version=2018-52-07 , contextPath=
+2018/02/07 09:52:32,658 INFO   restartedMain         com.gxd.redis.config.CacheConfig.connectionFactory(CacheConfig.java:82) - load redis cluster success [192.168.50.36:7000, 192.168.50.36:7001, 192.168.50.36:7002, 192.168.50.36:7007, 192.168.50.36:7009, 192.168.50.37:7003, 192.168.50.37:7004, 192.168.50.37:7005, 192.168.50.37:7006, 192.168.50.37:7008] 
+2018/02/07 09:52:33,258 INFO   restartedMain         org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.initialize(ExecutorConfigurationSupport.java:165) - Initializing ExecutorService 
+2018/02/07 09:52:33,274 DEBUG  restartedMain         com.gxd.redis.config.CacheConfig.redisTemplate(CacheConfig.java:113) - RedisTemplate 初始化成功......
+2018/02/07 09:52:33,405 WARN   restartedMain         org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext.refresh(AbstractApplicationContext.java:551) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'distributedLocker' defined in class path resource [com/gxd/redis/lock/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'distributedLocker' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.redisson.api.RedissonClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2018/02/07 09:52:33,407 INFO   restartedMain         org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown(ExecutorConfigurationSupport.java:202) - Shutting down ExecutorService
+2018/02/07 09:52:33,409 INFO   restartedMain         org.apache.catalina.core.StandardService.log(DirectJDKLog.java:179) - Stopping service [Tomcat]
+2018/02/07 09:52:33,449 INFO   restartedMain         org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer.logAutoConfigurationReport(AutoConfigurationReportLoggingInitializer.java:101) - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018/02/07 09:52:33,829 ERROR  restartedMain         org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42) - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method distributedLocker in com.gxd.redis.lock.RedissonAutoConfiguration required a bean of type 'org.redisson.api.RedissonClient' that could not be found.
+	- Bean method 'redissonCluster' in 'RedissonAutoConfiguration' not loaded because @ConditionalOnProperty (spring.redisson.nodeAddresses) did not find property 'spring.redisson.nodeAddresses'
+	- Bean method 'redissonSentinel' in 'RedissonAutoConfiguration' not loaded because @ConditionalOnProperty (spring.redisson.master-name) did not find property 'spring.redisson.master-name'
+	- Bean method 'redissonSingle' in 'RedissonAutoConfiguration' not loaded because @ConditionalOnProperty (spring.redisson.address) did not find property 'spring.redisson.address'
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'org.redisson.api.RedissonClient' in your configuration.
+
