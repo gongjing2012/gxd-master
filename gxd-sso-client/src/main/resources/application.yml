@@ -1,7 +1,7 @@
 server:
   port: 8081
 info:
-  component: sso-server to fetch configuration
+  component: gxd-sso-client to fetch configuration
 spring:
   application:
     name: gxd-sso-client

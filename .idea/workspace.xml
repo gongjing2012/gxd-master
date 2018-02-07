@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f117f7d-61e2-4ebf-8ad3-dadbc6ffd616" name="Default" comment="修改redission">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-client/src/main/java/com/gxd/client/filter/JwtFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-client/src/main/java/com/gxd/client/utils/JwtUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-client/src/main/java/com/gxd/client/web/ResourceController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-client/src/main/resources/application.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-client/src/main/resources/conf/log4j2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gxd-sso-client/src/main/resources/templates/protected-resource.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="6f117f7d-61e2-4ebf-8ad3-dadbc6ffd616" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-provider/pom.xml" afterPath="$PROJECT_DIR$/gxd-provider/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/utils/JwtUtils.java" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/utils/JwtUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/web/LoginController.java" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/web/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/templates/login.ftl" afterPath="$PROJECT_DIR$/gxd-sso-server/src/main/resources/templates/login.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gxd-sso-client/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/gxd-sso-client/src/main/resources/application.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/business.log" afterPath="$PROJECT_DIR$/logs/business.log" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/utils/CookieUtils.java" afterPath="$PROJECT_DIR$/gxd-commons/src/main/java/com/gxd/common/utils/CookieUtils.java" />
     </list>
     <ignored path="$PROJECT_DIR$/gxd-commons/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -59,7 +45,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gxd-sso-server/src/main/java/com/gxd/sso/web/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
@@ -103,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gxd-sso-client/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="31" column="48" lean-forward="false" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+            <state relative-caret-position="21">
+              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -126,7 +112,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gxd-sso-client/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-813">
+            <state relative-caret-position="-435">
               <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
               <folding />
             </state>
@@ -265,10 +251,10 @@
         <option value="$PROJECT_DIR$/gxd-sso-client/src/main/java/com/gxd/client/filter/JwtFilter.java" />
         <option value="$PROJECT_DIR$/gxd-sso-client/src/main/java/com/gxd/GxdSsoClientApplication.java" />
         <option value="$PROJECT_DIR$/gxd-sso-client/src/main/java/com/gxd/client/web/ResourceController.java" />
-        <option value="$PROJECT_DIR$/gxd-sso-client/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/gxd-provider/pom.xml" />
         <option value="$PROJECT_DIR$/gxd-sso-client/pom.xml" />
         <option value="$PROJECT_DIR$/gxd-sso-server/pom.xml" />
+        <option value="$PROJECT_DIR$/gxd-sso-client/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -1625,7 +1611,7 @@
       <workItem from="1517791983349" duration="19675000" />
       <workItem from="1517835237470" duration="2129000" />
       <workItem from="1517881288024" duration="26231000" />
-      <workItem from="1517964352723" duration="8227000" />
+      <workItem from="1517964352723" duration="8328000" />
     </task>
     <task id="LOCAL-00001" summary="提交代码">
       <created>1517665502709</created>
@@ -1795,7 +1781,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517968458736</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="增加单点登录客户端代码">
+      <created>1517973045780</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1517973045780</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1813,7 +1806,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85702000" />
+    <option name="totallyTimeSpent" value="85803000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1826,6 +1819,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1850,7 +1844,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4622951" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4622951" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1895,7 +1889,8 @@
     <MESSAGE value="密码加密传输" />
     <MESSAGE value="增加密码验证" />
     <MESSAGE value="修改eurake配置，显示ip" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改eurake配置，显示ip" />
+    <MESSAGE value="增加单点登录客户端代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加单点登录客户端代码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -5079,22 +5074,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gxd-sso-client/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="31" column="48" lean-forward="false" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gxd-sso-client/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-813">
-          <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gxd-sso-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -5138,6 +5117,22 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gxd-sso-client/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-435">
+          <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gxd-sso-client/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
