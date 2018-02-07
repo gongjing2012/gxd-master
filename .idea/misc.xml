@@ -25,6 +25,7 @@
         <option value="$PROJECT_DIR$/gxd-components-es/pom.xml" />
         <option value="$PROJECT_DIR$/gxd-provider1/pom.xml" />
         <option value="$PROJECT_DIR$/gxd-sso-server/pom.xml" />
+        <option value="$PROJECT_DIR$/gxd-sso-client/pom.xml" />
       </list>
     </option>
   </component>

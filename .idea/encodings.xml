@@ -19,6 +19,7 @@
     <file url="file://$PROJECT_DIR$/gxd-provider1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-sleuth-zipkin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-sso" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gxd-sso-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-sso-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gxd-turbine" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

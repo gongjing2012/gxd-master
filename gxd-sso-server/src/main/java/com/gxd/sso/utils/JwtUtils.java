@@ -1,5 +1,6 @@
 package com.gxd.sso.utils;
 
+import com.gxd.common.utils.CookieUtils;
 import com.gxd.redis.utils.RedisUtils;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
@@ -15,8 +16,6 @@ public class JwtUtils {
     private String REDIS_SET_ACTIVE_SUBJECTS = "active-subjects";
     @Autowired
     private RedisUtils redisUtils;
-    @Autowired
-    private CookieUtils cookieUtils;
 
     public String generateToken(String signingKey, String subject) {
         long nowMillis = System.currentTimeMillis();
@@ -34,7 +33,7 @@ public class JwtUtils {
     }
 
     public String parseToken(HttpServletRequest httpServletRequest, String jwtTokenCookieName, String signingKey){
-        String token = cookieUtils.getValue(httpServletRequest, jwtTokenCookieName);
+        String token = CookieUtils.getValue(httpServletRequest, jwtTokenCookieName);
         if(token == null) {
             return null;
         }

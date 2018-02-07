@@ -1,10 +1,10 @@
 package com.gxd.sso.web;
 
 import com.gxd.common.salt.Digests;
+import com.gxd.common.utils.CookieUtils;
 import com.gxd.common.utils.ImageCaptcha;
 import com.gxd.redis.utils.RedisUtils;
 import com.gxd.sso.model.LoginDTO;
-import com.gxd.sso.utils.CookieUtils;
 import com.gxd.sso.utils.JwtUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,9 +30,6 @@ public class LoginController {
     private static final String jwtTokenCookieName = "JWT-TOKEN";
     private static final String signingKey = "signingKey";
     private static final Map<String, String> credentials = new HashMap<>();
-
-    @Autowired
-    private CookieUtils cookieUtils;
     @Autowired
     private JwtUtils jwtUtils;
     @Autowired
@@ -63,7 +60,7 @@ public class LoginController {
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public String login(HttpServletRequest request,HttpServletResponse httpServletResponse, LoginDTO loginDTO, String redirect, Model model){
-        String validateCode = cookieUtils.getValue(request,validateCodeKey);
+        String validateCode = CookieUtils.getValue(request,validateCodeKey);
         String cachevalidCode = redisUtils.get(validateCode).toUpperCase();
         String passwordDb = Digests.MD5Encode("hellosso").toUpperCase();//此处从数据库取密码
         String passwordValidateCodeMd5 = Digests.MD5Encode(passwordDb+cachevalidCode);
@@ -76,7 +73,7 @@ public class LoginController {
         }
         Integer maxAge = Integer.valueOf(cookieMaxAge);
         String token = jwtUtils.generateToken(signingKey, loginDTO.getLoginAccount());
-        cookieUtils.create(httpServletResponse, jwtTokenCookieName, token, false, maxAge, "localhost");
+        CookieUtils.create(httpServletResponse, jwtTokenCookieName, token, false, maxAge, "localhost");
 
         return "redirect:" + redirect;
     }
@@ -88,7 +85,7 @@ public class LoginController {
         // 生成redis获取验证码的KEY保存到cookie中
         String validateCode = Digests.MD5Encode(UUID.randomUUID().toString());
 
-        cookieUtils.create(resp, validateCodeKey, validateCode, false,null, "localhost");
+        CookieUtils.create(resp, validateCodeKey, validateCode, false,null, "localhost");
         // 保存验证码到redis，时间为1分钟
         redisUtils.expire(validateCode, vCode.getCode(),60);
         // 禁止图像缓存。

@@ -16,7 +16,7 @@
                 <img src="${ctx}/static/img/logo-lg.png" alt="">
               </div>
               <div class="name">
-                <h2>CINDATA——AMP平台</h2>
+                <h2>CINDATA—AMP平台</h2>
               </div>
             </div>
             <div class="loginForm">
